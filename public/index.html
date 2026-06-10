@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>comse. | Prihlaseni</title>
+    <link rel="stylesheet" href="styles.css?v=20260605-xml6" />
+    <link rel="stylesheet" href="login.css?v=20260605d" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="left">
+        <div class="topbar">
+          <a class="logo" href="/" aria-label="comse administrace">comse<span class="brand-dot"></span></a>
+          <a class="help" href="mailto:podpora@comse.cz">Potrebujes pomoc?</a>
+        </div>
+
+        <div class="headline">
+          <div class="eyebrow">Performance control room</div>
+          <h1>Mej vykon e-shopu pod kontrolou.</h1>
+          <p>
+            Prehled kampani, produktu, PNO a rustu na jednom miste.
+            Bez chaosu. Bez hadani. Bez zbytecnych tabulek.
+          </p>
+        </div>
+
+        <div class="dashboard">
+          <div class="snapshot" id="snapshot">
+            <div class="snapshot-head">
+              <div class="snapshot-title">
+                <span class="live-dot"></span>
+                Profit Snapshot
+              </div>
+              <div class="status-pill" id="status-text">zivy nahled</div>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <span>Dnesni trzby</span>
+                <strong data-count="128450" data-format="money">0 Kc</strong>
+                <small>+18,4 %</small>
+              </div>
+
+              <div class="metric">
+                <span>PNO</span>
+                <strong data-count="14.8" data-format="percent">0 %</strong>
+                <small>v cili</small>
+              </div>
+
+              <div class="metric">
+                <span>ROAS</span>
+                <strong data-count="6.7" data-format="roas">0x</strong>
+                <small>stabilni</small>
+              </div>
+
+              <div class="metric warning">
+                <span>Waste produkty</span>
+                <strong data-count="17" data-format="number">0</strong>
+                <small>zkontrolovat</small>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="scan"></div>
+              <div class="chart-line">
+                <svg viewBox="0 0 560 80" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M0,58 C60,40 92,66 142,42 C190,19 230,52 276,34 C340,7 380,44 430,24 C482,2 520,18 560,10" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="alerts">
+            <div class="alert-card">
+              <strong>Produkt pali rozpocet</strong>
+              <p>Sedacka NIVA ma vysokou utratu bez odpovidajici hodnoty konverzi.</p>
+              <span class="tag">WASTE</span>
+            </div>
+
+            <div class="alert-card">
+              <strong>Produkt stoji za posileni</strong>
+              <p>Postel Evropa prodava stabilne a Google ji porad netlaci dost.</p>
+              <span class="tag good">HERO_UNDERPUSHED</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="login-card">
+          <h2>Vitej zpet.</h2>
+          <p>Prihlas se do sveho performance dashboardu.</p>
+
+          <form id="login-form" action="dashboard.html" method="get">
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="jan@firma.cz" autocomplete="email" />
+            </div>
+
+            <div class="field">
+              <label for="password">Heslo</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+              />
+            </div>
+
+            <div class="row">
+              <label class="remember">
+                <input type="checkbox" />
+                Pamatovat si me
+              </label>
+
+              <a class="forgot" href="#">Zapomenute heslo</a>
+            </div>
+
+            <button class="button" type="submit">Prihlasit do dashboardu</button>
+            <div class="login-message" id="login-message"></div>
+          </form>
+
+          <div class="mini-footer">
+            comse. © 2026 - performance bez omacky
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

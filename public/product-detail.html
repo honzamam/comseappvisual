@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail produktu | COMSE Administrace</title>
+    <link rel="stylesheet" href="/styles.css?v=20260605-xml6" />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-950 antialiased">
+    <main class="grid min-h-screen lg:grid-cols-[280px_1fr]">
+      <aside class="border-b border-indigo-100 bg-white px-5 py-5 shadow-sm lg:border-b-0 lg:border-r">
+        <a href="dashboard.html" class="flex items-center gap-3" aria-label="COMSE Administrace">
+          <span class="flex size-10 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white shadow-sm shadow-indigo-200">
+            C
+          </span>
+          <span class="text-base font-semibold tracking-normal text-slate-900">COMSE Admin</span>
+        </a>
+
+        <div class="mt-6">
+          <label for="eshop-select" class="block text-xs font-semibold uppercase tracking-normal text-slate-500">
+            Vybrany e-shop
+          </label>
+          <select
+            id="eshop-select"
+            class="mt-2 w-full rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-2.5 text-sm font-semibold text-indigo-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100"
+          >
+            <option value="all">Vsechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="mt-8 space-y-1" aria-label="Hlavni navigace">
+          <a href="dashboard.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Dashboard</a>
+          <a href="ad-accounts.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Vykon reklamnich uctu</a>
+          <a href="product-overview.html" class="flex items-center justify-between rounded-lg bg-indigo-50 px-3 py-2.5 text-sm font-semibold text-indigo-700">
+            Produktovy prehled
+            <span class="size-2 rounded-full bg-indigo-500"></span>
+          </a>
+          <a href="performance-xml.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Výkonnostní XML</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">E-shopy</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Objednavky</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Zakaznici</a>
+          <a href="order-statuses.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Stavy objednavek</a>
+          <a href="settings.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Nastaveni</a>
+          <a href="margin-settings.html" class="block rounded-lg px-6 py-2 text-sm font-medium text-slate-500 transition hover:bg-slate-50 hover:text-indigo-700">Nastaveni marzi</a>
+        </nav>
+
+        <div class="mt-8 rounded-lg border border-violet-100 bg-violet-50 p-4">
+          <p class="text-sm font-semibold text-violet-800">Base odkazy</p>
+          <div class="mt-3 space-y-2 text-sm">
+            <a href="order-statuses.html" class="block text-violet-700 transition hover:text-indigo-700">Nastaveni prehledu</a>
+            <a href="#" class="block text-violet-700 transition hover:text-indigo-700">Dokumentace</a>
+            <a href="api-integrations.html" class="block text-violet-700 transition hover:text-indigo-700">API napojeni</a>
+            <a href="#" class="block text-violet-700 transition hover:text-indigo-700">Stav systemu</a>
+          </div>
+        </div>
+      </aside>
+
+      <section class="bg-slate-50">
+        <header class="flex flex-col gap-4 border-b border-indigo-100 bg-white px-5 py-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <div>
+            <p class="text-sm font-medium text-indigo-700">Detail produktu</p>
+            <h1 class="mt-1 text-2xl font-semibold tracking-normal text-slate-950">Trail Runner Pro · vel. 41 · cerna</h1>
+            <p class="mt-1 text-sm text-slate-500">ID varianty TRP-042-41 · ID skupiny TRP-042 · Bezecke boty</p>
+          </div>
+          <a
+            href="product-overview.html"
+            class="w-full rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-center text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50 sm:w-auto"
+          >
+            Zpet na produktovy prehled
+          </a>
+        </header>
+
+        <div class="px-5 py-6 lg:px-8">
+          <section class="rounded-xl border border-indigo-100 bg-white p-5 shadow-sm shadow-indigo-100/50 sm:p-6">
+            <div class="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
+              <div>
+                <p class="text-sm font-medium text-violet-700">Produktovy vykon</p>
+                <h2 class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Vykon varianty v case</h2>
+                <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
+                  Ukazkovy detail spojuje Google, Meta a obchodni vysledek produktu. Body v grafech ukazuji zmeny
+                  stitku nebo custom labelu, ktere mohly ovlivnit vykon.
+                </p>
+              </div>
+              <div class="grid gap-2 sm:grid-cols-4 xl:min-w-[700px]">
+                <div class="rounded-lg bg-slate-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Utrata celkem</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-950">4 300 Kc</p>
+                </div>
+                <div class="rounded-lg bg-slate-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Nakupy</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-950">31 ks</p>
+                </div>
+                <div class="rounded-lg bg-emerald-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-emerald-700">PNO</p>
+                  <p class="mt-1 text-lg font-semibold text-emerald-700">15,8 %</p>
+                </div>
+                <div class="rounded-lg bg-sky-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-sky-700">Trzby</p>
+                  <p class="mt-1 text-lg font-semibold text-sky-700">29 600 Kc</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-4 xl:grid-cols-[1.2fr_0.8fr]">
+              <div class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <p class="text-sm font-semibold text-slate-950">Aktualni vazby a stitky</p>
+                <div class="mt-4 grid gap-3 sm:grid-cols-3">
+                  <div class="rounded-lg border border-blue-200 bg-blue-50 p-3">
+                    <p class="text-xs font-semibold uppercase tracking-normal text-blue-700">Google Ads</p>
+                    <p class="mt-1 text-sm font-semibold text-slate-950">PMax · Bezecke boty</p>
+                    <p class="mt-1 text-xs text-slate-500">Konverze 22 · CPC 4,25 Kc</p>
+                  </div>
+                  <div class="rounded-lg border border-violet-200 bg-violet-50 p-3">
+                    <p class="text-xs font-semibold uppercase tracking-normal text-violet-700">Meta Ads</p>
+                    <p class="mt-1 text-sm font-semibold text-slate-950">Katalog · retargeting</p>
+                    <p class="mt-1 text-xs text-slate-500">Kliknuti 224 · CTR 3,9 %</p>
+                  </div>
+                  <div class="rounded-lg border border-orange-200 bg-orange-50 p-3">
+                    <p class="text-xs font-semibold uppercase tracking-normal text-orange-700">Stitky</p>
+                    <div class="mt-2 flex flex-wrap gap-1.5 text-xs font-semibold">
+                      <span class="rounded-full bg-white px-2 py-1 text-orange-700 ring-1 ring-orange-200">Bestseller</span>
+                      <span class="rounded-full bg-white px-2 py-1 text-orange-700 ring-1 ring-orange-200">Skladem</span>
+                      <span class="rounded-full bg-white px-2 py-1 text-sky-700 ring-1 ring-sky-200">custom_label_1: high_roas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-lg border border-slate-200 bg-white p-4">
+                <p class="text-sm font-semibold text-slate-950">Zmeny v datech</p>
+                <div class="mt-4 space-y-3 text-sm">
+                  <div class="flex items-start gap-3">
+                    <span class="mt-1 size-2 rounded-full bg-orange-500"></span>
+                    <div>
+                      <p class="font-semibold text-slate-900">15. 5. · Zmena: obrazku</p>
+                      <p class="mt-1 text-xs text-slate-500">U varianty se zmenil hlavni produktovy obrazek ve feedu.</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <span class="mt-1 size-2 rounded-full bg-sky-500"></span>
+                    <div>
+                      <p class="font-semibold text-slate-900">22. 5. · Zmena: custom_label_1 high_roas</p>
+                      <p class="mt-1 text-xs text-slate-500">Výkonnostní XML poslalo novy label pro kampane.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <article class="mt-6 rounded-lg border border-slate-200 bg-white p-4">
+              <div class="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-normal text-indigo-700">Spolecny graf produktu</p>
+                  <h3 class="mt-1 text-base font-semibold text-slate-950">Vyvoj metrik podle vyberu</h3>
+                  <p class="mt-1 text-xs font-medium text-slate-500">
+                    Obdobi: <span data-period-label class="text-indigo-700">Poslednich 7 dni</span>
+                  </p>
+                </div>
+                <div class="grid gap-2 text-xs font-semibold sm:grid-cols-2 lg:grid-cols-4 xl:min-w-[760px]">
+                  <label class="chart-toggle text-blue-700">
+                    <input type="checkbox" checked data-chart-toggle="googleCtr" />
+                    <span>Google CTR</span>
+                  </label>
+                  <label class="chart-toggle text-slate-700">
+                    <input type="checkbox" checked data-chart-toggle="googleCpc" />
+                    <span>Google CPC</span>
+                  </label>
+                  <label class="chart-toggle text-violet-700">
+                    <input type="checkbox" checked data-chart-toggle="metaSpend" />
+                    <span>Meta utrata</span>
+                  </label>
+                  <label class="chart-toggle text-fuchsia-700">
+                    <input type="checkbox" checked data-chart-toggle="metaPurchases" />
+                    <span>Meta nakupy</span>
+                  </label>
+                  <label class="chart-toggle text-emerald-700">
+                    <input type="checkbox" checked data-chart-toggle="totalPurchases" />
+                    <span>Celkove nakupy</span>
+                  </label>
+                  <label class="chart-toggle text-amber-700">
+                    <input type="checkbox" data-chart-toggle="googleSpend" />
+                    <span>Google utrata</span>
+                  </label>
+                  <label class="chart-toggle text-cyan-700">
+                    <input type="checkbox" data-chart-toggle="conversions" />
+                    <span>Konverze</span>
+                  </label>
+                  <label class="chart-toggle text-rose-700">
+                    <input type="checkbox" data-chart-toggle="storno" />
+                    <span>Storno %</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="mt-4 grid gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3 lg:grid-cols-[auto_1fr] lg:items-end">
+                <div class="flex flex-wrap gap-2">
+                  <button
+                    type="button"
+                    data-period-preset="7"
+                    class="rounded-lg bg-white px-3 py-2 text-xs font-semibold text-indigo-700 shadow-sm ring-1 ring-slate-200"
+                  >
+                    Poslednich 7 dni
+                  </button>
+                  <button
+                    type="button"
+                    data-period-preset="30"
+                    class="rounded-lg px-3 py-2 text-xs font-semibold text-slate-600 ring-1 ring-slate-200"
+                  >
+                    30 dni
+                  </button>
+                </div>
+                <div class="grid gap-3 sm:grid-cols-2 lg:max-w-[420px]">
+                  <label class="block">
+                    <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Od</span>
+                    <input
+                      id="date-from"
+                      type="date"
+                      class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                    />
+                  </label>
+                  <label class="block">
+                    <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Do</span>
+                    <input
+                      id="date-to"
+                      type="date"
+                      class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="trend-chart trend-chart-large mt-5" data-product-chart>
+                <svg viewBox="0 0 980 340" role="img" aria-label="Spolecny graf metrik produktu">
+                  <path class="chart-grid" d="M55 45H940M55 110H940M55 175H940M55 240H940M55 305H940" />
+                  <path class="chart-axis-label" d="M55 305H940" />
+                  <g class="chart-events" aria-label="Udalosti v case">
+                    <line x1="420" y1="45" x2="420" y2="305" />
+                    <text x="420" y="30">15. 5. obrazek</text>
+                    <line x1="540" y1="45" x2="540" y2="305" />
+                    <text x="540" y="30">18. 5. bestseller</text>
+                    <line x1="660" y1="45" x2="660" y2="305" />
+                    <text x="660" y="30">22. 5. label</text>
+                  </g>
+                  <polyline data-chart-series="googleCtr" class="chart-line chart-line-blue" points="60,230 180,205 300,212 420,168 540,150 660,118 780,126 930,88" />
+                  <polyline data-chart-series="googleCpc" class="chart-line chart-line-slate" points="60,120 180,138 300,128 420,146 540,170 660,192 780,184 930,205" />
+                  <polyline data-chart-series="metaSpend" class="chart-line chart-line-violet" points="60,260 180,240 300,226 420,202 540,184 660,154 780,126 930,116" />
+                  <polyline data-chart-series="metaPurchases" class="chart-line chart-line-fuchsia" points="60,286 180,274 300,246 420,232 540,208 660,184 780,166 930,148" />
+                  <polyline data-chart-series="totalPurchases" class="chart-line chart-line-emerald" points="60,250 180,232 300,218 420,178 540,168 660,128 780,118 930,96" />
+                  <polyline data-chart-series="googleSpend" class="chart-line chart-line-amber" points="60,270 180,258 300,232 420,214 540,186 660,156 780,138 930,112" />
+                  <polyline data-chart-series="conversions" class="chart-line chart-line-cyan" points="60,280 180,266 300,248 420,214 540,196 660,158 780,146 930,128" />
+                  <polyline data-chart-series="storno" class="chart-line chart-line-rose" points="60,156 180,164 300,170 420,150 540,142 660,132 780,138 930,126" />
+                </svg>
+                <button class="chart-point bg-orange-500" style="left: 43%; top: 49%" aria-label="Zmena: obrazku">
+                  <span>Zmena: obrazku</span>
+                </button>
+                <button class="chart-point bg-orange-500" style="left: 55%; top: 36%" aria-label="Zmena: stitek Bestseller">
+                  <span>Zmena: stitek Bestseller</span>
+                </button>
+                <button class="chart-point bg-sky-500" style="left: 67%; top: 27%" aria-label="Zmena: custom_label_1 high_roas">
+                  <span>Zmena: custom_label_1 high_roas</span>
+                </button>
+                <div class="chart-cursor" data-chart-cursor style="left: 43%">
+                  <span></span>
+                </div>
+                <div class="chart-value-tooltip" data-chart-tooltip style="left: 45%; top: 62%">
+                  <p class="chart-value-date" data-chart-tooltip-date>15. 5.</p>
+                  <div data-chart-tooltip-values>
+                    <span>Google CTR <strong>4,1 %</strong></span>
+                    <span>Google CPC <strong>4,38 Kc</strong></span>
+                    <span>Meta utrata <strong>1 050 Kc</strong></span>
+                    <span>Celkove nakupy <strong>18 ks</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3 grid grid-cols-4 gap-2 text-xs text-slate-500">
+                <span>1. 5.</span>
+                <span>10. 5.</span>
+                <span>20. 5.</span>
+                <span class="text-right">31. 5.</span>
+              </div>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260605-xml6"></script>
+  </body>
+</html>

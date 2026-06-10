@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vykon reklamnich uctu | COMSE Administrace</title>
+    <link rel="stylesheet" href="/styles.css?v=20260605-xml6" />
+  </head>
+  <body class="ad-accounts-page min-h-screen bg-slate-50 text-slate-950 antialiased">
+    <main class="grid min-h-screen lg:grid-cols-[280px_1fr]">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html" class="is-active">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="bg-slate-50">
+        <header class="flex flex-col gap-4 border-b border-indigo-100 bg-white px-5 py-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <div>
+            <p class="text-sm font-medium text-indigo-700">Dashboard</p>
+            <h1 class="mt-1 text-2xl font-semibold tracking-normal text-slate-950">Vykon reklamnich uctu</h1>
+            <p class="mt-1 text-sm text-slate-500">
+              Aktualne vybrano: <span data-selected-shop-name class="font-medium text-indigo-700">Vsechny e-shopy</span>
+            </p>
+          </div>
+          <a
+            href="index.html"
+            class="w-full rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-center text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50 sm:w-auto"
+          >
+            Odhlasit
+          </a>
+        </header>
+
+        <div class="px-5 py-6 lg:px-8">
+          <section class="rounded-xl border border-indigo-100 bg-white p-5 shadow-sm shadow-indigo-100/50 sm:p-6">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+              <div>
+                <p class="text-sm font-medium text-violet-700">Reklamni ucty</p>
+                <h2 class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Prehled toho, co bezi</h2>
+                <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
+                  Jedna obrazovka pro Meta Ads, Google Ads a Sklik. Radky jsou ukazkove, ale struktura pocita s tim,
+                  ze se budou propisovat kampane, sady reklam a konkretni reklamy.
+                </p>
+              </div>
+              <div class="grid gap-2 sm:grid-cols-3 xl:min-w-[520px]">
+                <div class="rounded-lg bg-slate-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Spend</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-950">54 700 Kc</p>
+                </div>
+                <div class="rounded-lg bg-slate-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Trzby</p>
+                  <p class="mt-1 text-lg font-semibold text-slate-950">284 900 Kc</p>
+                </div>
+                <div class="rounded-lg bg-emerald-50 px-4 py-3">
+                  <p class="text-xs font-semibold uppercase tracking-normal text-emerald-700">ROAS</p>
+                  <p class="mt-1 text-lg font-semibold text-emerald-700">5,2x</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4">
+              <div class="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+                <div>
+                  <p class="text-sm font-medium text-indigo-700">Filtr reklam</p>
+                  <h3 class="mt-1 text-lg font-semibold tracking-normal text-slate-950">
+                    Zobrazeno: <span data-ads-filter-label>Aktivni reklamy</span>
+                  </h3>
+                </div>
+
+                <div class="flex flex-col gap-3 lg:flex-row lg:items-end">
+                  <div class="flex rounded-lg border border-indigo-100 bg-indigo-50 p-1">
+                    <button
+                      type="button"
+                      data-ads-filter="active"
+                      class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-700 shadow-sm"
+                    >
+                      Aktivni
+                    </button>
+                    <button
+                      type="button"
+                      data-ads-filter="all"
+                      class="rounded-md px-3 py-2 text-sm font-semibold text-slate-600 transition hover:text-indigo-700"
+                    >
+                      Vsechny reklamy
+                    </button>
+                  </div>
+
+                  <div class="flex rounded-lg border border-indigo-100 bg-indigo-50 p-1" aria-label="Období reklam">
+                    <button
+                      type="button"
+                      data-ads-period-preset="30"
+                      class="rounded-md px-3 py-2 text-sm font-semibold text-slate-600 transition hover:text-indigo-700"
+                    >
+                      30 dní
+                    </button>
+                    <button
+                      type="button"
+                      data-ads-period-preset="7"
+                      class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-700 shadow-sm"
+                    >
+                      7 dní
+                    </button>
+                    <button
+                      type="button"
+                      data-ads-period-preset="yesterday"
+                      class="rounded-md px-3 py-2 text-sm font-semibold text-slate-600 transition hover:text-indigo-700"
+                    >
+                      Včera
+                    </button>
+                  </div>
+
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <label class="block">
+                      <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Od</span>
+                      <input
+                        id="ads-date-from"
+                        type="date"
+                        class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      />
+                    </label>
+                    <label class="block">
+                      <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Do</span>
+                      <input
+                        id="ads-date-to"
+                        type="date"
+                        class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 flex w-full rounded-lg border border-indigo-100 bg-indigo-50 p-1 sm:w-fit">
+              <button
+                type="button"
+                data-network-tab="meta"
+                class="flex-1 rounded-md bg-white px-4 py-2 text-sm font-semibold text-indigo-700 shadow-sm sm:flex-none"
+              >
+                Meta Ads
+              </button>
+              <button
+                type="button"
+                data-network-tab="google"
+                class="flex-1 rounded-md px-4 py-2 text-sm font-semibold text-slate-600 transition hover:text-indigo-700 sm:flex-none"
+              >
+                Google Ads
+              </button>
+              <button
+                type="button"
+                data-network-tab="sklik"
+                class="flex-1 rounded-md px-4 py-2 text-sm font-semibold text-slate-600 transition hover:text-indigo-700 sm:flex-none"
+              >
+                Sklik
+              </button>
+            </div>
+
+            <section data-network-panel="meta" class="mt-4 rounded-lg border border-blue-100 bg-white">
+              <div class="border-b border-blue-100 bg-blue-50 px-4 py-3">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm font-semibold text-blue-700">Meta Ads struktura</p>
+                    <h3 class="text-lg font-semibold tracking-normal text-slate-950">Kampan -> Sada reklam -> Reklama</h3>
+                  </div>
+                  <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-blue-700 shadow-sm">Rozbalovaci prehled</span>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto">
+                <div class="min-w-[1120px]">
+                  <div class="grid grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] gap-3 bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-normal text-slate-500">
+                    <span>Meta struktura</span>
+                    <span>Vazba</span>
+                    <span>Status</span>
+                    <span>Prirazeni</span>
+                    <span>Spend</span>
+                    <span>ROAS</span>
+                  </div>
+
+                  <div class="divide-y divide-slate-200 text-sm">
+                    <details data-ad-row data-ad-status="active" class="group" open>
+                      <summary class="grid cursor-pointer list-none grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 bg-slate-50/70 px-4 py-3 transition hover:bg-indigo-50">
+                        <div class="flex items-center gap-2">
+                          <span class="text-xs text-slate-400 transition group-open:rotate-90">▶</span>
+                          <span class="rounded-md bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-700">Kampan</span>
+                          <span class="font-semibold text-slate-950">Letni akvizice</span>
+                        </div>
+                        <span class="text-slate-500">Souhrn</span>
+                        <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                        <span class="text-slate-500">2 sady reklam</span>
+                        <span class="font-semibold text-slate-900">12 900 Kc</span>
+                        <span class="font-semibold text-emerald-700">4,8x</span>
+                      </summary>
+
+                      <div class="divide-y divide-slate-200">
+                        <details class="group/sada" open>
+                          <summary class="grid cursor-pointer list-none grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 px-4 py-3 transition hover:bg-indigo-50/60">
+                            <div class="flex items-center gap-2 pl-8">
+                              <span class="text-xs text-slate-400 transition group-open/sada:rotate-90">▶</span>
+                              <span class="rounded-md bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-700">Sada reklam</span>
+                              <span class="font-semibold text-slate-950">Lookalike zakaznici 2 %</span>
+                            </div>
+                            <span class="text-slate-500">Souhrn</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <span class="text-slate-500">2 reklamy</span>
+                            <span class="font-semibold text-slate-900">7 400 Kc</span>
+                            <span class="font-semibold text-emerald-700">5,2x</span>
+                          </summary>
+
+                          <div class="grid grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 bg-slate-50/60 px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Reklama</span>
+                              <span class="ml-2 font-medium text-slate-900">Carousel bestsellery</span>
+                            </div>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Produktovy feed</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" title="Automaticky prirazeno podle produktoveho feedu" class="w-fit rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">Prirazeno k produktum</button>
+                            <span>3 350 Kc</span>
+                            <span class="font-semibold text-emerald-700">4,7x</span>
+                          </div>
+
+                          <div class="grid grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 bg-slate-50/60 px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Reklama</span>
+                              <span class="ml-2 font-medium text-slate-900">Video produktovy detail</span>
+                            </div>
+                            <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Samostatna reklama</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" data-assignment-open data-ad-name="Meta / Video produktovy detail" class="w-fit rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-violet-700">Priradit k produktum</button>
+                            <span>4 050 Kc</span>
+                            <span class="font-semibold text-emerald-700">5,6x</span>
+                          </div>
+                        </details>
+
+                        <details class="group/sada" open>
+                          <summary class="grid cursor-pointer list-none grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 px-4 py-3 transition hover:bg-indigo-50/60">
+                            <div class="flex items-center gap-2 pl-8">
+                              <span class="text-xs text-slate-400 transition group-open/sada:rotate-90">▶</span>
+                              <span class="rounded-md bg-indigo-50 px-2 py-1 text-xs font-semibold text-indigo-700">Sada reklam</span>
+                              <span class="font-semibold text-slate-950">Retargeting kosik 14 dni</span>
+                            </div>
+                            <span class="text-slate-500">Souhrn</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <span class="text-slate-500">1 reklama</span>
+                            <span class="font-semibold text-slate-900">5 500 Kc</span>
+                            <span class="font-semibold text-emerald-700">4,2x</span>
+                          </summary>
+
+                          <div class="grid grid-cols-[2.4fr_1fr_0.9fr_1.35fr_0.85fr_0.65fr] items-center gap-3 bg-slate-50/60 px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Reklama</span>
+                              <span class="ml-2 font-medium text-slate-900">Dynamicky katalog</span>
+                            </div>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Produktovy feed</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" title="Automaticky prirazeno podle produktoveho feedu" class="w-fit rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">Prirazeno k produktum</button>
+                            <span>5 500 Kc</span>
+                            <span class="font-semibold text-emerald-700">4,2x</span>
+                          </div>
+                        </details>
+                      </div>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section data-network-panel="google" class="mt-4 hidden rounded-lg border border-indigo-100 bg-white">
+              <div class="border-b border-indigo-100 bg-indigo-50 px-4 py-3">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm font-semibold text-indigo-700">Google Ads struktura</p>
+                    <h3 class="text-lg font-semibold tracking-normal text-slate-950">Vyhledavaci, PMax, YouTube a dalsi kampane</h3>
+                  </div>
+                  <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-indigo-700 shadow-sm">Jeden panel</span>
+                </div>
+              </div>
+
+              <div class="grid gap-3 p-4 xl:grid-cols-3">
+                <article class="rounded-lg border border-blue-100 bg-blue-50 p-4">
+                  <p class="text-sm font-medium text-blue-700">Search</p>
+                  <h4 class="mt-1 font-semibold text-slate-950">Vyhledavaci kampane</h4>
+                  <dl class="mt-4 grid grid-cols-4 gap-2 text-sm">
+                    <div><dt class="text-slate-500">Spend</dt><dd class="font-semibold text-slate-900">11 200 Kc</dd></div>
+                    <div><dt class="text-slate-500">Trzby</dt><dd class="font-semibold text-slate-900">68 300 Kc</dd></div>
+                    <div><dt class="text-slate-500">Zisk</dt><dd class="font-semibold text-emerald-700">22 900 Kc</dd></div>
+                    <div><dt class="text-slate-500">ROAS</dt><dd class="font-semibold text-emerald-700">6,1x</dd></div>
+                  </dl>
+                </article>
+
+                <article class="rounded-lg border border-emerald-100 bg-emerald-50 p-4">
+                  <p class="text-sm font-medium text-emerald-700">PMax</p>
+                  <h4 class="mt-1 font-semibold text-slate-950">Performance Max</h4>
+                  <dl class="mt-4 grid grid-cols-4 gap-2 text-sm">
+                    <div><dt class="text-slate-500">Spend</dt><dd class="font-semibold text-slate-900">14 600 Kc</dd></div>
+                    <div><dt class="text-slate-500">Trzby</dt><dd class="font-semibold text-slate-900">84 700 Kc</dd></div>
+                    <div><dt class="text-slate-500">Zisk</dt><dd class="font-semibold text-emerald-700">29 600 Kc</dd></div>
+                    <div><dt class="text-slate-500">ROAS</dt><dd class="font-semibold text-emerald-700">5,8x</dd></div>
+                  </dl>
+                </article>
+
+                <article class="rounded-lg border border-red-100 bg-red-50 p-4">
+                  <p class="text-sm font-medium text-red-700">YouTube</p>
+                  <h4 class="mt-1 font-semibold text-slate-950">Video kampane</h4>
+                  <dl class="mt-4 grid grid-cols-4 gap-2 text-sm">
+                    <div><dt class="text-slate-500">Spend</dt><dd class="font-semibold text-slate-900">3 200 Kc</dd></div>
+                    <div><dt class="text-slate-500">Trzby</dt><dd class="font-semibold text-slate-900">8 600 Kc</dd></div>
+                    <div><dt class="text-slate-500">Zisk</dt><dd class="font-semibold text-slate-900">1 100 Kc</dd></div>
+                    <div><dt class="text-slate-500">ROAS</dt><dd class="font-semibold text-slate-900">2,7x</dd></div>
+                  </dl>
+                </article>
+              </div>
+
+              <div class="overflow-x-auto border-t border-slate-200">
+                <div class="min-w-[1160px]">
+                  <div class="grid grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] gap-3 bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-normal text-slate-500">
+                    <span>Google struktura</span>
+                    <span>Vazba</span>
+                    <span>Status</span>
+                    <span>Prirazeni</span>
+                    <span>Spend</span>
+                    <span>Zisk</span>
+                    <span>ROAS</span>
+                  </div>
+
+                  <div class="divide-y divide-slate-200 text-sm">
+                    <details open class="group">
+                      <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 px-4 py-3">
+                        <div class="flex items-center gap-2">
+                          <span class="text-indigo-500 transition group-open:rotate-90">›</span>
+                          <span class="rounded-md bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-700">Kampan</span>
+                          <span class="font-semibold text-slate-950">Search | Brand + konkurence</span>
+                        </div>
+                        <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Search</span>
+                        <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                        <span class="text-slate-500">2 reklamni sestavy</span>
+                        <span class="font-semibold text-slate-900">11 200 Kc</span>
+                        <span class="font-semibold text-emerald-700">22 900 Kc</span>
+                        <span class="font-semibold text-emerald-700">6,1x</span>
+                      </summary>
+
+                      <div class="divide-y divide-slate-100 border-t border-slate-100">
+                        <details open class="group/ad">
+                          <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-slate-50/70 px-4 py-3">
+                            <div class="pl-8">
+                              <span class="text-indigo-500 transition group-open/ad:rotate-90">›</span>
+                              <span class="ml-2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-slate-600">Reklamni sestava</span>
+                              <span class="ml-2 font-medium text-slate-900">Brand exact</span>
+                            </div>
+                            <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Klicova slova</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" data-assignment-open data-ad-name="Google Search / Brand exact" class="w-fit rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-violet-700">Priradit k produktum</button>
+                            <span>6 900 Kc</span>
+                            <span class="font-semibold text-emerald-700">18 400 Kc</span>
+                            <span class="font-semibold text-emerald-700">8,4x</span>
+                          </summary>
+
+                          <div data-ad-row data-ad-status="active" class="grid grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-white px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Responzivni reklama</span>
+                              <span class="ml-2 font-medium text-slate-900">COMSE brand</span>
+                            </div>
+                            <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Samostatna reklama</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" data-assignment-open data-ad-name="Google Search / COMSE brand" class="w-fit rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-violet-700">Priradit k produktum</button>
+                            <span>3 800 Kc</span>
+                            <span class="font-semibold text-emerald-700">12 900 Kc</span>
+                            <span class="font-semibold text-emerald-700">9,2x</span>
+                          </div>
+                        </details>
+                      </div>
+                    </details>
+
+                    <details open class="group">
+                      <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 px-4 py-3">
+                        <div class="flex items-center gap-2">
+                          <span class="text-indigo-500 transition group-open:rotate-90">›</span>
+                          <span class="rounded-md bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Kampan</span>
+                          <span class="font-semibold text-slate-950">PMax | Produktovy katalog</span>
+                        </div>
+                        <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Performance Max</span>
+                        <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                        <span class="text-slate-500">Asset groups</span>
+                        <span class="font-semibold text-slate-900">14 600 Kc</span>
+                        <span class="font-semibold text-emerald-700">29 600 Kc</span>
+                        <span class="font-semibold text-emerald-700">5,8x</span>
+                      </summary>
+
+                      <div class="divide-y divide-slate-100 border-t border-slate-100">
+                        <details open class="group/ad">
+                          <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-slate-50/70 px-4 py-3">
+                            <div class="pl-8">
+                              <span class="text-indigo-500 transition group-open/ad:rotate-90">›</span>
+                              <span class="ml-2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-slate-600">Asset group</span>
+                              <span class="ml-2 font-medium text-slate-900">Top produkty feed</span>
+                            </div>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Produktovy feed</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" title="Asset group je automaticky prirazeny podle produktoveho feedu" class="w-fit rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">Prirazeno k produktum</button>
+                            <span>10 200 Kc</span>
+                            <span class="font-semibold text-emerald-700">22 100 Kc</span>
+                            <span class="font-semibold text-emerald-700">6,1x</span>
+                          </summary>
+
+                          <div data-ad-row data-ad-status="active" class="grid grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-white px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Asset</span>
+                              <span class="ml-2 font-medium text-slate-900">Obrazky + texty z feedu</span>
+                            </div>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Produktovy feed</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" title="Produktovy feed uz vazbu zajistuje" class="w-fit rounded-lg border border-emerald-100 bg-emerald-50 px-3 py-2 text-xs font-semibold text-emerald-700">Prirazeno k produktum</button>
+                            <span>10 200 Kc</span>
+                            <span class="font-semibold text-emerald-700">22 100 Kc</span>
+                            <span class="font-semibold text-emerald-700">6,1x</span>
+                          </div>
+                        </details>
+                      </div>
+                    </details>
+
+                    <details open class="group">
+                      <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 px-4 py-3">
+                        <div class="flex items-center gap-2">
+                          <span class="text-indigo-500 transition group-open:rotate-90">›</span>
+                          <span class="rounded-md bg-red-50 px-2 py-1 text-xs font-semibold text-red-700">Kampan</span>
+                          <span class="font-semibold text-slate-950">YouTube | Akvizicni videa</span>
+                        </div>
+                        <span class="rounded-full bg-red-50 px-2 py-1 text-xs font-semibold text-red-700">Video</span>
+                        <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                        <span class="text-slate-500">Video ad groups</span>
+                        <span class="font-semibold text-slate-900">3 200 Kc</span>
+                        <span class="font-semibold text-slate-900">1 100 Kc</span>
+                        <span class="font-semibold text-slate-900">2,7x</span>
+                      </summary>
+
+                      <div class="divide-y divide-slate-100 border-t border-slate-100">
+                        <details open class="group/ad">
+                          <summary data-ad-row data-ad-status="active" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-slate-50/70 px-4 py-3">
+                            <div class="pl-8">
+                              <span class="text-indigo-500 transition group-open/ad:rotate-90">›</span>
+                              <span class="ml-2 rounded-md bg-white px-2 py-1 text-xs font-semibold text-slate-600">Ad group</span>
+                              <span class="ml-2 font-medium text-slate-900">In-market publikum</span>
+                            </div>
+                            <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Samostatne video</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" data-assignment-open data-ad-name="Google YouTube / In-market publikum" class="w-fit rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-violet-700">Priradit k produktum</button>
+                            <span>3 200 Kc</span>
+                            <span class="font-semibold text-slate-900">1 100 Kc</span>
+                            <span class="font-semibold text-slate-900">2,7x</span>
+                          </summary>
+
+                          <div data-ad-row data-ad-status="active" class="grid grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 bg-white px-4 py-3">
+                            <div class="pl-16">
+                              <span class="rounded-md bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Video reklama</span>
+                              <span class="ml-2 font-medium text-slate-900">Produktovy spot 15 s</span>
+                            </div>
+                            <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Samostatna reklama</span>
+                            <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                            <button type="button" data-assignment-open data-ad-name="Google YouTube / Produktovy spot 15 s" class="w-fit rounded-lg bg-indigo-600 px-3 py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-violet-700">Priradit k produktum</button>
+                            <span>3 200 Kc</span>
+                            <span class="font-semibold text-slate-900">1 100 Kc</span>
+                            <span class="font-semibold text-slate-900">2,7x</span>
+                          </div>
+                        </details>
+                      </div>
+                    </details>
+
+                    <details class="group">
+                      <summary data-ad-row data-ad-status="paused" class="grid cursor-pointer grid-cols-[2.05fr_1fr_0.85fr_1.25fr_0.75fr_0.8fr_0.6fr] items-center gap-3 px-4 py-3">
+                        <div class="flex items-center gap-2">
+                          <span class="text-indigo-500 transition group-open:rotate-90">›</span>
+                          <span class="rounded-md bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-700">Kampan</span>
+                          <span class="font-semibold text-slate-950">Demand Gen | Nove publikum</span>
+                        </div>
+                        <span class="rounded-full bg-violet-50 px-2 py-1 text-xs font-semibold text-violet-700">Demand Gen</span>
+                        <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600">Pozastaveno</span>
+                        <span class="text-slate-500">Bannery</span>
+                        <span class="font-semibold text-slate-900">1 450 Kc</span>
+                        <span class="font-semibold text-slate-900">2 300 Kc</span>
+                        <span class="font-semibold text-slate-900">3,4x</span>
+                      </summary>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section data-network-panel="sklik" class="mt-4 hidden rounded-lg border border-amber-100 bg-white">
+              <div class="border-b border-amber-100 bg-amber-50 px-4 py-3">
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <p class="text-sm font-semibold text-amber-700">Sklik struktura</p>
+                    <h3 class="text-lg font-semibold tracking-normal text-slate-950">Brand, search a remarketing</h3>
+                  </div>
+                  <span class="rounded-full bg-white px-3 py-1 text-xs font-semibold text-amber-700 shadow-sm">Sync</span>
+                </div>
+              </div>
+
+              <div class="grid gap-3 p-4 lg:grid-cols-2">
+                <article class="rounded-lg border border-amber-100 bg-amber-50 p-4">
+                  <p class="text-sm font-medium text-amber-700">Brand Search</p>
+                  <h4 class="mt-1 font-semibold text-slate-950">Brand + konkurence</h4>
+                  <dl class="mt-4 grid grid-cols-3 gap-2 text-sm">
+                    <div><dt class="text-slate-500">Spend</dt><dd class="font-semibold text-slate-900">2 900 Kc</dd></div>
+                    <div><dt class="text-slate-500">Trzby</dt><dd class="font-semibold text-slate-900">21 800 Kc</dd></div>
+                    <div><dt class="text-slate-500">ROAS</dt><dd class="font-semibold text-emerald-700">7,5x</dd></div>
+                  </dl>
+                </article>
+
+                <article class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                  <p class="text-sm font-medium text-slate-600">Remarketing</p>
+                  <h4 class="mt-1 font-semibold text-slate-950">Navstevnici kosiku</h4>
+                  <dl class="mt-4 grid grid-cols-3 gap-2 text-sm">
+                    <div><dt class="text-slate-500">Spend</dt><dd class="font-semibold text-slate-900">1 300 Kc</dd></div>
+                    <div><dt class="text-slate-500">Trzby</dt><dd class="font-semibold text-slate-900">5 600 Kc</dd></div>
+                    <div><dt class="text-slate-500">ROAS</dt><dd class="font-semibold text-slate-900">4,3x</dd></div>
+                  </dl>
+                </article>
+              </div>
+
+              <div class="overflow-x-auto border-t border-slate-200">
+                <div class="min-w-[920px]">
+                  <div class="grid grid-cols-[1fr_1.6fr_1.3fr_1.1fr_0.9fr_1.25fr_0.8fr_0.65fr] gap-3 bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-normal text-slate-500">
+                    <span>Typ</span>
+                    <span>Kampan</span>
+                    <span>Sestava</span>
+                    <span>Vazba</span>
+                    <span>Status</span>
+                    <span>Prirazeni</span>
+                    <span>Spend</span>
+                    <span>ROAS</span>
+                  </div>
+
+                  <div class="divide-y divide-slate-200 text-sm">
+                    <div data-ad-row data-ad-status="active" class="grid grid-cols-[1fr_1.6fr_1.3fr_1.1fr_0.9fr_1.25fr_0.8fr_0.65fr] items-center gap-3 px-4 py-3">
+                      <span class="rounded-md bg-amber-50 px-2 py-1 text-xs font-semibold text-amber-700">Search</span>
+                      <span class="font-medium text-slate-950">Brand + remarketing</span>
+                      <span>Brand sestava</span>
+                      <span class="rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-700">Samostatna reklama</span>
+                      <span class="rounded-full bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">Aktivni</span>
+                      <button type="button" title="Textova reklama se obvykle neprirazuje primo k produktu" class="w-fit rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold text-slate-500">Bez prirazeni</button>
+                      <span>4 200 Kc</span>
+                      <span class="font-semibold text-emerald-700">6,5x</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="assignment-modal"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/40 px-4 py-6"
+      aria-hidden="true"
+    >
+      <section class="w-full max-w-2xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="assignment-modal-title">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-sm font-medium text-indigo-700">Prirazeni reklamy</p>
+            <h2 id="assignment-modal-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">
+              Priradit k produktum
+            </h2>
+            <p class="mt-2 text-sm leading-6 text-slate-500" data-assignment-ad-name>
+              Vyberte vazbu pro samostatnou reklamu bez produktoveho feedu.
+            </p>
+          </div>
+          <button
+            type="button"
+            data-assignment-close
+            class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50"
+          >
+            Zavrit
+          </button>
+        </div>
+
+        <div class="mt-5 grid gap-3 sm:grid-cols-4">
+          <button type="button" data-assignment-type="eshop" class="rounded-lg bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm">E-shop</button>
+          <button type="button" data-assignment-type="category" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600">Kategorie</button>
+          <button type="button" data-assignment-type="product" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600">Produkt</button>
+          <button type="button" data-assignment-type="custom-label" class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600">Custom label</button>
+        </div>
+
+        <div class="mt-5 rounded-lg border border-slate-200 bg-slate-50 p-4">
+          <div data-assignment-panel="eshop">
+            <p class="text-sm font-semibold text-slate-950">Prirazeno k e-shopu</p>
+            <p class="mt-1 text-sm text-slate-500">Reklama se automaticky navaze na aktualne vybrany e-shop.</p>
+            <div class="mt-3 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-indigo-700">Vsechny e-shopy</div>
+          </div>
+
+          <label data-assignment-panel="category" class="hidden">
+            <span class="block text-sm font-semibold text-slate-950">Vyber kategorie</span>
+            <select class="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+              <option>Elektronika / Prislusenstvi</option>
+              <option>Domacnost / Akce</option>
+              <option>Sezonni kolekce</option>
+            </select>
+          </label>
+
+          <label data-assignment-panel="product" class="hidden">
+            <span class="block text-sm font-semibold text-slate-950">Zvolte ID produktu</span>
+            <input
+              type="text"
+              placeholder="napr. SKU-10482"
+              class="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+            />
+          </label>
+
+          <div data-assignment-panel="custom-label" class="hidden">
+            <div class="grid gap-3 sm:grid-cols-2">
+              <label>
+                <span class="block text-sm font-semibold text-slate-950">Vyber custom label</span>
+                <select class="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+                  <option>custom_label_0</option>
+                  <option>custom_label_1</option>
+                  <option>custom_label_2</option>
+                  <option>custom_label_3</option>
+                  <option>custom_label_4</option>
+                </select>
+              </label>
+              <label>
+                <span class="block text-sm font-semibold text-slate-950">Hodnota v labelu</span>
+                <select class="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+                  <option>best_seller</option>
+                  <option>sale</option>
+                  <option>new_collection</option>
+                  <option>high_margin</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            data-assignment-close
+            class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50"
+          >
+            Zrusit
+          </button>
+          <button type="button" data-assignment-close class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">
+            Ulozit prirazeni
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script src="/app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stavy objednávek | comse.</title>
+    <link rel="stylesheet" href="/styles.css?v=20260610-order-statuses-base" />
+  </head>
+  <body class="commerce-app order-statuses-page">
+    <main class="analytics-shell">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html" class="is-active">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="analytics-main dashboard-main order-statuses-main">
+        <header class="dashboard-header top-dashboard-card">
+          <div class="dashboard-title-row">
+            <div>
+              <p class="eyebrow-line">Nastavení přehledu</p>
+              <h1>Stavy objednávek</h1>
+              <p>Nastavte, které stavy se započítávají do marketingového a finančního přehledu.</p>
+            </div>
+            <details class="user-menu">
+              <summary>
+                <span>JM</span>
+                <div>
+                  <strong>Jan Mamula</strong>
+                  <small>Správce účtu</small>
+                </div>
+              </summary>
+              <div>
+                <a href="settings.html">Nastavení účtu</a>
+                <a href="api-integrations.html">API napojení</a>
+                <a href="index.html">Odhlásit</a>
+              </div>
+            </details>
+          </div>
+
+          <div class="order-status-context">
+            <span>Aktuálně vybráno</span>
+            <strong data-selected-shop-name>Všechny e-shopy</strong>
+            <a href="dashboard.html">Zpět na přehled</a>
+          </div>
+        </header>
+
+        <section class="order-status-card">
+          <div class="order-status-card-header">
+            <div>
+              <p class="eyebrow-line">Base</p>
+              <h2>Výběr stavů pro výpočty</h2>
+              <p>
+                Přepínače určují, jestli se daný stav objednávky počítá do marketingového nebo finančního pohledu.
+              </p>
+            </div>
+            <span>7 stavů</span>
+          </div>
+
+          <div class="order-status-table-wrap">
+            <div class="order-status-row order-status-head">
+              <span>Stav objednávky</span>
+              <span>Marketingový přehled</span>
+              <span>Finanční přehled</span>
+            </div>
+
+            <div class="order-status-table-body">
+              <div class="order-status-row">
+                <span class="order-status-name">Nová objednávka</span>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">Vyřízená</span>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">Stornovaná</span>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">Zaplacená</span>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">Odeslaná</span>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">V přepravě</span>
+                <div data-toggle-group class="status-toggle flex bg-indigo-50">
+                  <button type="button" class="flex-1 bg-white text-indigo-700 shadow-sm">Zapnout</button>
+                  <button type="button" class="flex-1 text-slate-500">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+              </div>
+
+              <div class="order-status-row">
+                <span class="order-status-name">Vrácená</span>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+                <div data-toggle-group class="status-toggle flex bg-slate-100">
+                  <button type="button" class="flex-1 text-slate-500">Zapnout</button>
+                  <button type="button" class="flex-1 bg-white text-slate-700 shadow-sm">Vypnout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

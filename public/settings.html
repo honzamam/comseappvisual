@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nastavení | comse.</title>
+    <link rel="stylesheet" href="/styles.css?v=20260610-settings-base" />
+  </head>
+  <body class="commerce-app settings-page">
+    <main class="analytics-shell">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html" class="is-active">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="analytics-main dashboard-main settings-main">
+        <header class="dashboard-header top-dashboard-card">
+          <div class="dashboard-title-row">
+            <div>
+              <p class="eyebrow-line">Base</p>
+              <h1>Nastavení</h1>
+              <p>Správa přehledu, marží, stavů objednávek, napojení, předplatného a fakturace.</p>
+            </div>
+            <details class="user-menu">
+              <summary>
+                <span>JM</span>
+                <div>
+                  <strong>Jan Mamula</strong>
+                  <small>Správce účtu</small>
+                </div>
+              </summary>
+              <div>
+                <a href="settings.html">Nastavení účtu</a>
+                <a href="api-integrations.html">API napojení</a>
+                <a href="index.html">Odhlásit</a>
+              </div>
+            </details>
+          </div>
+
+          <div class="order-status-context">
+            <span>Aktuálně vybráno</span>
+            <strong data-selected-shop-name>Všechny e-shopy</strong>
+            <a href="dashboard.html">Zpět na přehled</a>
+          </div>
+        </header>
+
+        <section class="settings-card">
+          <div class="settings-card-header">
+            <div>
+              <p class="eyebrow-line">Nastavení aplikace</p>
+              <h2>Konfigurace přehledu</h2>
+              <p>Rychlé vstupy do základních částí, které ovlivňují výpočty a napojení v dashboardu.</p>
+            </div>
+          </div>
+
+          <div class="settings-link-grid">
+            <a href="order-statuses.html" class="settings-link-card">
+              <span>Nastavení přehledu</span>
+              <strong>Stavy objednávek</strong>
+              <p>Určuje, které objednávky vstupují do marketingového a finančního pohledu.</p>
+            </a>
+
+            <a href="margin-settings.html" class="settings-link-card">
+              <span>Finance</span>
+              <strong>Nastavení marží</strong>
+              <p>Správa marží pro přesnější zisk, PNO a výkon produktů.</p>
+            </a>
+
+            <a href="api-integrations.html" class="settings-link-card">
+              <span>Napojení</span>
+              <strong>API integrace</strong>
+              <p>Kontrola datových zdrojů a připojení e-shopu k reklamním účtům.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="billing-card">
+          <div class="billing-plan">
+            <div>
+              <p class="eyebrow-line">Aktuální předplatné</p>
+              <h2>COMSE Growth</h2>
+              <p>Tarif pro produktovou analytiku, XML feed editor a výkon reklamních účtů.</p>
+            </div>
+            <span>Aktivní</span>
+          </div>
+
+          <div class="billing-grid">
+            <div class="billing-metric">
+              <span>Měsíční cena</span>
+              <strong>2 990 Kč</strong>
+              <p>bez DPH / měsíc</p>
+            </div>
+
+            <div class="billing-metric">
+              <span>Další fakturace</span>
+              <strong>15. 7. 2026</strong>
+              <p>automatické prodloužení</p>
+            </div>
+
+            <div class="billing-metric">
+              <span>Platební metoda</span>
+              <strong>Visa **** 2841</strong>
+              <p>Jan Mamula</p>
+            </div>
+          </div>
+
+          <div class="billing-actions">
+            <a href="#">Zobrazit faktury</a>
+            <a href="#">Změnit tarif</a>
+            <a href="#">Upravit fakturační údaje</a>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

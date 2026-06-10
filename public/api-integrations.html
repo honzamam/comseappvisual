@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API napojení | comse.</title>
+    <link rel="stylesheet" href="/styles.css?v=20260610-api-base" />
+  </head>
+  <body class="commerce-app api-integrations-page">
+    <main class="analytics-shell">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html" class="is-active">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="analytics-main dashboard-main api-integrations-main">
+        <header class="dashboard-header top-dashboard-card">
+          <div class="dashboard-title-row">
+            <div>
+              <p class="eyebrow-line">Napojení</p>
+              <h1>API napojení</h1>
+              <p>Přehled připojených konektorů pro e-shop, objednávky a reklamní kanály.</p>
+            </div>
+            <details class="user-menu">
+              <summary>
+                <span>JM</span>
+                <div>
+                  <strong>Jan Mamula</strong>
+                  <small>Správce účtu</small>
+                </div>
+              </summary>
+              <div>
+                <a href="settings.html">Nastavení účtu</a>
+                <a href="api-integrations.html">API napojení</a>
+                <a href="index.html">Odhlásit</a>
+              </div>
+            </details>
+          </div>
+
+          <div class="order-status-context">
+            <span>Aktuálně vybráno</span>
+            <strong data-selected-shop-name>Všechny e-shopy</strong>
+            <a href="settings.html">Zpět do nastavení</a>
+          </div>
+        </header>
+
+        <section class="api-card">
+          <div class="api-card-header">
+            <div>
+              <p class="eyebrow-line">Konektory</p>
+              <h2>Přehled dostupných napojení</h2>
+              <p>Napojení drží pohromadě data z e-shopu, reklamních účtů a objednávek.</p>
+            </div>
+            <span>4 připojená napojení</span>
+          </div>
+
+          <div class="api-connector-grid">
+            <article class="api-connector-card">
+              <div class="api-connector-icon">
+                <img src="https://www.google.com/s2/favicons?domain=shoptet.cz&sz=128" alt="Shoptet logo" />
+              </div>
+              <div>
+                <span>App</span>
+                <h3>Shoptet</h3>
+                <p>Produkty, objednávky, sklad a XML feed.</p>
+              </div>
+              <em>Připojeno</em>
+            </article>
+
+            <article class="api-connector-card">
+              <div class="api-connector-icon">
+                <img src="https://www.google.com/s2/favicons?domain=meta.com&sz=128" alt="Meta logo" />
+              </div>
+              <div>
+                <span>Ads</span>
+                <h3>Meta Ads</h3>
+                <p>Útrata a výkon kampaní pro produktové vyhodnocení.</p>
+              </div>
+              <em>Připojeno</em>
+            </article>
+
+            <article class="api-connector-card">
+              <div class="api-connector-icon">
+                <img src="https://www.google.com/s2/favicons?domain=ads.google.com&sz=128" alt="Google Ads logo" />
+              </div>
+              <div>
+                <span>Ads</span>
+                <h3>Google Ads</h3>
+                <p>Nákupy, útrata, PNO a zisk pro produktový přehled.</p>
+              </div>
+              <em>Připojeno</em>
+            </article>
+
+            <article class="api-connector-card">
+              <div class="api-connector-icon">
+                <img src="https://www.google.com/s2/favicons?domain=sklik.cz&sz=128" alt="Sklik logo" />
+              </div>
+              <div>
+                <span>Ads</span>
+                <h3>Sklik</h3>
+                <p>Reklamní výkon a import nákladů pro české kampaně.</p>
+              </div>
+              <em>Připojeno</em>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

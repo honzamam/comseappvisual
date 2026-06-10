@@ -1,0 +1,1322 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produkty XML feedu | COMSE Administrace</title>
+    <link rel="stylesheet" href="/styles.css?v=20260606-xml-products7" />
+    <link rel="stylesheet" href="/xml-feed-products.css?v=20260606-auto-rules-column1" />
+  </head>
+  <body class="xml-feed-products-page min-h-screen bg-slate-50 text-slate-950 antialiased">
+    <main class="grid min-h-screen lg:grid-cols-[280px_1fr]">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html" class="is-active">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="bg-slate-50">
+        <header class="xml-editor-hero flex flex-col gap-4 border-b border-indigo-100 bg-white px-5 py-5 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+          <div>
+            <p class="text-sm font-medium text-indigo-700">Produktovy editor XML feedu</p>
+            <h1 class="mt-1 text-2xl font-semibold tracking-normal text-slate-950">Google reklama - produkty ve feedu</h1>
+            <p class="mt-1 text-sm text-slate-500">Aktualne vybrano: <span data-selected-shop-name class="font-medium text-indigo-700">Vsechny e-shopy</span></p>
+          </div>
+          <a href="performance-xml.html?v=20260606-xml-products4" class="w-full rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-center text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50 sm:w-auto">
+            Zpet na XML feedy
+          </a>
+        </header>
+
+        <div class="px-5 py-6 lg:px-8">
+          <section class="rounded-xl border border-indigo-100 bg-white p-5 shadow-sm shadow-indigo-100/50 sm:p-6">
+            <div class="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+              <div>
+                <p class="text-sm font-medium text-violet-700">XML feed /feeds/google-ads-performance.xml</p>
+                <h2 class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Produkty, vykon a upravitelne XML parametry</h2>
+                <p class="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
+                  ID produktu je pouze identifikace. Ostatni XML atributy lze upravit primo u konkretniho produktu.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+	                  <button type="button" data-feed-ai-analysis-open class="rounded-lg border border-violet-100 bg-white px-4 py-2.5 text-sm font-semibold text-violet-700 shadow-sm transition hover:bg-violet-50">
+	                    Analyza feedu COMSE AI
+	                  </button>
+	                  <button type="button" data-bulk-rules-open class="rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50">
+	                    Hromadna pravidla
+	                  </button>
+	                  <button type="button" data-custom-label-rules-open data-custom-label-open-action="rules" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">
+	                    Automaticka pravidla labelu
+	                  </button>
+	                  <button type="button" data-custom-label-rules-open data-custom-label-open-action="create" class="rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50">
+	                    Vytvorit custom label
+	                  </button>
+                </div>
+              </div>
+	              <div class="grid gap-2 sm:min-w-[240px]">
+	                <div class="rounded-lg bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Produkty</p><p class="mt-1 text-lg font-semibold text-slate-950">1 248</p></div>
+	                <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3">
+	                  <div class="flex items-center justify-between gap-3">
+	                    <p class="text-xs font-semibold uppercase tracking-normal text-emerald-700">Automaticka pravidla labelu</p>
+	                    <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white">Zapnuto</span>
+	                  </div>
+	                  <p class="mt-2 text-sm font-semibold text-slate-950">custom_label_0 = top_vykon</p>
+	                  <p class="mt-1 text-xs leading-5 text-emerald-700">Hero produkty: PNO &lt; 18 %, ROAS &gt; 6x, scoring 85+</p>
+	                </div>
+	              </div>
+            </div>
+
+            <div class="mt-5 grid gap-3 md:grid-cols-4 xl:grid-cols-6">
+              <label class="block md:col-span-2">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Vyhledat produkt</span>
+                <input type="text" value="Trail Runner Pro" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" />
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Stav uprav</span>
+                <select class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">
+                  <option>Vsechny produkty</option>
+                  <option>Jen upravene</option>
+                  <option>Bez uprav</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Custom label</span>
+                <select class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">
+                  <option>Vsechny custom labely</option>
+                  <option>custom_label_0: top_vykon</option>
+                  <option>custom_label_1: high_roas</option>
+                  <option>custom_label_1: high_pno</option>
+                  <option>custom_label_4: omezit_bid</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Vykon</span>
+                <select class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">
+                  <option>Vsechen vykon</option>
+                  <option>Hero produkty</option>
+                  <option>Top vykon</option>
+                  <option>Ke kontrole</option>
+                  <option>Rizikove produkty</option>
+                  <option>PNO pod 18 %</option>
+                  <option>ROAS nad 6x</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Od</span>
+                <input type="date" value="2026-05-11" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" />
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Do</span>
+                <input type="date" value="2026-06-10" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" />
+              </label>
+              <label class="block">
+                <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Kategorie produktu</span>
+                <select class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">
+                  <option>Vsechny kategorie</option>
+                  <option>Bezecke boty</option>
+                  <option>Batohy</option>
+                  <option>Lahve</option>
+                  <option>Outdoor bundy</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="advanced-product-filters mt-5" data-product-advanced-filters>
+              <div class="advanced-filter-heading">
+                <div>
+                  <p>Pokrocile filtry</p>
+                  <h4>Kombinace pravidel nad vykonem, XML atributy a produktem</h4>
+                </div>
+                <span data-product-filter-count>2 aktivni filtry</span>
+              </div>
+
+              <div class="advanced-filter-list" data-product-filter-list>
+                <div class="advanced-filter-rule" data-product-filter-rule>
+                  <label>
+                    <span>Atribut</span>
+                    <select data-product-filter-field>
+                      <optgroup label="Google Ads">
+                        <option selected>Google Ads utrata</option>
+                        <option>Google Ads PNO</option>
+                        <option>Google Ads zisk</option>
+                        <option>Google Ads ROAS</option>
+                        <option>Google Ads konverze</option>
+                        <option>Google Ads CPC</option>
+                        <option>Google Ads CTR</option>
+                      </optgroup>
+                      <optgroup label="Meta Ads">
+                        <option>Meta Ads utrata</option>
+                        <option>Meta Ads CTR</option>
+                        <option>Meta Ads CPC</option>
+                        <option>Meta Ads kliknuti</option>
+                      </optgroup>
+                      <optgroup label="Eshop">
+                        <option>Eshop trzby</option>
+                        <option>Eshop PNO</option>
+                        <option>Eshop zisk</option>
+                        <option>Prodane ks</option>
+                        <option>Sklad</option>
+                        <option>Storno %</option>
+                      </optgroup>
+                      <optgroup label="Produkt">
+                        <option>Cena produktu</option>
+                        <option>Marze</option>
+                        <option>Marze %</option>
+                        <option>Kategorie</option>
+                        <option>Dostupnost</option>
+                      </optgroup>
+                      <optgroup label="XML">
+                        <option>custom_label_0</option>
+                        <option>custom_label_1</option>
+                        <option>custom_label_2</option>
+                        <option>custom_label_3</option>
+                        <option>custom_label_4</option>
+                        <option>XML uprava</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Podminka</span>
+                    <select data-product-filter-operator>
+                      <option selected>je vetsi nez</option>
+                      <option>neni vyssi nez</option>
+                      <option>je mensi nez</option>
+                      <option>je alespon</option>
+                      <option>je presne</option>
+                      <option>obsahuje</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Hodnota</span>
+                    <input data-product-filter-value type="text" value="3 000 Kc" />
+                  </label>
+                  <button type="button" data-product-filter-remove aria-label="Odebrat filtr">&times;</button>
+                </div>
+
+                <div class="advanced-filter-rule" data-product-filter-rule>
+                  <label>
+                    <span>Atribut</span>
+                    <select data-product-filter-field>
+                      <optgroup label="Google Ads">
+                        <option>Google Ads utrata</option>
+                        <option>Google Ads PNO</option>
+                        <option>Google Ads zisk</option>
+                        <option>Google Ads ROAS</option>
+                        <option>Google Ads konverze</option>
+                        <option>Google Ads CPC</option>
+                        <option>Google Ads CTR</option>
+                      </optgroup>
+                      <optgroup label="Meta Ads">
+                        <option>Meta Ads utrata</option>
+                        <option>Meta Ads CTR</option>
+                        <option>Meta Ads CPC</option>
+                        <option>Meta Ads kliknuti</option>
+                      </optgroup>
+                      <optgroup label="Eshop">
+                        <option>Eshop trzby</option>
+                        <option selected>Eshop PNO</option>
+                        <option>Eshop zisk</option>
+                        <option>Prodane ks</option>
+                        <option>Sklad</option>
+                        <option>Storno %</option>
+                      </optgroup>
+                      <optgroup label="Produkt">
+                        <option>Cena produktu</option>
+                        <option>Marze</option>
+                        <option>Marze %</option>
+                        <option>Kategorie</option>
+                        <option>Dostupnost</option>
+                      </optgroup>
+                      <optgroup label="XML">
+                        <option>custom_label_0</option>
+                        <option>custom_label_1</option>
+                        <option>custom_label_2</option>
+                        <option>custom_label_3</option>
+                        <option>custom_label_4</option>
+                        <option>XML uprava</option>
+                      </optgroup>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Podminka</span>
+                    <select data-product-filter-operator>
+                      <option>je vetsi nez</option>
+                      <option selected>neni vyssi nez</option>
+                      <option>je mensi nez</option>
+                      <option>je alespon</option>
+                      <option>je presne</option>
+                      <option>obsahuje</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Hodnota</span>
+                    <input data-product-filter-value type="text" value="20 %" />
+                  </label>
+                  <button type="button" data-product-filter-remove aria-label="Odebrat filtr">&times;</button>
+                </div>
+              </div>
+
+              <div class="advanced-filter-actions">
+                <button type="button" data-product-filter-add>Pridat dalsi filtr</button>
+                <p>Filtry se vyhodnocuji soucasne, napr. Google Ads utrata je vetsi nez 3 000 Kc, Eshop PNO neni vyssi nez 20 %, sklad je alespon 10 ks nebo marze je vetsi nez 40 %.</p>
+              </div>
+            </div>
+
+            <div class="mt-5 overflow-x-auto rounded-lg border border-slate-200">
+              <div class="xml-products-row grid gap-3 bg-slate-50 px-4 py-3 text-xs font-semibold uppercase tracking-normal text-slate-500">
+                <span>Produkt</span>
+                <span>Google Ads</span>
+                <span>Meta Ads</span>
+                <span>Eshop</span>
+                <span>custom_label_0</span>
+                <span>custom_label_1</span>
+                <span>custom_label_2</span>
+                <span>custom_label_3</span>
+                <span>custom_label_4</span>
+                <span>Scoring</span>
+                <span>Pravidla labelu</span>
+                <span>XML upravy</span>
+              </div>
+
+              <div class="xml-products-table divide-y divide-slate-200 bg-white text-sm">
+                <details open>
+                  <summary class="cursor-pointer list-none">
+                    <div class="xml-products-row grid items-start gap-3 px-4 py-4 text-slate-700">
+                      <div class="flex items-start gap-2"><span class="mt-1 text-xs font-semibold text-indigo-600">&rsaquo;</span><div><p class="font-semibold text-slate-950">Trail Runner Pro</p><p class="mt-1 text-xs text-slate-500">ID TRP-042 - 3 varianty - Bezecke boty</p></div></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>8 900 Kc</strong></span><span>Zisk <strong class="text-emerald-700">28 580 Kc</strong></span><span>PNO <strong class="text-emerald-700">14,0 %</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>3 500 Kc</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Trzby <strong>86 900 Kc</strong></span><span>Prodana ks <strong>87 ks</strong></span><span>PNO <strong class="text-emerald-700">15,5 %</strong></span><span>Zisk <strong class="text-emerald-700">37 420 Kc</strong></span></div>
+                      <div class="custom-label-cell text-xs"><span>sport</span></div>
+                      <div class="custom-label-cell text-xs"><span>high_roas</span></div>
+                      <div class="custom-label-cell text-xs"><span>jaro</span></div>
+                      <div class="custom-label-cell text-xs"><span>black</span></div>
+                      <div class="custom-label-cell text-xs"><span>skladem</span></div>
+                      <div class="w-fit rounded-lg bg-emerald-50 px-3 py-2 text-xs font-semibold leading-5 text-emerald-700 ring-1 ring-emerald-100"><strong class="block text-sm text-emerald-700">92 / 100</strong><span>Top vykon</span></div>
+                      <div class="grid w-fit gap-1 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-semibold leading-5 text-emerald-700"><span>Zapnuto</span><strong class="text-slate-950">custom_label_0</strong><span>top_vykon</span></div>
+	                      <span class="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-200">Puvodni</span>
+                    </div>
+                  </summary>
+                  <div class="bg-indigo-50/40 px-4 pb-5">
+                    <div class="rounded-lg border border-indigo-100 bg-white p-4">
+                      <div class="xml-expanded-metrics">
+                        <div>
+                          <span>Google Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>8 900 Kc</dd></div>
+                            <div><dt>Konverze</dt><dd>64</dd></div>
+                            <div><dt>PNO</dt><dd class="text-emerald-700">14,0 %</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-emerald-700">28 580 Kc</dd></div>
+                            <div><dt>Hodnota konverzi</dt><dd>63 700 Kc</dd></div>
+                            <div><dt>ROAS</dt><dd>7,2x</dd></div>
+                            <div><dt>Cena za konverzi</dt><dd>139 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>2 180</dd></div>
+                            <div><dt>CPC</dt><dd>4,08 Kc</dd></div>
+                            <div><dt>CTR</dt><dd>4,6 %</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Meta Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>3 500 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>670</dd></div>
+                            <div><dt>CTR</dt><dd>3,8 %</dd></div>
+                            <div><dt>CPC</dt><dd>5,22 Kc</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Eshop</span>
+                          <dl>
+                            <div><dt>PNO</dt><dd class="text-emerald-700">15,5 %</dd></div>
+                            <div><dt>Trzby</dt><dd>86 900 Kc</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-emerald-700">37 420 Kc</dd></div>
+                            <div><dt>Prodanych polozek</dt><dd>87 ks</dd></div>
+                            <div><dt>Skladem</dt><dd>142 ks</dd></div>
+                            <div><dt>Storno %</dt><dd>6,7 %</dd></div>
+                            <div><dt>Hodnota storna</dt><dd>5 800 Kc</dd></div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="grid gap-4 xl:grid-cols-[280px_1fr]">
+                        <div>
+                          <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Identifikace</p>
+                          <div class="mt-3 grid gap-2 text-sm">
+                            <div class="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">id</span><strong class="mt-1 block text-slate-800">TRP-042</strong></div>
+	                            <div class="overflow-hidden rounded-lg border border-slate-200 bg-white">
+	                              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=520&h=360&q=80" alt="Hlavni obrazek Trail Runner Pro" class="aspect-[4/3] w-full object-cover" />
+	                              <div class="px-3 py-2 text-xs font-semibold text-slate-500">Hlavni obrazek</div>
+	                            </div>
+	                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">image_link</span><input type="text" value="{main_image_url}" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+	                            <button type="button" data-image-edit-open data-image-edit-product="Trail Runner Pro" class="w-full rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100">Editovat</button>
+	                            <div class="product-labels product-labels-xml text-xs"><span>custom_label_0: sport</span><span>custom_label_1: high_roas</span><span>custom_label_2: jaro</span><span>custom_label_3: black</span><span>custom_label_4: skladem</span></div>
+                          </div>
+                        </div>
+                        <div class="grid gap-3 md:grid-cols-2">
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">title</span><input type="text" value="Trail Runner Pro - lehke bezecke boty" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">additional_image_link</span><textarea rows="2" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">{trail_lifestyle_image_url}, {trail_detail_image_url}, {trail_size_image_url}</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-2">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">price</span><input type="text" value="2490 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">sale_price</span><input type="text" value="2190 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-4">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">availability</span><input type="text" value="in_stock" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_quantity</span><input type="text" value="42" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_status</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">delivery_time</span><input type="text" value="1-2 dny" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">description</span><textarea rows="3" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">Lehke bezecke boty Trail Runner Pro pro rychly trenink i delsi vybehy. Stabilni podrazka, prodysny svršek a dobra navratnost energie.</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">color</span><input type="text" value="black" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">size</span><input type="text" value="42" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">material</span><input type="text" value="mesh, rubber" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">product_type</span><input type="text" value="Sport > Bezecke boty" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">google_product_category</span><input type="text" value="Apparel &amp; Accessories > Shoes" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">item_group_id</span><input type="text" value="TRP-042" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <div class="grid gap-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">brand</span><input type="text" value="RunLab" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">gtin</span><input type="text" value="8590001234567" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">mpn</span><input type="text" value="TRP-042" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-5">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_0</span><input type="text" value="sport" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_1</span><input type="text" value="high_roas" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_2</span><input type="text" value="jaro" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_3</span><input type="text" value="black" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_4</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="cursor-pointer list-none">
+                    <div class="xml-products-row grid items-start gap-3 px-4 py-4 text-slate-700">
+                      <div class="flex items-start gap-2"><span class="mt-1 text-xs font-semibold text-indigo-600">&rsaquo;</span><div><p class="font-semibold text-slate-950">City Backpack 24L</p><p class="mt-1 text-xs text-slate-500">ID CBP-118 - 5 variant - Batohy</p></div></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>5 420 Kc</strong></span><span>Zisk <strong class="text-emerald-700">18 940 Kc</strong></span><span>PNO <strong class="text-emerald-700">12,6 %</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>2 180 Kc</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Trzby <strong>43 100 Kc</strong></span><span>Prodana ks <strong>52 ks</strong></span><span>PNO <strong class="text-emerald-700">14,8 %</strong></span><span>Zisk <strong class="text-emerald-700">20 360 Kc</strong></span></div>
+                      <div class="custom-label-cell text-xs"><span>accessories</span></div>
+                      <div class="custom-label-cell text-xs"><span>high_roas</span></div>
+                      <div class="custom-label-cell text-xs"><span>evergreen</span></div>
+                      <div class="custom-label-cell text-xs"><span>black</span></div>
+                      <div class="custom-label-cell text-xs"><span>skladem</span></div>
+                      <div class="w-fit rounded-lg bg-emerald-50 px-3 py-2 text-xs font-semibold leading-5 text-emerald-700 ring-1 ring-emerald-100"><strong class="block text-sm text-emerald-700">89 / 100</strong><span>Po uprave</span></div>
+                      <div class="grid w-fit gap-1 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-semibold leading-5 text-emerald-700"><span>Vyhovuje</span><strong class="text-slate-950">custom_label_0</strong><span>top_vykon</span></div>
+	                      <span class="xml-change-state is-manual group relative">
+	                        <strong>Manualni</strong>
+	                        <em>Upraveno</em>
+	                        <span class="pointer-events-none absolute right-0 top-full z-20 mt-2 hidden w-56 rounded-lg border border-emerald-100 bg-white p-3 text-left text-xs font-medium leading-5 text-slate-600 shadow-2xl shadow-slate-900/20 group-hover:block">
+	                          Manualne upraveno: title, sale_price, custom_label_1, image_link
+	                        </span>
+	                      </span>
+                    </div>
+                  </summary>
+                  <div class="bg-indigo-50/40 px-4 pb-5">
+                    <div class="rounded-lg border border-indigo-100 bg-white p-4">
+                      <div class="xml-expanded-metrics">
+                        <div>
+                          <span>Google Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>5 420 Kc</dd></div>
+                            <div><dt>Konverze</dt><dd>39</dd></div>
+                            <div><dt>PNO</dt><dd class="text-emerald-700">12,6 %</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-emerald-700">18 940 Kc</dd></div>
+                            <div><dt>Hodnota konverzi</dt><dd>42 900 Kc</dd></div>
+                            <div><dt>ROAS</dt><dd>7,9x</dd></div>
+                            <div><dt>Cena za konverzi</dt><dd>139 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>1 260</dd></div>
+                            <div><dt>CPC</dt><dd>4,30 Kc</dd></div>
+                            <div><dt>CTR</dt><dd>4,8 %</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Meta Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>2 180 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>412</dd></div>
+                            <div><dt>CTR</dt><dd>4,1 %</dd></div>
+                            <div><dt>CPC</dt><dd>5,29 Kc</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Eshop</span>
+                          <dl>
+                            <div><dt>PNO</dt><dd class="text-emerald-700">14,8 %</dd></div>
+                            <div><dt>Trzby</dt><dd>43 100 Kc</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-emerald-700">20 360 Kc</dd></div>
+                            <div><dt>Prodanych polozek</dt><dd>52 ks</dd></div>
+                            <div><dt>Skladem</dt><dd>18 ks</dd></div>
+                            <div><dt>Storno %</dt><dd>3,9 %</dd></div>
+                            <div><dt>Hodnota storna</dt><dd>1 680 Kc</dd></div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="grid gap-4 xl:grid-cols-[280px_1fr]">
+                        <div>
+                          <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Identifikace</p>
+                          <div class="mt-3 grid gap-2 text-sm">
+                            <div class="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">id</span><strong class="mt-1 block text-slate-800">CBP-118</strong></div>
+	                            <div class="rounded-lg border border-emerald-200 bg-emerald-50 p-2 ring-2 ring-emerald-100">
+	                              <div class="grid gap-2 sm:grid-cols-2">
+	                                <div class="overflow-hidden rounded-lg border border-slate-200 bg-white">
+	                                  <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=520&h=360&q=80" alt="Puvodni obrazek City Backpack 24L" class="aspect-[4/3] w-full object-cover opacity-60 grayscale" />
+	                                  <div class="px-2 py-1.5 text-xs font-semibold text-slate-500">Puvodni</div>
+	                                </div>
+	                                <div class="overflow-hidden rounded-lg border border-emerald-300 bg-white shadow-sm">
+	                                  <div class="relative">
+	                                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=520&h=360&q=80" alt="Upraveny obrazek City Backpack 24L" class="aspect-[4/3] w-full object-cover contrast-125 saturate-150" />
+	                                    <span class="absolute left-2 top-2 rounded-full bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white shadow-sm">novy</span>
+	                                  </div>
+	                                  <div class="px-2 py-1.5 text-xs font-semibold text-emerald-700">Upraveny</div>
+	                                </div>
+	                              </div>
+	                              <div class="mt-2 flex items-center justify-between gap-2 px-1 text-xs font-semibold text-emerald-700">
+	                                <span>Hlavni obrazek</span>
+	                                <span class="rounded-full bg-white px-2 py-0.5 text-emerald-700 ring-1 ring-emerald-100">upraveno</span>
+	                              </div>
+	                            </div>
+	                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">image_link</span><input type="text" value="{backpack_main_image_url}" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+	                            <button type="button" data-image-edit-open data-image-edit-product="City Backpack 24L" class="w-full rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100">Editovat</button>
+	                            <div class="product-labels product-labels-xml text-xs"><span>custom_label_0: accessories</span><span>custom_label_1: high_roas</span><span>custom_label_2: evergreen</span><span>custom_label_3: black</span><span>custom_label_4: skladem</span></div>
+                          </div>
+                        </div>
+                        <div class="grid gap-3 md:grid-cols-2">
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">title</span><input type="text" value="City Backpack 24L - mestsky batoh" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">additional_image_link</span><textarea rows="2" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">{backpack_lifestyle_image_url}, {backpack_detail_image_url}, {backpack_inside_image_url}</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-2">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">price</span><input type="text" value="1790 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">sale_price</span><input type="text" value="1590 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-4">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">availability</span><input type="text" value="in_stock" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_quantity</span><input type="text" value="18" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_status</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">delivery_time</span><input type="text" value="2-3 dny" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">description</span><textarea rows="3" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">Odolny mestsky batoh s kapsou na notebook, pevnymi zipy a vodoodpudivou upravou.</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">color</span><input type="text" value="olive" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">size</span><input type="text" value="24L" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">material</span><input type="text" value="polyester" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">product_type</span><input type="text" value="Doplnky > Batohy" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">google_product_category</span><input type="text" value="Luggage &amp; Bags > Backpacks" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">item_group_id</span><input type="text" value="CBP-118" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <div class="grid gap-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">brand</span><input type="text" value="UrbanPack" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">gtin</span><input type="text" value="8590001180240" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">mpn</span><input type="text" value="CBP-118" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-5">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_0</span><input type="text" value="accessories" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_1</span><input type="text" value="high_roas" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_2</span><input type="text" value="evergreen" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_3</span><input type="text" value="black" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_4</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="cursor-pointer list-none">
+                    <div class="xml-products-row grid items-start gap-3 px-4 py-4 text-slate-700">
+                      <div class="flex items-start gap-2"><span class="mt-1 text-xs font-semibold text-indigo-600">&rsaquo;</span><div><p class="font-semibold text-slate-950">Hydro Bottle Steel</p><p class="mt-1 text-xs text-slate-500">ID HBS-640 - 4 varianty - Lahve</p></div></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>2 950 Kc</strong></span><span>Zisk <strong class="text-amber-700">4 620 Kc</strong></span><span>PNO <strong class="text-amber-700">18,4 %</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>1 260 Kc</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Trzby <strong>16 050 Kc</strong></span><span>Prodana ks <strong>71 ks</strong></span><span>PNO <strong class="text-amber-700">26,2 %</strong></span><span>Zisk <strong class="text-emerald-700">5 180 Kc</strong></span></div>
+                      <div class="custom-label-cell text-xs"><span>bottle</span></div>
+                      <div class="custom-label-cell text-xs"><span>margin_ok</span></div>
+                      <div class="custom-label-cell text-xs"><span>summer</span></div>
+                      <div class="custom-label-cell text-xs"><span>steel</span></div>
+                      <div class="custom-label-cell text-xs"><span>skladem</span></div>
+                      <div class="w-fit rounded-lg bg-amber-50 px-3 py-2 text-xs font-semibold leading-5 text-amber-700 ring-1 ring-amber-100"><strong class="block text-sm text-amber-700">74 / 100</strong><span>Ke kontrole</span></div>
+                      <div class="grid w-fit gap-1 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs font-semibold leading-5 text-amber-700"><span>Mimo pravidlo</span><strong class="text-slate-950">PNO 18,4 %</strong><span>limit 18 %</span></div>
+	                      <span class="group relative w-fit rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-700 ring-1 ring-amber-100">
+	                        Upraveno
+	                        <span class="pointer-events-none absolute right-0 top-full z-20 mt-2 hidden w-56 rounded-lg border border-amber-100 bg-white p-3 text-left text-xs font-medium leading-5 text-slate-600 shadow-2xl shadow-slate-900/20 group-hover:block">
+	                          Upraveno: price, stock_quantity, delivery_time
+	                        </span>
+	                      </span>
+                    </div>
+                  </summary>
+                  <div class="bg-indigo-50/40 px-4 pb-5">
+                    <div class="rounded-lg border border-indigo-100 bg-white p-4">
+                      <div class="xml-expanded-metrics">
+                        <div>
+                          <span>Google Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>2 950 Kc</dd></div>
+                            <div><dt>Konverze</dt><dd>28</dd></div>
+                            <div><dt>PNO</dt><dd class="text-amber-700">18,4 %</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-amber-700">4 620 Kc</dd></div>
+                            <div><dt>Hodnota konverzi</dt><dd>16 050 Kc</dd></div>
+                            <div><dt>ROAS</dt><dd>5,4x</dd></div>
+                            <div><dt>Cena za konverzi</dt><dd>105 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>790</dd></div>
+                            <div><dt>CPC</dt><dd>3,73 Kc</dd></div>
+                            <div><dt>CTR</dt><dd>3,6 %</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Meta Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>1 260 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>289</dd></div>
+                            <div><dt>CTR</dt><dd>3,2 %</dd></div>
+                            <div><dt>CPC</dt><dd>4,36 Kc</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Eshop</span>
+                          <dl>
+                            <div><dt>PNO</dt><dd class="text-amber-700">26,2 %</dd></div>
+                            <div><dt>Trzby</dt><dd>16 050 Kc</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-emerald-700">5 180 Kc</dd></div>
+                            <div><dt>Prodanych polozek</dt><dd>71 ks</dd></div>
+                            <div><dt>Skladem</dt><dd>96 ks</dd></div>
+                            <div><dt>Storno %</dt><dd>2,1 %</dd></div>
+                            <div><dt>Hodnota storna</dt><dd>340 Kc</dd></div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="grid gap-4 xl:grid-cols-[280px_1fr]">
+                        <div>
+                          <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Identifikace</p>
+                          <div class="mt-3 grid gap-2 text-sm">
+                            <div class="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">id</span><strong class="mt-1 block text-slate-800">HBS-640</strong></div>
+	                            <div class="overflow-hidden rounded-lg border border-slate-200 bg-white">
+	                              <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=520&h=360&q=80" alt="Hlavni obrazek Hydro Bottle Steel" class="aspect-[4/3] w-full object-cover" />
+	                              <div class="px-3 py-2 text-xs font-semibold text-slate-500">Hlavni obrazek</div>
+	                            </div>
+	                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">image_link</span><input type="text" value="{bottle_main_image_url}" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+	                            <button type="button" data-image-edit-open data-image-edit-product="Hydro Bottle Steel" class="w-full rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100">Editovat</button>
+	                            <div class="product-labels product-labels-xml text-xs"><span>custom_label_0: bottle</span><span>custom_label_1: margin_ok</span><span>custom_label_2: summer</span><span>custom_label_3: steel</span><span>custom_label_4: skladem</span></div>
+                          </div>
+                        </div>
+                        <div class="grid gap-3 md:grid-cols-2">
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">title</span><input type="text" value="Hydro Bottle Steel - nerezova lahev" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">additional_image_link</span><textarea rows="2" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">{bottle_lifestyle_image_url}, {bottle_cap_image_url}, {bottle_detail_image_url}</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-2">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">price</span><input type="text" value="690 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">sale_price</span><input type="text" value="590 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-4">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">availability</span><input type="text" value="in_stock" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_quantity</span><input type="text" value="96" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_status</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">delivery_time</span><input type="text" value="1-2 dny" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">description</span><textarea rows="3" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">Nerezova termolahev pro sport i bezny den, drzi teplotu a ma tesnici vicko.</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">color</span><input type="text" value="silver" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">size</span><input type="text" value="750 ml" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">material</span><input type="text" value="stainless steel" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">product_type</span><input type="text" value="Sport > Lahve" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">google_product_category</span><input type="text" value="Sporting Goods > Outdoor Recreation > Camping &amp; Hiking > Hydration Systems" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">item_group_id</span><input type="text" value="HBS-640" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <div class="grid gap-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">brand</span><input type="text" value="HydroPeak" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">gtin</span><input type="text" value="8590006407501" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">mpn</span><input type="text" value="HBS-640" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-5">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_0</span><input type="text" value="bottle" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_1</span><input type="text" value="margin_ok" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_2</span><input type="text" value="summer" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_3</span><input type="text" value="steel" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_4</span><input type="text" value="skladem" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+                <details>
+                  <summary class="cursor-pointer list-none">
+                    <div class="xml-products-row grid items-start gap-3 px-4 py-4 text-slate-700">
+                      <div class="flex items-start gap-2"><span class="mt-1 text-xs font-semibold text-indigo-600">&rsaquo;</span><div><p class="font-semibold text-slate-950">Softshell Jacket Core</p><p class="mt-1 text-xs text-slate-500">ID SJC-220 - 6 variant - Outdoor bundy</p></div></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>11 300 Kc</strong></span><span>Zisk <strong class="text-rose-700">-1 860 Kc</strong></span><span>PNO <strong class="text-rose-700">28,9 %</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Utrata <strong>4 780 Kc</strong></span></div>
+                      <div class="channel-metrics text-xs"><span>Trzby <strong>39 100 Kc</strong></span><span>Prodana ks <strong>31 ks</strong></span><span>PNO <strong class="text-rose-700">41,1 %</strong></span><span>Zisk <strong class="text-rose-700">-2 740 Kc</strong></span></div>
+                      <div class="custom-label-cell text-xs"><span>outdoor</span></div>
+                      <div class="custom-label-cell text-xs"><span>high_pno</span></div>
+                      <div class="custom-label-cell text-xs"><span>autumn</span></div>
+                      <div class="custom-label-cell text-xs"><span>men</span></div>
+                      <div class="custom-label-cell text-xs"><span>omezit_bid</span></div>
+                      <div class="w-fit rounded-lg bg-rose-50 px-3 py-2 text-xs font-semibold leading-5 text-rose-700 ring-1 ring-rose-100"><strong class="block text-sm text-rose-700">48 / 100</strong><span>Rizikove</span></div>
+                      <div class="grid w-fit gap-1 rounded-lg border border-rose-100 bg-rose-50 px-3 py-2 text-xs font-semibold leading-5 text-rose-700"><span>Vylouceno</span><strong class="text-slate-950">ROAS 3,5x</strong><span>limit 6x</span></div>
+	                      <span class="group relative w-fit rounded-full bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700 ring-1 ring-rose-100">
+	                        Upraveno
+	                        <span class="pointer-events-none absolute right-0 top-full z-20 mt-2 hidden w-56 rounded-lg border border-rose-100 bg-white p-3 text-left text-xs font-medium leading-5 text-slate-600 shadow-2xl shadow-slate-900/20 group-hover:block">
+	                          Upraveno: availability, stock_status, custom_label_1, custom_label_4
+	                        </span>
+	                      </span>
+                    </div>
+                  </summary>
+                  <div class="bg-indigo-50/40 px-4 pb-5">
+                    <div class="rounded-lg border border-indigo-100 bg-white p-4">
+                      <div class="xml-expanded-metrics">
+                        <div>
+                          <span>Google Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>11 300 Kc</dd></div>
+                            <div><dt>Konverze</dt><dd>41</dd></div>
+                            <div><dt>PNO</dt><dd class="text-rose-700">28,9 %</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-rose-700">-1 860 Kc</dd></div>
+                            <div><dt>Hodnota konverzi</dt><dd>39 100 Kc</dd></div>
+                            <div><dt>ROAS</dt><dd>3,5x</dd></div>
+                            <div><dt>Cena za konverzi</dt><dd>276 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>2 940</dd></div>
+                            <div><dt>CPC</dt><dd>3,84 Kc</dd></div>
+                            <div><dt>CTR</dt><dd>2,9 %</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Meta Ads</span>
+                          <dl>
+                            <div><dt>Utrata</dt><dd>4 780 Kc</dd></div>
+                            <div><dt>Kliknuti</dt><dd>523</dd></div>
+                            <div><dt>CTR</dt><dd>2,6 %</dd></div>
+                            <div><dt>CPC</dt><dd>9,14 Kc</dd></div>
+                          </dl>
+                        </div>
+                        <div>
+                          <span>Eshop</span>
+                          <dl>
+                            <div><dt>PNO</dt><dd class="text-rose-700">41,1 %</dd></div>
+                            <div><dt>Trzby</dt><dd>39 100 Kc</dd></div>
+                            <div><dt>Zisk</dt><dd class="text-rose-700">-2 740 Kc</dd></div>
+                            <div><dt>Prodanych polozek</dt><dd>31 ks</dd></div>
+                            <div><dt>Skladem</dt><dd>7 ks</dd></div>
+                            <div><dt>Storno %</dt><dd>8,2 %</dd></div>
+                            <div><dt>Hodnota storna</dt><dd>3 210 Kc</dd></div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="grid gap-4 xl:grid-cols-[280px_1fr]">
+                        <div>
+                          <p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Identifikace</p>
+                          <div class="mt-3 grid gap-2 text-sm">
+                            <div class="rounded-lg border border-slate-200 bg-slate-100 px-3 py-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">id</span><strong class="mt-1 block text-slate-800">SJC-220</strong></div>
+	                            <div class="overflow-hidden rounded-lg border border-slate-200 bg-white">
+	                              <img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?auto=format&fit=crop&w=520&h=360&q=80" alt="Hlavni obrazek Softshell Jacket Core" class="aspect-[4/3] w-full object-cover" />
+	                              <div class="px-3 py-2 text-xs font-semibold text-slate-500">Hlavni obrazek</div>
+	                            </div>
+	                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">image_link</span><input type="text" value="{jacket_main_image_url}" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+	                            <button type="button" data-image-edit-open data-image-edit-product="Softshell Jacket Core" class="w-full rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100">Editovat</button>
+	                            <div class="product-labels product-labels-xml text-xs"><span>custom_label_0: outdoor</span><span>custom_label_1: high_pno</span><span>custom_label_2: autumn</span><span>custom_label_3: men</span><span>custom_label_4: omezit_bid</span></div>
+                          </div>
+                        </div>
+                        <div class="grid gap-3 md:grid-cols-2">
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">title</span><input type="text" value="Softshell Jacket Core - panska bunda" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">additional_image_link</span><textarea rows="2" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">{jacket_lifestyle_image_url}, {jacket_detail_image_url}, {jacket_hood_image_url}</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-2">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">price</span><input type="text" value="3290 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">sale_price</span><input type="text" value="2990 CZK" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-4">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">availability</span><input type="text" value="limited_availability" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_quantity</span><input type="text" value="7" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">stock_status</span><input type="text" value="posledni kusy" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">delivery_time</span><input type="text" value="3-5 dnu" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block md:col-span-2"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">description</span><textarea rows="3" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100">Softshellova bunda do premenliveho pocasi s vetruodolnou membranou a nastavitelnou kapuci.</textarea></label>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">color</span><input type="text" value="navy" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">size</span><input type="text" value="L" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">material</span><input type="text" value="softshell, fleece" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">product_type</span><input type="text" value="Outdoor > Bundy" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">google_product_category</span><input type="text" value="Apparel &amp; Accessories > Clothing > Outerwear > Coats &amp; Jackets" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">item_group_id</span><input type="text" value="SJC-220" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          <div class="grid gap-2 sm:grid-cols-3">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">brand</span><input type="text" value="TrailGuard" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">gtin</span><input type="text" value="8590002201804" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">mpn</span><input type="text" value="SJC-220" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                          <div class="grid gap-2 md:col-span-2 sm:grid-cols-5">
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_0</span><input type="text" value="outdoor" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_1</span><input type="text" value="high_pno" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_2</span><input type="text" value="autumn" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_3</span><input type="text" value="men" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                            <label class="block"><span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">custom_label_4</span><input type="text" value="omezit_bid" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" /></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <div class="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+              <a href="performance-xml.html?v=20260606-xml-products4" class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-center text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zrusit</a>
+              <button type="button" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">Ulozit upravy</button>
+            </div>
+          </section>
+        </div>
+      </section>
+	    </main>
+
+	    <div
+	      id="image-edit-modal"
+	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
+	      aria-hidden="true"
+	    >
+	      <section class="w-full max-w-3xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="image-edit-modal-title">
+	        <div class="flex items-start justify-between gap-4">
+	          <div>
+	            <p class="text-sm font-medium text-violet-700">Hlavni obrazek produktu</p>
+	            <h2 id="image-edit-modal-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">
+	              Editovat obrazek
+	            </h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500">
+	              Vyberte, jak chcete aktualizovat hlavni obrazek ve vykonnostnim XML feedu.
+	            </p>
+	          </div>
+	          <button type="button" data-image-edit-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	        </div>
+
+	        <div class="mt-5 grid gap-4 lg:grid-cols-3">
+	          <section class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+	            <p class="text-sm font-semibold text-slate-950">Vlozit odkaz</p>
+	            <label class="mt-4 block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">URL obrazku</span>
+	              <input type="url" placeholder="https://..." class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" />
+	            </label>
+	            <button type="button" data-image-edit-close class="mt-4 w-full rounded-lg bg-indigo-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700">Pouzit odkaz</button>
+	          </section>
+
+	          <section class="rounded-lg border border-slate-200 bg-slate-50 p-4">
+	            <p class="text-sm font-semibold text-slate-950">Vlozit obrazek</p>
+	            <label class="mt-4 flex min-h-28 cursor-pointer items-center justify-center rounded-lg border border-dashed border-indigo-200 bg-white px-3 py-4 text-center text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50">
+	              <input type="file" accept="image/*" class="sr-only" />
+	              Vybrat soubor
+	            </label>
+	            <button type="button" data-image-edit-close class="mt-4 w-full rounded-lg bg-indigo-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700">Nahrat obrazek</button>
+	          </section>
+
+	          <section class="rounded-lg border border-violet-200 bg-violet-50 p-4">
+	            <p class="text-sm font-semibold text-slate-950">Vygenerovat COMSE AI</p>
+	            <label class="mt-4 block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Zadani pro AI</span>
+	              <textarea rows="4" placeholder="Produktova fotka na bilem pozadi..." class="mt-1 w-full rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100"></textarea>
+	            </label>
+	            <button type="button" data-comse-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat</button>
+	            <div data-comse-ai-result class="mt-4 hidden rounded-lg border border-violet-200 bg-white p-3">
+	              <div class="overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+	                <img data-comse-ai-image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=520&h=360&q=80" alt="Obrazek vygenerovany COMSE AI" class="aspect-[4/3] w-full object-cover" />
+	              </div>
+	              <p class="mt-3 text-xs font-semibold uppercase tracking-normal text-violet-700">Vygenerovano COMSE AI</p>
+	              <div class="mt-3 grid gap-2 sm:grid-cols-2">
+	                <button type="button" data-comse-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Vygenerovat znovu</button>
+	                <button type="button" data-image-edit-close class="rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Potvrdit</button>
+	              </div>
+	            </div>
+	          </section>
+	        </div>
+	      </section>
+	    </div>
+
+	    <div
+	      id="xml-field-modal"
+	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
+	      aria-hidden="true"
+	    >
+	      <section class="w-full max-w-2xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="xml-field-modal-title">
+	        <div class="flex items-start justify-between gap-4">
+	          <div>
+	            <p class="text-sm font-medium text-violet-700">XML feed hodnota</p>
+	            <h2 id="xml-field-modal-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Editovat XML hodnotu</h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500">Upravuje se jen hodnota posilana do vykonnostniho XML feedu.</p>
+	          </div>
+	          <button type="button" data-xml-field-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	        </div>
+	        <div class="mt-5 grid gap-2 rounded-lg bg-slate-100 p-1 sm:grid-cols-2">
+	          <button type="button" data-xml-field-mode="manual" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-700 shadow-sm">Rucne</button>
+	          <button type="button" data-xml-field-mode="ai" class="rounded-md px-3 py-2 text-sm font-semibold text-slate-500">COMSE AI</button>
+	        </div>
+	        <div data-xml-field-panel="manual" class="mt-5">
+	          <label class="block">
+	            <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500" data-xml-field-label>pole</span>
+	            <textarea rows="5" data-xml-field-value class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100"></textarea>
+	          </label>
+	        </div>
+	        <div data-xml-field-panel="ai" class="mt-5 hidden">
+	          <label class="block">
+	            <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Zadani pro COMSE AI</span>
+	            <textarea rows="4" data-xml-field-ai-prompt placeholder="Zkrat text, vylepsi nazev, dopln lepsi custom label..." class="mt-1 w-full rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100"></textarea>
+	          </label>
+	          <button type="button" data-xml-field-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat COMSE AI</button>
+	          <div data-xml-field-ai-result class="mt-4 hidden rounded-lg border border-violet-200 bg-white p-3">
+	            <p class="text-xs font-semibold uppercase tracking-normal text-violet-700">Navrh COMSE AI</p>
+	            <textarea rows="4" data-xml-field-ai-value class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100"></textarea>
+	            <div class="mt-3 grid gap-2 sm:grid-cols-2">
+	              <button type="button" data-xml-field-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Vygenerovat znovu</button>
+	              <button type="button" data-xml-field-ai-use class="rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Pouzit hodnotu</button>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+	          <button type="button" data-xml-field-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zrusit</button>
+	          <button type="button" data-xml-field-close class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">Potvrdit upravu</button>
+	        </div>
+	      </section>
+	    </div>
+
+	    <div
+	      id="feed-ai-analysis-modal"
+	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
+	      aria-hidden="true"
+	    >
+	      <section class="w-full max-w-3xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="feed-ai-analysis-title">
+	        <div class="flex items-start justify-between gap-4">
+	          <div>
+	            <p class="text-sm font-medium text-violet-700">COMSE AI</p>
+	            <h2 id="feed-ai-analysis-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Analyza feedu COMSE AI</h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500">Rychly audit kvality XML feedu, vykonu produktu a doporucenych uprav.</p>
+	          </div>
+	          <button type="button" data-feed-ai-analysis-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	        </div>
+
+	        <div class="feed-ai-summary mt-5">
+	          <div>
+	            <span>Skore feedu</span>
+	            <strong>82 / 100</strong>
+	            <p>Feed je pouzitelny, ale 184 produktu ma slabsi texty nebo nevyplnene atributy.</p>
+	          </div>
+	          <div>
+	            <span>Potencial trzeb</span>
+	            <strong>+128 000 Kc</strong>
+	            <p>Nejvetsi dopad ma doplneni description a presnejsich custom labelu.</p>
+	          </div>
+	          <div>
+	            <span>Riziko</span>
+	            <strong>37 produktu</strong>
+	            <p>Produkty s vysokou utratou, nizkym ziskem a chybejicim skladem.</p>
+	          </div>
+	        </div>
+
+	        <div class="mt-5 grid gap-3 md:grid-cols-3">
+	          <div class="feed-ai-finding">
+	            <span>Obsah</span>
+	            <strong>Kratke description</strong>
+	            <p>62 produktu ma popis pod 80 znaku. Doporucena hromadna uprava podle kategorie.</p>
+	          </div>
+	          <div class="feed-ai-finding">
+	            <span>Data</span>
+	            <strong>Chybejici marze</strong>
+	            <p>21 produktu nema vyplnenou marzi, pravidla zisku jsou potom mene presna.</p>
+	          </div>
+	          <div class="feed-ai-finding">
+	            <span>Vykon</span>
+	            <strong>Waste segment</strong>
+	            <p>13 produktu utraci bez objednavek. Navrh: custom_label_4 = omezit_bid.</p>
+	          </div>
+	        </div>
+
+	        <div class="mt-5 rounded-lg border border-violet-100 bg-violet-50 p-4">
+	          <p class="text-sm font-semibold text-slate-950">Doporuceny dalsi krok</p>
+	          <p class="mt-2 text-sm leading-6 text-slate-600">Spustit hromadne pravidlo pro atribut <strong>description</strong> u kategorie Bezecke boty a nechat COMSE AI pripravit navrhy textu pro manualni schvaleni.</p>
+	        </div>
+
+	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+	          <button type="button" data-feed-ai-analysis-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	          <button type="button" data-feed-ai-analysis-close data-bulk-rules-open class="rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Vytvorit hromadne pravidlo</button>
+	        </div>
+	      </section>
+	    </div>
+
+	    <div
+	      id="bulk-rules-modal"
+	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
+	      aria-hidden="true"
+	    >
+	      <section class="w-full max-w-5xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="bulk-rules-title">
+	        <div class="flex items-start justify-between gap-4">
+	          <div>
+	            <p class="text-sm font-medium text-violet-700">Hromadne upravy XML feedu</p>
+	            <h2 id="bulk-rules-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Hromadna pravidla</h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500">Nejdriv vyberte segment produktu, potom atribut a prompt. COMSE AI pripravi navrhy, ktere muzete schvalit nebo rucne upravit.</p>
+	          </div>
+	          <button type="button" data-bulk-rules-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	        </div>
+
+	        <div class="bulk-rules-grid mt-5">
+	          <section class="bulk-rules-panel">
+	            <p class="bulk-rules-step">1. Vyber produktu</p>
+	            <div class="grid gap-3 md:grid-cols-2">
+	              <label>
+	                <span>Kategorie</span>
+	                <select>
+	                  <option>Bezecke boty</option>
+	                  <option>Batohy</option>
+	                  <option>Lahve</option>
+	                  <option>Outdoor bundy</option>
+	                  <option>Vsechny kategorie</option>
+	                </select>
+	              </label>
+	              <label>
+	                <span>Custom label</span>
+	                <select>
+	                  <option>custom_label_1: high_roas</option>
+	                  <option>custom_label_0: sport</option>
+	                  <option>custom_label_2: summer</option>
+	                  <option>custom_label_4: omezit_bid</option>
+	                  <option>Bez omezeni</option>
+	                </select>
+	              </label>
+	              <label>
+	                <span>Vykonovy segment</span>
+	                <select>
+	                  <option>Hero / potential produkty</option>
+	                  <option>Waste produkty</option>
+	                  <option>Produkty bez description</option>
+	                  <option>Produkty skladem</option>
+	                </select>
+	              </label>
+	              <label>
+	                <span>Dalsi filtr</span>
+	                <select>
+	                  <option>Sklad je vetsi nez 10 ks</option>
+	                  <option>Marze % je vetsi nez 35 %</option>
+	                  <option>Eshop zisk je vetsi nez 5 000 Kc</option>
+	                  <option>Google Ads PNO neni vyssi nez 18 %</option>
+	                </select>
+	              </label>
+	            </div>
+	          </section>
+
+	          <section class="bulk-rules-panel">
+	            <p class="bulk-rules-step">2. Pravidlo upravy</p>
+	            <div class="grid gap-3 md:grid-cols-[220px_1fr]">
+	              <label>
+	                <span>Atribut produktu</span>
+	                <select>
+	                  <option>description</option>
+	                  <option>title</option>
+	                  <option>product_type</option>
+	                  <option>custom_label_0</option>
+	                  <option>custom_label_1</option>
+	                  <option>availability</option>
+	                </select>
+	              </label>
+	              <label>
+	                <span>Prompt pro COMSE AI</span>
+	                <textarea rows="4">Vylepsi description pro Google Shopping. Zachovej fakta o produktu, dopln hlavni benefity, material, pouziti a udrz text do 280 znaku.</textarea>
+	              </label>
+	            </div>
+	            <button type="button" data-bulk-rules-generate class="mt-4 rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat navrhy uprav</button>
+	          </section>
+	        </div>
+
+	        <section class="bulk-rules-results mt-5" data-bulk-rules-results>
+	          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+	            <div>
+	              <p class="bulk-rules-step">3. Navrhy ke schvaleni</p>
+	              <h3>3 produkty pripraveny k uprave atributu description</h3>
+	            </div>
+	            <span data-bulk-rules-approved-count>0 / 3 schvaleno</span>
+	          </div>
+
+	          <div class="mt-4 grid gap-3">
+	            <article class="bulk-suggestion-card" data-bulk-suggestion>
+	              <div>
+	                <strong>Trail Runner Pro</strong>
+	                <span>TRP-042 - Bezecke boty - custom_label_1: high_roas</span>
+	              </div>
+	              <textarea rows="3">Lehke bezecke boty Trail Runner Pro pro rychly trenink i delsi behy. Prodysny svršek, stabilni podrazka a pohodlne tlumeni pomahaji drzet tempo na silnici i zpevnenych cestach.</textarea>
+	              <div class="bulk-suggestion-actions">
+	                <button type="button" data-bulk-approve>Schvalit</button>
+	                <button type="button" data-bulk-edit>Upravit manualne</button>
+	              </div>
+	            </article>
+	            <article class="bulk-suggestion-card" data-bulk-suggestion>
+	              <div>
+	                <strong>City Backpack 24L</strong>
+	                <span>CBP-118 - Batohy - custom_label_0: accessories</span>
+	              </div>
+	              <textarea rows="3">Mestsky batoh City Backpack 24L s prehlednym vnitrnim prostorem, kapsou na notebook a odolnym materialem. Vhodny pro praci, skolu i kazdodenni cestovani.</textarea>
+	              <div class="bulk-suggestion-actions">
+	                <button type="button" data-bulk-approve>Schvalit</button>
+	                <button type="button" data-bulk-edit>Upravit manualne</button>
+	              </div>
+	            </article>
+	            <article class="bulk-suggestion-card" data-bulk-suggestion>
+	              <div>
+	                <strong>Hydro Bottle Steel</strong>
+	                <span>HBS-640 - Lahve - custom_label_2: summer</span>
+	              </div>
+	              <textarea rows="3">Nerezova lahev Hydro Bottle Steel pro sport i bezny den. Udrzi napoj dele chladny, tesni pri prenaseni a diky odolnemu telu se hodi do batohu i auta.</textarea>
+	              <div class="bulk-suggestion-actions">
+	                <button type="button" data-bulk-approve>Schvalit</button>
+	                <button type="button" data-bulk-edit>Upravit manualne</button>
+	              </div>
+	            </article>
+	          </div>
+	        </section>
+
+	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+	          <button type="button" data-bulk-rules-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zrusit</button>
+	          <button type="button" data-bulk-rules-close class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">Pouzit schvalene upravy</button>
+	        </div>
+	      </section>
+	    </div>
+
+	    <div
+	      id="custom-label-rules-modal"
+	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
+	      aria-hidden="true"
+	    >
+	      <section class="w-full max-w-3xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="custom-label-rules-title">
+	        <div class="flex items-start justify-between gap-4">
+	          <div>
+	            <p class="text-sm font-medium text-violet-700">Automaticka pravidla labelu</p>
+	            <h2 id="custom-label-rules-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950" data-custom-label-modal-title>Custom labely</h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500" data-custom-label-modal-description>
+	              Pripravte pravidlo, ktere bude doplnovat hodnotu do vybraneho custom labelu u produktu ve feedu.
+	            </p>
+	          </div>
+	          <button type="button" data-custom-label-rules-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
+	        </div>
+
+	        <div data-custom-label-create-flow class="mt-5 grid gap-2 rounded-lg bg-slate-100 p-1 sm:grid-cols-2" aria-label="Kroky custom labelu">
+	          <button type="button" data-custom-label-step-tab="label" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-700 shadow-sm">1. Label</button>
+	          <button type="button" data-custom-label-step-tab="value" class="rounded-md px-3 py-2 text-sm font-semibold text-slate-500">2. Hodnota</button>
+	        </div>
+
+	        <div data-custom-label-create-flow data-custom-label-step="label" class="mt-5">
+	          <p class="text-sm font-semibold text-slate-950">Vyberte XML atribut</p>
+	          <div class="mt-3 grid gap-2 sm:grid-cols-5">
+	            <button type="button" data-custom-label-option="custom_label_0" class="rounded-lg border border-indigo-100 bg-indigo-50 px-3 py-3 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-100">custom_label_0</button>
+	            <button type="button" data-custom-label-option="custom_label_1" class="rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">custom_label_1</button>
+	            <button type="button" data-custom-label-option="custom_label_2" class="rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">custom_label_2</button>
+	            <button type="button" data-custom-label-option="custom_label_3" class="rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">custom_label_3</button>
+	            <button type="button" data-custom-label-option="custom_label_4" class="rounded-lg border border-slate-200 bg-white px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50">custom_label_4</button>
+	          </div>
+	          <div class="custom-label-library mt-4 rounded-lg border border-indigo-100 bg-indigo-50 p-4">
+	            <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+	              <div>
+	                <p class="text-sm font-semibold text-slate-950">Hotove hodnoty pod vybranym labelem</p>
+	                <p class="mt-1 text-xs leading-5 text-slate-500">Vybrane pole: <strong data-custom-label-library-title>custom_label_0</strong></p>
+	              </div>
+	              <span class="w-fit rounded-full bg-white px-3 py-1 text-xs font-semibold text-indigo-700 ring-1 ring-indigo-100">vytvorene labely</span>
+	            </div>
+	            <div data-custom-label-existing-values class="mt-4 grid gap-2"></div>
+	          </div>
+	        </div>
+
+	        <div data-custom-label-create-flow data-custom-label-step="value" class="mt-5 hidden">
+	          <div class="grid gap-4 md:grid-cols-[1fr_260px]">
+	            <label class="block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Hodnota custom labelu</span>
+	              <input type="text" data-custom-label-value value="top_vykon" placeholder="napr. high_roas, sezonni, omezit_bid" class="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100" />
+	            </label>
+	            <div class="rounded-lg border border-indigo-100 bg-indigo-50 px-4 py-3 text-sm">
+	              <p class="text-xs font-semibold uppercase tracking-normal text-indigo-700">Nahled pravidla</p>
+	              <p class="mt-2 font-semibold text-slate-950"><span data-custom-label-preview-label>custom_label_0</span>: <span data-custom-label-preview-value>top_vykon</span></p>
+		              <p class="mt-1 text-xs leading-5 text-slate-500">Pravidlo se zobrazuje jen ve vizualu aplikace.</p>
+		            </div>
+		          </div>
+	        </div>
+
+	        <div data-custom-label-rules-flow class="auto-label-rules-panel mt-5 hidden">
+	          <div class="grid gap-4 lg:grid-cols-[1fr_1fr_1.2fr]">
+	            <label class="block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Vybrat label</span>
+	              <select data-rule-label-select class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+	                <option value="custom_label_0">custom_label_0</option>
+	                <option value="custom_label_1">custom_label_1</option>
+	                <option value="custom_label_2">custom_label_2</option>
+	                <option value="custom_label_3">custom_label_3</option>
+	                <option value="custom_label_4">custom_label_4</option>
+	              </select>
+	            </label>
+	            <label class="block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Vybrat hodnotu</span>
+	              <select data-rule-value-select class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"></select>
+	            </label>
+	            <label class="block">
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Pouzit na produkty</span>
+	              <select class="mt-1 w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+	                <option>Produkty splnujici vsechny filtry</option>
+	                <option>Jen produkty ve vybrane kategorii</option>
+	                <option>Jen oznacene produkty</option>
+	                <option>Vsechny aktivni produkty ve feedu</option>
+	              </select>
+	            </label>
+	          </div>
+
+	          <div class="mt-5 rounded-lg border border-indigo-100 bg-indigo-50 p-4">
+	            <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+	              <div>
+	                <p class="text-sm font-semibold text-slate-950">Filtry produktu</p>
+	                <p class="mt-1 text-xs leading-5 text-slate-500">Stejna logika jako v produktovem prehledu: zvolite atribut, podminku a hodnotu.</p>
+	              </div>
+	              <button type="button" class="w-fit rounded-full border border-indigo-100 bg-white px-3 py-1.5 text-xs font-semibold text-indigo-700">Pridat filtr</button>
+	            </div>
+	            <div class="mt-4 grid gap-3">
+	              <div class="auto-label-filter-row">
+	                <label>
+	                  <span>Atribut</span>
+	                  <select>
+	                    <optgroup label="Google Ads">
+	                      <option>Google Ads utrata</option>
+	                      <option>Google Ads PNO</option>
+	                      <option>Google Ads zisk</option>
+	                      <option>Google Ads ROAS</option>
+	                      <option>Google Ads konverze</option>
+	                    </optgroup>
+	                    <optgroup label="Meta Ads">
+	                      <option>Meta Ads utrata</option>
+	                      <option>Meta Ads CTR</option>
+	                      <option>Meta Ads CPC</option>
+	                    </optgroup>
+	                    <optgroup label="Eshop">
+	                      <option>Eshop trzby</option>
+	                      <option>Eshop PNO</option>
+	                      <option>Eshop zisk</option>
+	                      <option>Prodane ks</option>
+	                      <option>Sklad</option>
+	                      <option>Eshop storno %</option>
+	                      <option>Eshop hodnota storna</option>
+	                    </optgroup>
+	                    <optgroup label="Produkt">
+	                      <option>Cena produktu</option>
+	                      <option>Marze</option>
+	                      <option>Marze %</option>
+	                      <option>Kategorie</option>
+	                      <option>Dostupnost</option>
+	                    </optgroup>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Podminka</span>
+	                  <select>
+	                    <option>je vetsi nez</option>
+	                    <option>neni vyssi nez</option>
+	                    <option>je rovno</option>
+	                    <option>obsahuje</option>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Hodnota</span>
+	                  <input type="text" value="18 %" />
+	                </label>
+	              </div>
+	              <div class="auto-label-filter-row">
+	                <label>
+	                  <span>Atribut</span>
+	                  <select>
+	                    <option>Eshop zisk</option>
+	                    <option>Eshop storno %</option>
+	                    <option>Eshop hodnota storna</option>
+	                    <option>Sklad</option>
+	                    <option>Marze %</option>
+	                    <option>Google Ads zisk</option>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Podminka</span>
+	                  <select>
+	                    <option>je vetsi nez</option>
+	                    <option>neni vyssi nez</option>
+	                    <option>je rovno</option>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Hodnota</span>
+	                  <input type="text" value="5 000 Kc" />
+	                </label>
+	              </div>
+	              <div class="auto-label-filter-row">
+	                <label>
+	                  <span>Atribut</span>
+	                  <select>
+	                    <option>Sklad</option>
+	                    <option>Eshop storno %</option>
+	                    <option>Eshop hodnota storna</option>
+	                    <option>Prodane ks</option>
+	                    <option>Cena produktu</option>
+	                    <option>Marze</option>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Podminka</span>
+	                  <select>
+	                    <option>je vetsi nez</option>
+	                    <option>neni vyssi nez</option>
+	                    <option>je rovno</option>
+	                  </select>
+	                </label>
+	                <label>
+	                  <span>Hodnota</span>
+	                  <input type="text" value="10 ks" />
+	                </label>
+	              </div>
+	            </div>
+	          </div>
+
+	          <div class="mt-5 grid gap-3 md:grid-cols-3">
+	            <label class="auto-label-product-card">
+	              <input type="checkbox" checked />
+	              <span>
+	                <strong>Trail Runner Pro</strong>
+	                <em>PNO 14,0 % - zisk 37 420 Kc - sklad 142 ks</em>
+	              </span>
+	            </label>
+	            <label class="auto-label-product-card">
+	              <input type="checkbox" checked />
+	              <span>
+	                <strong>City Backpack 24L</strong>
+	                <em>PNO 14,8 % - zisk 20 360 Kc - sklad 18 ks</em>
+	              </span>
+	            </label>
+	            <label class="auto-label-product-card">
+	              <input type="checkbox" />
+	              <span>
+	                <strong>Hydro Bottle Steel</strong>
+	                <em>PNO 26,2 % - zisk 5 180 Kc - sklad 96 ks</em>
+	              </span>
+	            </label>
+	          </div>
+	        </div>
+
+	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
+	          <button type="button" data-custom-label-rules-back class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zpet</button>
+	          <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+	            <button type="button" data-custom-label-rules-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zrusit</button>
+	            <button type="button" data-custom-label-rules-next class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">Pokracovat</button>
+	          </div>
+	        </div>
+	      </section>
+	    </div>
+	
+	    <script src="/app.js?v=20260606-xml-products7" defer></script>
+	  </body>
+	</html>

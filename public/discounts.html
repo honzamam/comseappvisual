@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slevy | comse.</title>
+    <link rel="stylesheet" href="/styles.css?v=20260610-discounts-base" />
+  </head>
+  <body class="commerce-app discounts-page">
+    <main class="analytics-shell">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html" class="is-active">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="analytics-main dashboard-main discounts-main">
+        <header class="dashboard-header top-dashboard-card">
+          <div class="dashboard-title-row">
+            <div>
+              <p class="eyebrow-line">Obchodní výkon</p>
+              <h1>Slevy</h1>
+              <p>Přehled slevových kuponů, využití a hodnoty poskytnuté přes akční ceny.</p>
+            </div>
+            <details class="user-menu">
+              <summary>
+                <span>JM</span>
+                <div>
+                  <strong>Jan Mamula</strong>
+                  <small>Správce účtu</small>
+                </div>
+              </summary>
+              <div>
+                <a href="settings.html">Nastavení účtu</a>
+                <a href="api-integrations.html">API napojení</a>
+                <a href="index.html">Odhlásit</a>
+              </div>
+            </details>
+          </div>
+
+          <div class="discount-period-filter" aria-label="Filtr období slev">
+            <div>
+              <span>Aktuálně vybráno</span>
+              <strong data-selected-shop-name>Všechny e-shopy</strong>
+            </div>
+            <label>
+              <span>Od</span>
+              <input type="date" value="2026-05-11" />
+            </label>
+            <label>
+              <span>Do</span>
+              <input type="date" value="2026-06-10" />
+            </label>
+          </div>
+        </header>
+
+        <section class="discount-summary-grid" aria-label="Souhrn slev">
+          <article>
+            <span>Slevové kupony</span>
+            <strong>84 620 Kč</strong>
+            <p>celková hodnota slev</p>
+          </article>
+          <article>
+            <span>Použití kuponů</span>
+            <strong>312</strong>
+            <p>u objednávek ve vybraném období</p>
+          </article>
+          <article>
+            <span>Akční cena</span>
+            <strong>126 450 Kč</strong>
+            <p>poskytnutá sleva z akčních cen</p>
+          </article>
+          <article>
+            <span>Podíl na tržbách</span>
+            <strong>8,7 %</strong>
+            <p>orientačně vůči tržbám</p>
+          </article>
+        </section>
+
+        <section class="discounts-layout">
+          <article class="discount-card">
+            <div class="discount-card-header">
+              <div>
+                <p class="eyebrow-line">Slevové kupony</p>
+                <h2>Výpis slevových kuponů</h2>
+                <p>Každý kupon ukazuje počet použití a celkovou hodnotu poskytnuté slevy.</p>
+              </div>
+            </div>
+
+            <div class="coupon-list">
+              <div class="coupon-row coupon-head">
+                <span>Kupon</span>
+                <span>Použito</span>
+                <span>Hodnota slevy</span>
+                <span>Průměr</span>
+              </div>
+              <div class="coupon-row">
+                <div>
+                  <strong>WELCOME10</strong>
+                  <p>Noví zákazníci</p>
+                </div>
+                <span>128x</span>
+                <span>28 420 Kč</span>
+                <span>222 Kč</span>
+              </div>
+              <div class="coupon-row">
+                <div>
+                  <strong>SUMMER15</strong>
+                  <p>Letní kampaň</p>
+                </div>
+                <span>94x</span>
+                <span>31 800 Kč</span>
+                <span>338 Kč</span>
+              </div>
+              <div class="coupon-row">
+                <div>
+                  <strong>VIP500</strong>
+                  <p>Retence zákazníků</p>
+                </div>
+                <span>42x</span>
+                <span>21 000 Kč</span>
+                <span>500 Kč</span>
+              </div>
+              <div class="coupon-row">
+                <div>
+                  <strong>DOPRAVA0</strong>
+                  <p>Doprava zdarma</p>
+                </div>
+                <span>48x</span>
+                <span>3 400 Kč</span>
+                <span>71 Kč</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="discount-card action-price-card">
+            <div>
+              <p class="eyebrow-line">Akční ceny</p>
+              <h2>Poskytnuto na akční ceně</h2>
+              <p>Součet rozdílu mezi běžnou a akční cenou u prodaných produktů.</p>
+            </div>
+
+            <div class="action-price-value">
+              <span>Celkem</span>
+              <strong>126 450 Kč</strong>
+              <p>u 186 prodaných položek</p>
+            </div>
+
+            <div class="action-price-breakdown">
+              <div>
+                <span>Sedačky</span>
+                <strong>48 200 Kč</strong>
+              </div>
+              <div>
+                <span>Postele</span>
+                <strong>33 900 Kč</strong>
+              </div>
+              <div>
+                <span>Skříně</span>
+                <strong>26 150 Kč</strong>
+              </div>
+              <div>
+                <span>Matrace</span>
+                <strong>18 200 Kč</strong>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260605-xml6" defer></script>
+  </body>
+</html>

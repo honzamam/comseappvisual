@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | comse.</title>
+    <link rel="stylesheet" href="/styles.css?v=20260610-dashboard-ui" />
+  </head>
+  <body class="commerce-app">
+    <main class="analytics-shell">
+      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html" class="is-active">Přehled</a>
+          <a href="ad-accounts.html">Výkon reklamních účtů</a>
+          <a href="product-overview.html">Produkty</a>
+          <a href="discounts.html">Slevy</a>
+          <a href="#">Doporučení</a>
+          <a href="performance-xml.html">Feed</a>
+          <a href="#">Reporty</a>
+          <a href="settings.html">Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+      <section class="analytics-main dashboard-main">
+        <header class="dashboard-header top-dashboard-card">
+          <div class="dashboard-title-row">
+            <div>
+              <p class="eyebrow-line">Dashboard</p>
+              <h1>Výkon e-shopu</h1>
+              <p>Čistý přehled tržeb, marže a reklamního výkonu bez zbytečného šumu.</p>
+            </div>
+            <details class="user-menu">
+              <summary>
+                <span>JM</span>
+                <div>
+                  <strong>Jan Mamula</strong>
+                  <small>Správce účtu</small>
+                </div>
+              </summary>
+              <div>
+                <a href="settings.html">Nastavení účtu</a>
+                <a href="api-integrations.html">API napojení</a>
+                <a href="index.html">Odhlásit</a>
+              </div>
+            </details>
+          </div>
+
+          <div class="dashboard-control-grid" aria-label="Nastavení dashboardu">
+            <section class="dashboard-control-block">
+              <span>Typ přehledu</span>
+              <strong data-overview-title>Marketingový přehled</strong>
+              <div class="segmented-control">
+                <button type="button" data-overview-tab="marketing" class="is-active">Marketingový</button>
+                <button type="button" data-overview-tab="finance">Finanční</button>
+              </div>
+            </section>
+
+            <section class="dashboard-control-block">
+              <span>Období</span>
+              <strong data-period-label>Posledních 7 dní</strong>
+              <div class="segmented-control compact">
+                <button type="button" data-period-preset="30">30 dní</button>
+                <button type="button" data-period-preset="7" class="is-active">7 dní</button>
+                <button type="button" data-period-preset="yesterday">Včera</button>
+              </div>
+            </section>
+
+            <section class="dashboard-control-block date-control-block">
+              <span>Vlastní období</span>
+              <div class="date-range">
+                <label>
+                  <span>Od</span>
+                  <input id="date-from" type="date" />
+                </label>
+                <label>
+                  <span>Do</span>
+                  <input id="date-to" type="date" />
+                </label>
+              </div>
+            </section>
+
+            <section class="dashboard-control-block actions-control-block">
+              <span>Rychlé akce</span>
+              <div class="quick-links">
+                <a href="order-statuses.html">Nastavení přehledu</a>
+                <a href="margin-settings.html">Nastavení marží</a>
+              </div>
+            </section>
+          </div>
+        </header>
+
+        <section class="dashboard-grid">
+          <article class="hero-panel">
+            <div class="panel-heading">
+              <div>
+                <span>Souhrn výkonu</span>
+                <h2>Výkon za vybrané období</h2>
+              </div>
+              <em>COMSE Digital s.r.o.</em>
+            </div>
+
+            <div class="revenue-block">
+              <span>Tržby</span>
+              <strong data-metric="revenue">84 250 Kč</strong>
+              <p data-metric="revenueChange">+12 % oproti minulému období</p>
+            </div>
+
+            <div class="revenue-trend" aria-label="Vývoj tržeb za posledních 7 dní">
+              <div class="trend-topline">
+                <span>Vývoj tržeb</span>
+                <strong>+18,6 %</strong>
+              </div>
+              <svg viewBox="0 0 720 190" preserveAspectRatio="none" role="img" aria-label="Linkový graf vývoje tržeb">
+                <path class="trend-grid" d="M28 44H692M28 92H692M28 140H692M28 188H692" />
+                <path class="trend-fill" d="M28 150 C76 140 96 122 139 128 C184 134 204 94 250 104 C292 114 322 78 360 84 C408 92 430 63 470 66 C522 70 548 44 581 48 C628 52 646 30 692 28 L692 188 L28 188 Z" />
+                <path class="trend-line" d="M28 150 C76 140 96 122 139 128 C184 134 204 94 250 104 C292 114 322 78 360 84 C408 92 430 63 470 66 C522 70 548 44 581 48 C628 52 646 30 692 28" />
+                <g class="trend-points">
+                  <circle cx="28" cy="150" r="3.5" />
+                  <circle cx="139" cy="128" r="3.5" />
+                  <circle cx="250" cy="104" r="3.5" />
+                  <circle cx="360" cy="84" r="3.5" />
+                  <circle cx="470" cy="66" r="3.5" />
+                  <circle cx="581" cy="48" r="3.5" />
+                  <circle cx="692" cy="28" r="3.5" />
+                </g>
+              </svg>
+              <div class="trend-labels">
+                <span>Po</span>
+                <span>Út</span>
+                <span>St</span>
+                <span>Čt</span>
+                <span>Pá</span>
+                <span>So</span>
+                <span>Ne</span>
+              </div>
+            </div>
+
+            <div class="mini-kpis">
+              <div>
+                <span>Objednávky</span>
+                <strong data-metric="orders">128</strong>
+                <p data-metric="ordersNote">všechny objednávky</p>
+              </div>
+              <div>
+                <span>Zákazníci</span>
+                <strong data-metric="customers">1 482</strong>
+                <p data-metric="returningCustomers">z toho vracející se 326</p>
+              </div>
+              <div>
+                <span>Průměrná objednávka</span>
+                <strong data-metric="averageOrder">658 Kč</strong>
+                <p>na objednávku</p>
+              </div>
+            </div>
+          </article>
+
+          <aside class="profit-panel">
+            <span>Ziskovost</span>
+            <h2>Marže a reklama</h2>
+            <dl>
+              <div>
+                <dt>Hrubý zisk</dt>
+                <dd data-metric="grossProfit">33 700 Kč</dd>
+              </div>
+              <div class="is-highlighted">
+                <dt>Zisk po reklamě</dt>
+                <dd data-metric="profitAfterAds">21 000 Kč</dd>
+                <p data-metric="profitNote">orientační výsledek po započtení reklamních výdajů</p>
+              </div>
+              <div>
+                <dt>Reklama z tržeb</dt>
+                <dd data-metric="adRevenueShare">19,2 %</dd>
+              </div>
+            </dl>
+          </aside>
+        </section>
+
+        <section class="kpi-grid dashboard-kpis" aria-label="Hlavní ukazatele">
+          <article class="stat-card">
+            <span>Slevy</span>
+            <strong data-metric="discounts">12 450 Kč</strong>
+            <em data-metric="discountShare">14,8 % z tržeb</em>
+          </article>
+          <article class="stat-card">
+            <span>Reklama celkem</span>
+            <strong data-metric="totalAds">54 700 Kč · PNO 19,2 %</strong>
+            <em>placené kanály</em>
+          </article>
+          <article class="stat-card">
+            <span>PNO</span>
+            <strong>19,2 %</strong>
+            <em>v limitu</em>
+          </article>
+          <article class="stat-card">
+            <span>ROAS</span>
+            <strong>5,2</strong>
+            <em>stabilní</em>
+          </article>
+        </section>
+
+        <section class="channel-section">
+          <div class="section-heading">
+            <div>
+              <span>Reklamní kanály</span>
+              <h2>Výkon placených kanálů</h2>
+            </div>
+            <a href="ad-accounts.html">Detail kampaní</a>
+          </div>
+
+          <div class="channel-grid">
+            <a href="ad-accounts.html#google" class="channel-card">
+              <span>Google Ads</span>
+              <strong>32 000 Kč</strong>
+              <dl>
+                <div><dt>PNO</dt><dd>18,4 %</dd></div>
+                <div><dt>ROAS</dt><dd>5,4</dd></div>
+              </dl>
+            </a>
+            <article class="channel-card">
+              <span>Meta Ads</span>
+              <strong>18 500 Kč</strong>
+              <dl>
+                <div><dt>PNO</dt><dd>21,9 %</dd></div>
+                <div><dt>ROAS</dt><dd>4,6</dd></div>
+              </dl>
+            </article>
+            <article class="channel-card">
+              <span>Sklik</span>
+              <strong>4 200 Kč</strong>
+              <dl>
+                <div><dt>PNO</dt><dd>12,7 %</dd></div>
+                <div><dt>ROAS</dt><dd>7,8</dd></div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section class="insight-grid">
+          <article class="sales-panel">
+            <div class="section-heading">
+              <div>
+                <span>Výkon e-shopu</span>
+                <h2>Prodeje za posledních 7 dní</h2>
+              </div>
+              <a href="#">Report</a>
+            </div>
+            <div class="soft-chart" aria-label="Sloupcový graf prodejů">
+              <i style="height: 42%"></i>
+              <i style="height: 58%"></i>
+              <i style="height: 36%"></i>
+              <i style="height: 72%"></i>
+              <i style="height: 50%"></i>
+              <i style="height: 84%"></i>
+              <i style="height: 66%"></i>
+            </div>
+          </article>
+
+          <aside class="activity-panel">
+            <span>Aktivita</span>
+            <h2>Poslední události</h2>
+            <div class="activity-list">
+              <article>
+                <strong>Nová objednávka</strong>
+                <p>Objednávka přesáhla průměrnou hodnotu o 18 %.</p>
+              </article>
+              <article>
+                <strong>Produkt přesunut do HERO</strong>
+                <p>Rohová sedačka NIVA splnila limit PNO.</p>
+              </article>
+              <article>
+                <strong>Synchronizace skladu</strong>
+                <p>Feed Luceda.cz byl aktualizován před 12 minutami.</p>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+      </section>
+    </main>
+
+    <script src="/app.js?v=20260610-dashboard-ui" defer></script>
+  </body>
+</html>
