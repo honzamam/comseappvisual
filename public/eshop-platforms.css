@@ -1,0 +1,15 @@
+.api-integrations-page .platform-mark { font-size: 26px; font-weight: 800; }
+.api-integrations-page .platform-shopify { background: #edf7df; color: #44671b; }
+.api-integrations-page .platform-woo { background: #f0e9fa; color: #73429b; }
+.api-integrations-page .platform-presta { background: #fff0f5; color: #b73868; }
+.api-integrations-page .platform-upgates { background: #e6f6fa; color: #176d84; }
+.api-integrations-page .platform-other { background: var(--cv-purple-soft); color: var(--cv-purple-dark); }
+.api-integrations-page .platform-disconnected { background: var(--cv-purple-mist); color: var(--cv-muted); }
+.platform-details { grid-column: 1 / -1; border-top: 1px solid var(--cv-line); padding-top: 12px; }
+.platform-details summary { cursor: pointer; color: var(--cv-purple-dark); font-size: 13px; font-weight: 700; }
+.platform-details summary:focus-visible { outline: 2px solid var(--cv-purple); outline-offset: 4px; border-radius: 4px; }
+.api-integrations-page .platform-demo-note { font-size: 12px; }
+@media (max-width: 600px) {
+  .api-integrations-page .eshop-platform-card { grid-template-columns: auto minmax(0, 1fr); }
+  .eshop-platform-card .platform-disconnected { grid-column: 2; justify-self: start; }
+}
