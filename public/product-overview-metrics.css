@@ -1,0 +1,56 @@
+.product-overview-page .product-metrics-table {
+  min-width: 2260px;
+}
+
+.product-overview-page .product-metrics-table > .grid,
+.product-overview-page .product-metrics-table details > summary > .grid,
+.product-overview-page .product-metrics-table details > div > .grid {
+  grid-template-columns: 350px 520px 260px 1060px;
+}
+
+.product-overview-page .product-metrics-table details > summary > .grid > .product-shop-metrics,
+.product-overview-page .product-metrics-table details > div > .grid > .product-shop-metrics {
+  grid-template-columns: repeat(7, minmax(78px, 1fr)) 120px 190px;
+}
+
+.product-overview-page .product-metrics-table .product-shop-metrics > .product-discount-metric,
+.product-overview-page .product-metrics-table .product-shop-metrics > .product-order-average-metric {
+  color: var(--cv-copy);
+  line-height: 1.4;
+}
+
+.product-overview-page .product-metrics-table .product-shop-metrics > .product-discount-metric strong {
+  color: var(--cv-orange-ink);
+}
+
+.product-overview-page .product-metrics-table .product-shop-metrics > .product-order-average-metric strong {
+  color: var(--cv-purple-dark);
+}
+
+.product-metrics-help {
+  margin-top: 24px;
+  padding: 14px 18px;
+  border: 1px solid var(--cv-line);
+  border-radius: 18px;
+  background: var(--cv-purple-mist);
+  color: var(--cv-copy);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.product-metrics-help > summary {
+  cursor: pointer;
+  color: var(--cv-purple-dark);
+  font-weight: 700;
+}
+
+.product-metrics-help > summary:focus-visible {
+  outline: 2px solid var(--cv-purple);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.product-metrics-help p {
+  margin-top: 10px;
+  max-width: 95ch;
+}

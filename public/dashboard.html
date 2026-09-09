@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | comse.</title>
     <link rel="stylesheet" href="/styles.css?v=20260610-dashboard-ui" />
-  </head>
-  <body class="commerce-app">
+    <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
+    <link rel="stylesheet" href="/finance-dashboard.css?v=1" />
+  <link rel="stylesheet" href="/chart-design.css?v=2" />
+</head>
+  <body class="comse-visual commerce-app">
     <main class="analytics-shell">
-      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
         <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
 
         <div class="shop-select-card">
           <label for="eshop-select">Vybraný e-shop</label>
@@ -21,14 +32,14 @@
         </div>
 
         <nav class="analytics-nav">
-          <a href="dashboard.html" class="is-active">Přehled</a>
-          <a href="ad-accounts.html">Výkon reklamních účtů</a>
-          <a href="product-overview.html">Produkty</a>
-          <a href="discounts.html">Slevy</a>
-          <a href="#">Doporučení</a>
-          <a href="performance-xml.html">Feed</a>
-          <a href="#">Reporty</a>
-          <a href="settings.html">Nastavení</a>
+          <a href="dashboard.html" class="is-active" aria-current="page"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
         </nav>
 
         <div class="active-shop">
@@ -112,105 +123,94 @@
                 <span>Souhrn výkonu</span>
                 <h2>Výkon za vybrané období</h2>
               </div>
-              <em>COMSE Digital s.r.o.</em>
+              <em data-demo-metric="scope">Souhrn · E-shop 1 + E-shop 2</em>
             </div>
 
+            <div class="chart-view-tabs" role="tablist" aria-label="Pohled na výkon"><button id="chart-tab-revenue" type="button" role="tab" aria-controls="chart-view-panel" aria-selected="true" data-chart-view="revenue">Tržby</button><button id="chart-tab-profit" type="button" role="tab" aria-controls="chart-view-panel" aria-selected="false" tabindex="-1" data-chart-view="profit">Zisk po nákladech</button><button id="chart-tab-cash" type="button" role="tab" aria-controls="chart-view-panel" aria-selected="false" tabindex="-1" data-chart-view="cash">Cashflow</button></div>
+            <div id="chart-view-panel" role="tabpanel" aria-labelledby="chart-tab-revenue">
             <div class="revenue-block">
-              <span>Tržby</span>
-              <strong data-metric="revenue">84 250 Kč</strong>
-              <p data-metric="revenueChange">+12 % oproti minulému období</p>
+              <span id="chart-headline-label">Tržby</span>
+              <strong id="chart-headline-value">84 250 Kč</strong>
+              <p id="chart-headline-note">Ukázka 7 dní</p>
             </div>
 
-            <div class="revenue-trend" aria-label="Vývoj tržeb za posledních 7 dní">
-              <div class="trend-topline">
-                <span>Vývoj tržeb</span>
-                <strong>+18,6 %</strong>
-              </div>
-              <svg viewBox="0 0 720 190" preserveAspectRatio="none" role="img" aria-label="Linkový graf vývoje tržeb">
-                <path class="trend-grid" d="M28 44H692M28 92H692M28 140H692M28 188H692" />
-                <path class="trend-fill" d="M28 150 C76 140 96 122 139 128 C184 134 204 94 250 104 C292 114 322 78 360 84 C408 92 430 63 470 66 C522 70 548 44 581 48 C628 52 646 30 692 28 L692 188 L28 188 Z" />
-                <path class="trend-line" d="M28 150 C76 140 96 122 139 128 C184 134 204 94 250 104 C292 114 322 78 360 84 C408 92 430 63 470 66 C522 70 548 44 581 48 C628 52 646 30 692 28" />
-                <g class="trend-points">
-                  <circle cx="28" cy="150" r="3.5" />
-                  <circle cx="139" cy="128" r="3.5" />
-                  <circle cx="250" cy="104" r="3.5" />
-                  <circle cx="360" cy="84" r="3.5" />
-                  <circle cx="470" cy="66" r="3.5" />
-                  <circle cx="581" cy="48" r="3.5" />
-                  <circle cx="692" cy="28" r="3.5" />
-                </g>
-              </svg>
-              <div class="trend-labels">
-                <span>Po</span>
-                <span>Út</span>
-                <span>St</span>
-                <span>Čt</span>
-                <span>Pá</span>
-                <span>So</span>
-                <span>Ne</span>
-              </div>
-            </div>
+            <p class="demo-shop-equation" id="chart-equation">52 000 Kč + 32 250 Kč = 84 250 Kč</p>
+            <section class="comse-chart" aria-label="Graf denních tržeb">
+              <div class="comse-chart-heading"><div><h3 id="chart-view-title">Vývoj tržeb</h3><span class="comse-chart-legend"><i aria-hidden="true"></i><span id="chart-view-legend">Tržby za den · ukázka 7 dní</span></span></div><div class="comse-chart-readout" aria-live="polite" aria-atomic="true"><span id="chart-selected-day">Neděle</span><strong id="chart-selected-value">17 650 Kč</strong></div></div>
+              <div class="comse-chart-body"><div class="comse-chart-axis" aria-hidden="true"><span>20 tis.</span><span>15 tis.</span><span>10 tis.</span><span>5 tis.</span><span>0 Kč</span></div><div class="comse-chart-plot">
+                <svg id="comse-revenue-chart" viewBox="0 0 700 216" preserveAspectRatio="none" role="img" aria-labelledby="revenue-chart-title revenue-chart-description"><title id="revenue-chart-title">Denní tržby v Kč</title><desc id="revenue-chart-description">Ukázka denních tržeb od pondělí do neděle. Přesné hodnoty jsou dostupné tlačítky pod grafem.</desc><defs><linearGradient id="comse-chart-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#7c65df" stop-opacity=".24"/><stop offset="100%" stop-color="#7c65df" stop-opacity=".015"/></linearGradient></defs><path class="comse-chart-grid" d="M0 12H700 M0 60H700 M0 108H700 M0 156H700 M0 204H700"/><path id="chart-area" class="comse-chart-area"/><path id="chart-line" class="comse-chart-line"/><path id="chart-forecast" class="comse-chart-line chart-forecast"/><line id="chart-zero" class="comse-chart-grid" x1="0" x2="700"/><line id="chart-guide" class="comse-chart-guide" y1="12" y2="204"/><g id="chart-points"></g><circle id="chart-halo" class="comse-chart-halo" r="11"/><circle id="chart-selected-point" class="comse-chart-selected-point" r="5"/></svg>
+                <div class="comse-chart-days" id="chart-days" role="group" aria-label="Vyberte den pro zobrazení tržeb"></div>
+              </div></div>
+              <p class="comse-chart-hint" id="chart-view-hint">Přejeďte po grafu nebo vyberte den pro detail.</p>
+              <div class="chart-cash-breakdown" id="chart-cash-breakdown" hidden><span>Inkaso k datu<strong id="chart-cash-income">—</strong></span><span>Výdaje k datu<strong id="chart-cash-expense">—</strong></span><span>Plán na konci měsíce<strong id="chart-cash-end">—</strong></span></div>
+            </section>
 
+            <p class="chart-cost-link" id="chart-cost-link" hidden><a href="company-costs.html">Upravit měsíční náklady ↗</a><span>Měsíc a den přebíráme z karty Zisk po nákladech.</span></p>
+            </div>
             <div class="mini-kpis">
               <div>
                 <span>Objednávky</span>
-                <strong data-metric="orders">128</strong>
-                <p data-metric="ordersNote">všechny objednávky</p>
+                <strong data-demo-metric="orders">128</strong>
+                <p data-demo-metric="ordersNote">všechny objednávky</p>
               </div>
               <div>
                 <span>Zákazníci</span>
-                <strong data-metric="customers">1 482</strong>
-                <p data-metric="returningCustomers">z toho vracející se 326</p>
+                <strong data-demo-metric="customers">1 482</strong>
+                <p data-demo-metric="returningCustomers">z toho vracející se 326</p>
               </div>
               <div>
                 <span>Průměrná objednávka</span>
-                <strong data-metric="averageOrder">658 Kč</strong>
+                <strong data-demo-metric="averageOrder">658 Kč</strong>
                 <p>na objednávku</p>
               </div>
             </div>
           </article>
 
-          <aside class="profit-panel">
-            <span>Ziskovost</span>
-            <h2>Marže a reklama</h2>
-            <dl>
-              <div>
-                <dt>Hrubý zisk</dt>
-                <dd data-metric="grossProfit">33 700 Kč</dd>
-              </div>
-              <div class="is-highlighted">
-                <dt>Zisk po reklamě</dt>
-                <dd data-metric="profitAfterAds">21 000 Kč</dd>
-                <p data-metric="profitNote">orientační výsledek po započtení reklamních výdajů</p>
-              </div>
-              <div>
-                <dt>Reklama z tržeb</dt>
-                <dd data-metric="adRevenueShare">19,2 %</dd>
-              </div>
-            </dl>
+          <aside class="profit-panel finance-profit" id="ziskovost" aria-labelledby="finance-profit-title">
+            <div class="finance-profit-heading"><span>Měsíční výsledek</span><span class="finance-demo-tag">Ukázka</span></div>
+            <h2 id="finance-profit-title">Zisk po nákladech</h2>
+            <div class="finance-date"><label for="finance-asof">Stav k datu</label><input id="finance-asof" type="date" value="2026-09-15" min="2020-01-01" max="2100-12-31" required /></div>
+            <div class="finance-net" aria-live="polite" aria-atomic="true"><p id="finance-period-label">1.–15. září · celá firma</p><strong id="finance-net">—</strong><span id="finance-net-caption">Po reklamě a průběžných nákladech</span></div>
+            <dl class="finance-breakdown"><div><dt>Zisk po reklamě</dt><dd id="finance-before">—</dd></div><div><dt>Náklady do tohoto dne</dt><dd id="finance-deducted">—</dd></div></dl>
+            <details class="finance-explanation"><summary>Jak se náklady odečítají?</summary><p id="finance-formula">—</p><p>Měsíční náklad se rozpočítá na jednotlivé dny. Například 30 000 Kč za 30denní měsíc znamená k 15. dni náklad 15 000 Kč. Datum úhrady tento výpočet nemění.</p><p id="finance-scope-note"></p></details>
+            <a class="finance-payment-link" href="#mesicni-zisk">Co ještě zbývá zaplatit <span aria-hidden="true">↓</span></a>
           </aside>
+        </section>
+
+        <section class="finance-payments-panel" id="mesicni-zisk" aria-labelledby="finance-payments-title">
+          <div class="finance-section-heading"><div><p class="eyebrow-line">Platby a měsíční náklady</p><h2 id="finance-payments-title">Co už odešlo a co nás čeká</h2><p id="finance-payments-period">Náklady za září 2026 · stav k 15. 9. 2026</p></div><a href="company-costs.html" class="finance-manage">Spravovat náklady ↗</a></div>
+          <div class="finance-payment-summary" aria-live="polite" aria-atomic="true">
+            <article><span>Uhrazeno</span><strong id="finance-paid">—</strong><small>z nákladů vybraného měsíce</small></article>
+            <article class="finance-to-pay"><span>Zbývá zaplatit</span><strong id="finance-pending">—</strong><small id="finance-next-payment">—</small></article>
+            <article><span>Z toho po splatnosti</span><strong id="finance-overdue">—</strong><small id="finance-overdue-caption">—</small></article>
+          </div>
+          <div class="finance-table-heading"><h3>Očekávané platby</h3><div class="finance-tabs" role="group" aria-label="Filtr plateb"><button type="button" data-finance-filter="pending" aria-pressed="true">K úhradě</button><button type="button" data-finance-filter="paid" aria-pressed="false">Uhrazené</button><button type="button" data-finance-filter="all" aria-pressed="false">Všechny</button></div></div>
+          <div class="finance-table-scroll" role="region" aria-label="Přehled plateb" tabindex="0"><table class="finance-payment-table"><caption class="finance-sr-only">Platby evidovaných nákladů podle splatnosti</caption><thead><tr><th scope="col">Za co</th><th scope="col">Přiřazení</th><th scope="col">Splatnost</th><th scope="col">Částka</th><th scope="col">Stav</th></tr></thead><tbody id="finance-payment-rows"></tbody><tfoot><tr><th scope="row" colspan="3" id="finance-table-total-label">Celkem k úhradě</th><td id="finance-table-total">—</td><td></td></tr></tfoot></table></div>
+          <p id="finance-empty" class="finance-empty" hidden>Pro tento výběr tu nejsou žádné platby.</p>
+          <p class="finance-bottom-note">Zisk nahoře počítá průběžnou část nákladů. Tady jsou celé částky plateb podle splatnosti — od zisku se znovu neodečítají.</p>
+          <p class="finance-demo-note">Syntetická měsíční ukázka, bez bankovního zůstatku. Datum v kartě Zisk po nákladech a výběr e-shopu ovládají oba přehledy; horní filtr reklamního výkonu je samostatný.</p>
         </section>
 
         <section class="kpi-grid dashboard-kpis" aria-label="Hlavní ukazatele">
           <article class="stat-card">
             <span>Slevy</span>
-            <strong data-metric="discounts">12 450 Kč</strong>
-            <em data-metric="discountShare">14,8 % z tržeb</em>
+            <strong data-demo-metric="discounts">12 450 Kč</strong>
+            <em data-demo-metric="discountShare">14,8 % z tržeb</em>
           </article>
           <article class="stat-card">
             <span>Reklama celkem</span>
-            <strong data-metric="totalAds">54 700 Kč · PNO 19,2 %</strong>
+            <strong data-demo-metric="totalAds">54 700 Kč · PNO 19,2 %</strong>
             <em>placené kanály</em>
           </article>
           <article class="stat-card">
             <span>PNO</span>
-            <strong>19,2 %</strong>
-            <em>v limitu</em>
+            <strong data-demo-metric="pno">15,1 %</strong>
+            <em>reklamní náklady / tržby</em>
           </article>
           <article class="stat-card">
             <span>ROAS</span>
-            <strong>5,2</strong>
-            <em>stabilní</em>
+            <strong data-demo-metric="roas">6,6</strong>
+            <em>tržby / reklamní náklady</em>
           </article>
         </section>
 
@@ -224,28 +224,28 @@
           </div>
 
           <div class="channel-grid">
-            <a href="ad-accounts.html#google" class="channel-card">
+            <a href="ad-accounts.html#google" class="channel-card" data-demo-channel="0">
               <span>Google Ads</span>
-              <strong>32 000 Kč</strong>
+              <strong data-channel-spend>32 000 Kč</strong>
               <dl>
-                <div><dt>PNO</dt><dd>18,4 %</dd></div>
-                <div><dt>ROAS</dt><dd>5,4</dd></div>
+                <div><dt>PNO</dt><dd data-channel-pno>18,4 %</dd></div>
+                <div><dt>ROAS</dt><dd data-channel-roas>5,4</dd></div>
               </dl>
             </a>
-            <article class="channel-card">
+            <article class="channel-card" data-demo-channel="1">
               <span>Meta Ads</span>
-              <strong>18 500 Kč</strong>
+              <strong data-channel-spend>18 500 Kč</strong>
               <dl>
-                <div><dt>PNO</dt><dd>21,9 %</dd></div>
-                <div><dt>ROAS</dt><dd>4,6</dd></div>
+                <div><dt>PNO</dt><dd data-channel-pno>21,9 %</dd></div>
+                <div><dt>ROAS</dt><dd data-channel-roas>4,6</dd></div>
               </dl>
             </article>
-            <article class="channel-card">
+            <article class="channel-card" data-demo-channel="2">
               <span>Sklik</span>
-              <strong>4 200 Kč</strong>
+              <strong data-channel-spend>4 200 Kč</strong>
               <dl>
-                <div><dt>PNO</dt><dd>12,7 %</dd></div>
-                <div><dt>ROAS</dt><dd>7,8</dd></div>
+                <div><dt>PNO</dt><dd data-channel-pno>12,7 %</dd></div>
+                <div><dt>ROAS</dt><dd data-channel-roas>7,8</dd></div>
               </dl>
             </article>
           </div>
@@ -256,19 +256,13 @@
             <div class="section-heading">
               <div>
                 <span>Výkon e-shopu</span>
-                <h2>Prodeje za posledních 7 dní</h2>
+                <h2>Objednávky v průběhu týdne</h2>
               </div>
               <a href="#">Report</a>
             </div>
-            <div class="soft-chart" aria-label="Sloupcový graf prodejů">
-              <i style="height: 42%"></i>
-              <i style="height: 58%"></i>
-              <i style="height: 36%"></i>
-              <i style="height: 72%"></i>
-              <i style="height: 50%"></i>
-              <i style="height: 84%"></i>
-              <i style="height: 66%"></i>
-            </div>
+            <div class="comse-orders-heading"><span>Počet objednávek <small>· ukázka 7 dní</small></span><strong id="chart-orders-total">128 objednávek</strong></div>
+            <div class="comse-orders-chart" id="chart-order-bars" role="group" aria-label="Denní počty objednávek"></div>
+            <p class="comse-chart-hint">Kliknutím na sloupec zvýrazníte stejný den i v grafu tržeb.</p>
           </article>
 
           <aside class="activity-panel">
@@ -295,5 +289,10 @@
     </main>
 
     <script src="/app.js?v=20260610-dashboard-ui" defer></script>
-  </body>
+    <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
+    <script type="module" src="/monthly-finance.js?v=4"></script>
+  <script src="/dashboard-data.js?v=1" defer></script>
+  <script type="module" src="/chart-design.js?v=3"></script>
+</body>
 </html>

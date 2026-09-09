@@ -1,0 +1,28 @@
+.comse-visual .product-stock-toggle {
+  color: #0f766e;
+  border-color: #99d6ce;
+  background: #effbf8;
+}
+
+.product-stock-toggle input { accent-color: #0f766e; }
+
+.product-stock-note {
+  margin-top: 18px;
+  color: var(--cv-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.trend-chart .product-stock-line {
+  stroke: #0f766e;
+  stroke-width: 3;
+  stroke-dasharray: 8 5;
+}
+
+.product-stock-axis text {
+  fill: #0f766e;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.product-stock-axis.is-hidden { display: none; }

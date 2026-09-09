@@ -1,11 +1,68 @@
 <!doctype html>
-<html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nastaveni marzi | COMSE Administrace</title>
-  </head>
-  <body>
-    hotovo
-  </body>
-</html>
+<html lang="cs"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Nastavení marží | comse.</title>
+<link rel="stylesheet" href="/styles.css?v=20260610-settings-base" /><link rel="stylesheet" href="/design.css?v=20260909-visual1" /><link rel="stylesheet" href="/ai-credits.css?v=1" /><link rel="stylesheet" href="/honza-chat.css?v=1" /><link rel="stylesheet" href="/margin-settings.css?v=2" /></head>
+<body class="comse-visual commerce-app margin-page"><main class="analytics-shell">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html" class="is-active" aria-current="location"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+<section class="analytics-main dashboard-main margin-main">
+  <header class="margin-card margin-header"><div><a href="settings.html" class="margin-back">← Nastavení</a><p class="eyebrow-line">Base · Ziskovost</p><h1>Nastavení marží</h1><p>Vyfiltrujte produkty, označte je a nastavte marži hromadně. Cenu i marži můžete upravit také jednotlivě.</p></div><button class="margin-primary" id="margin-ai-open" type="button">✦ Nastavit s Honzou AI</button></header>
+  <div class="margin-context"><span>Upravujete: <strong data-selected-shop-name>Všechny e-shopy</strong></span><span>Syntetická ukázka · marže z prodejní ceny</span></div>
+  <aside class="margin-honza"><img src="/images/honza-ai.webp" width="52" height="52" alt="" /><div><strong>„Honzo, výrobci X nastav u triček marži 49 %.“</strong><p>Nejdřív uvidíte návrh a dotčené produkty. Změnu použijete až potvrzením.</p></div><button class="margin-secondary" id="margin-ai-example" type="button">Vyzkoušet →</button></aside>
+  <section class="margin-card" aria-labelledby="product-margin-title"><div class="margin-heading"><div><p class="eyebrow-line">Jednotlivé produkty</p><h2 id="product-margin-title">Produkty a jejich marže</h2></div><label class="margin-field">Hledat produkt<input id="margin-search" type="search" placeholder="Název, výrobce nebo SKU" /></label></div>
+    <div class="margin-product-filters"><label class="margin-field">Kategorie<select id="margin-filter-category"><option value="all">Všechny kategorie</option><option value="shirts">Trička</option><option value="hoodies">Mikiny</option><option value="shoes">Boty</option></select></label><label class="margin-field">Výrobce<select id="margin-filter-maker"><option value="all">Všichni výrobci</option><option value="X">Výrobce X</option><option value="Y">Výrobce Y</option></select></label><label class="margin-field">Nastavení marže<select id="margin-filter-source"><option value="all">Všechna nastavení</option><option value="own">Vlastní marže</option><option value="inherited">Podle pravidla</option></select></label><button class="margin-link-button" id="margin-clear-filters" type="button">Zrušit filtry</button></div>
+    <div class="margin-bulk-toolbar"><div><strong id="margin-results-count">6 produktů</strong><span id="margin-selection-count" role="status">Označeno: 0</span></div><button class="margin-secondary" id="margin-select-filtered" type="button">Označit vyfiltrované</button><button class="margin-link-button" id="margin-clear-selection" type="button" disabled>Zrušit označení</button><button class="margin-primary" id="margin-bulk-open" type="button" disabled>Nastavit marži označeným</button></div>
+    <p class="margin-rule-note">Přednost má <strong>vlastní marže produktu</strong>, pak pravidlo <strong>výrobce + kategorie</strong> a nakonec marže kategorie.</p>
+    <div class="margin-table-scroll" role="region" aria-label="Nastavení marží produktů" tabindex="0"><table class="margin-table"><caption>Prodejní ceny jsou ukázkové v Kč. Ruční změny se použijí tlačítkem Uložit řádek.</caption><thead><tr><th scope="col"><span class="margin-sr-only">Označení produktu</span></th><th scope="col">Produkt</th><th scope="col">Kategorie / výrobce</th><th scope="col">Prodejní cena (Kč)</th><th scope="col">Použitá marže</th><th scope="col">Vlastní marže (%)</th><th scope="col">Akce</th></tr></thead><tbody id="margin-products"></tbody></table></div>
+    <p class="margin-empty" id="margin-empty" hidden>Tomuto výběru neodpovídá žádný produkt.</p><p id="margin-feedback" class="margin-feedback" role="status"></p>
+  </section>
+  <section class="margin-card" aria-labelledby="category-margin-title"><div class="margin-heading"><div><p class="eyebrow-line">Základní pravidla</p><h2 id="category-margin-title">Marže podle kategorie</h2><p>Použije se u produktů bez vlastního nastavení nebo podrobnějšího pravidla výrobce.</p></div></div><div class="margin-category-grid" id="margin-categories"></div></section>
+  <section class="margin-card" aria-labelledby="margin-rules-title"><div class="margin-heading"><div><h2 id="margin-rules-title">Pravidla výrobce a kategorie</h2><p>Zde se objeví potvrzené návrhy Honzy AI.</p></div></div><div id="margin-rules"><p class="margin-muted">Zatím žádné pravidlo. Zkuste zadání přes Honzu AI.</p></div></section>
+  <details class="margin-card margin-help"><summary>Co znamená marže a jak ovlivňuje Přehled?</summary><p>Marže se zadává jako procento z prodejní ceny. Při ceně 1 000 Kč a marži 49 % je hrubý zisk 490 Kč, před reklamou a provozními náklady. Marže není přirážka k nákupní ceně.</p><p>Výběr objednávek do marketingového a finančního přehledu si klient nastavuje podle stavů svého e-shopu. Marže pak slouží k vyhodnocení hrubého zisku zahrnutých produktů.</p><p><a href="order-statuses.html">Nastavit stavy objednávek →</a> <a href="docs/prehled-a-nastaveni.md" download>Popis Přehledu ↓</a></p></details>
+  <p class="margin-footnote">Klikací ukázka: změny platí do obnovení stránky. AI je simulovaná, bez čerpání kreditů. Úpravy cen a marží se neodesílají do e-shopu ani zatím nepřepočítávají dashboard.</p>
+</section></main>
+<dialog id="margin-bulk-dialog" class="margin-ai-dialog" aria-labelledby="margin-bulk-title"><form id="margin-bulk-form"><div class="margin-heading"><div><p class="eyebrow-line">Hromadná úprava</p><h2 id="margin-bulk-title">Nastavit marži označeným produktům</h2></div><button class="margin-close" id="margin-bulk-close" type="button" aria-label="Zavřít hromadnou úpravu">×</button></div><p id="margin-bulk-scope" class="margin-ai-scope"></p><label class="margin-field">Nová vlastní marže v %<input id="margin-bulk-value" type="number" min="0" max="100" step="0.01" value="49" required /></label><p class="margin-small">Nastaví vlastní marži jen označeným produktům a nahradí jejich případné individuální hodnoty. Prodejní ceny zůstanou stejné.</p><div class="margin-table-scroll"><table class="margin-table"><thead><tr><th scope="col">Označený produkt</th><th scope="col">Nyní</th><th scope="col">Nově</th></tr></thead><tbody id="margin-bulk-preview"></tbody></table></div><p id="margin-bulk-error" class="margin-error" role="alert"></p><div class="margin-form-actions"><button class="margin-secondary" id="margin-bulk-cancel" type="button">Zrušit</button><button class="margin-primary" type="submit">Potvrdit změnu marže</button></div></form></dialog>
+<dialog id="margin-ai-dialog" class="margin-ai-dialog" aria-labelledby="margin-ai-title"><form id="margin-ai-form">
+  <div class="margin-heading"><div class="margin-ai-person"><img src="/images/honza-ai.webp" width="48" height="48" alt="" /><div><p class="eyebrow-line">Honza AI · ukázka</p><h2 id="margin-ai-title">Řekněte mi, kde změnit marži</h2></div></div><button class="margin-close" type="button" id="margin-ai-close" aria-label="Zavřít okno">×</button></div>
+  <p class="margin-ai-scope">Rozsah: <strong id="margin-ai-scope">Všechny e-shopy</strong></p>
+  <label class="margin-field">Vaše zadání<textarea id="margin-ai-prompt" rows="3" maxlength="500" required>Nastav mi u výrobce X a kategorie Trička marži na 49 %.</textarea></label>
+  <p class="margin-small">Honza pracuje podle zadání v rozsahu e-shopu, nezávisle na označení řádků. Ukázka rozpozná výrobce X nebo Y, kategorii Trička, Mikiny nebo Boty a hodnotu v %. Pro jiné zadání si vyžádá upřesnění.</p>
+  <label class="margin-checkbox"><input type="checkbox" id="margin-ai-overwrite" /> Přepsat i vlastní marže dotčených produktů</label>
+  <p class="margin-small">Bez zaškrtnutí mají individuální výjimky dál přednost.</p>
+  <div class="margin-form-actions"><button class="margin-secondary" type="button" id="margin-ai-cancel">Zrušit</button><button class="margin-primary" type="submit">Připravit návrh</button></div>
+  <p id="margin-ai-error" class="margin-error" role="alert"></p>
+  <section class="margin-ai-preview" id="margin-ai-preview" aria-labelledby="margin-preview-title" hidden><h3 id="margin-preview-title">Návrh změny</h3><p id="margin-ai-summary"></p><div class="margin-table-scroll"><table class="margin-table"><thead><tr><th scope="col">Produkt</th><th scope="col">Nyní</th><th scope="col">Po potvrzení</th></tr></thead><tbody id="margin-ai-preview-rows"></tbody></table></div><p id="margin-ai-preserved" class="margin-small"></p><button class="margin-primary" id="margin-ai-apply" type="button">Potvrdit a použít v ukázce</button></section>
+</form></dialog>
+<script src="/app.js?v=20260610-dashboard-ui" defer></script><script type="module" src="/ai-credits.js?v=1"></script><script src="/honza-chat.js?v=1" defer></script><script type="module" src="/margin-settings.js?v=2"></script></body></html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Náklady společnosti | comse.</title>
+  <link rel="stylesheet" href="/styles.css?v=20260610-settings-base" />
+  <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+  <link rel="stylesheet" href="/company-costs.css?v=1" />
+  <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
+    <link rel="stylesheet" href="/monthly-finance.css?v=1" />
+</head>
+<body class="comse-visual commerce-app costs-page">
+<main class="analytics-shell">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
+        <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
+
+        <div class="shop-select-card">
+          <label for="eshop-select">Vybraný e-shop</label>
+          <select id="eshop-select">
+            <option value="all">Všechny e-shopy</option>
+            <option value="store">Eshop 1</option>
+            <option value="outlet">Eshop 2</option>
+          </select>
+        </div>
+
+        <nav class="analytics-nav">
+          <a href="dashboard.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html" class="is-active" aria-current="location"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
+        </nav>
+
+        <div class="active-shop">
+          <span>Aktivní e-shop</span>
+          <strong data-selected-shop-name>Všechny e-shopy</strong>
+        </div>
+      </aside>
+
+
+<section class="analytics-main dashboard-main costs-main">
+  <header class="cost-card cost-header">
+    <div><a class="cost-back" href="settings.html">← Zpět do nastavení</a><p class="eyebrow-line">Base · Finance · Ukázková firma Alfa</p>
+      <h1>Každý náklad má své místo.</h1>
+      <p>Lidé, nástroje i provoz. Zjistěte, co skutečně stojí za výsledkem každého e-shopu.</p>
+    </div>
+    <div><button class="cost-secondary" id="reset-costs" type="button">Obnovit ukázku</button> <button class="cost-primary" id="add-cost" type="button">＋ Přidat náklad</button></div>
+  </header>
+  <p class="cost-demo">Klikací ukázka se syntetickými daty · CZK · Změny se drží v této kartě prohlížeče a promítají se do grafů.</p>
+  <section class="cost-card" aria-labelledby="cost-summary-title">
+    <div class="cost-section-heading"><div><p class="eyebrow-line">Náklady společnosti</p><h2 id="cost-summary-title">Celá firma, nebo jeden e-shop?</h2></div>
+      <label class="cost-field">Období nákladu<input id="cost-period" type="month" value="2026-09" min="2020-01" max="2100-12" required /></label>
+    </div>
+    <p>Rozsah změníte výběrem e-shopu v navigaci. Firemní souhrn zahrnuje oba e-shopy i nerozdělenou režii.</p>
+
+    <div class="monthly-result" aria-live="polite" aria-atomic="true">
+      <div class="monthly-result-main"><span id="monthly-profit-label">Celkový zisk po měsíčních nákladech</span><strong id="monthly-profit">—</strong><p id="monthly-scope">Firma Alfa · září 2026</p></div>
+      <dl class="monthly-equation"><div><dt>Výsledek po reklamě</dt><dd id="monthly-before">—</dd></div><div><dt>− Náklady tohoto měsíce</dt><dd id="monthly-costs">—</dd></div><div><dt>= Výsledek po nákladech</dt><dd id="monthly-after">—</dd></div></dl>
+    </div>
+    <div class="monthly-payment-heading"><h3>Co už je zaplaceno a co nás čeká</h3><span>Zbývá uhradit <strong id="monthly-pending">—</strong></span></div>
+    <div class="monthly-payments" aria-live="polite" aria-atomic="true">
+      <article class="monthly-paid"><span>✓ Uhrazeno</span><strong id="monthly-paid">—</strong><small>z nákladů zvoleného měsíce</small></article>
+      <article class="monthly-current"><span>Splatné v tomto období</span><strong id="monthly-current">—</strong><small>dosud neuhrazené</small></article>
+      <article class="monthly-later"><span>Platby v dalších obdobích</span><strong id="monthly-later">—</strong><small>náklad nyní, splatnost později</small></article>
+      <article class="monthly-earlier"><span>Splatné v dřívějších obdobích</span><strong id="monthly-earlier">—</strong><small>dosud neuhrazené</small></article>
+    </div>
+    <p class="monthly-note">Všechny čtyři skupiny jsou už odečtené od výsledku. Datum platby ovlivňuje stav úhrady, nikoli měsíc nákladu. Rozpis zahrnuje pouze náklady zvoleného měsíce, nejde o celkový kalendář plateb.</p>
+    <h3 class="monthly-shop-heading">Dopad na jednotlivé e-shopy</h3>
+    <div class="cost-impact" id="cost-impact"></div>
+    <p class="cost-fine">Ukázka dopadu: výsledek po reklamě − zde evidované provozní náklady. Nejde o účetní čistý zisk. Syntetický měsíční příklad za září 2026, shodný s měsíčním souhrnem na hlavním přehledu. Úpravy nákladů se promítají také do zisku a cashflow na přehledu.</p>
+  </section>
+  <aside class="cost-honza">
+    <img src="images/honza-ai.webp" alt="" width="54" height="54" />
+    <div><strong>Honza má jasno. A vy taky.</strong><p>Zaměstnanec X pracuje pouze pro E-shop 2. Jeho 48 000 Kč proto sníží výsledek E-shopu 2. E-shop 1 zůstane beze změny.</p></div>
+    <span class="cost-badge">Ukázkový příklad</span>
+  </aside>
+  <section class="cost-card" aria-labelledby="cost-list-title">
+    <div class="cost-section-heading"><div><p class="eyebrow-line">Přehledně podle typu</p><h2 id="cost-list-title">Za co utrácíme</h2></div>
+      <label class="cost-field">Platby<select id="cost-payment-filter"><option value="all">Všechny platby</option><option value="paid">Uhrazeno</option><option value="current">Splatné v tomto období</option><option value="later">Platby v dalších obdobích</option><option value="earlier">Splatné v dřívějších obdobích</option></select></label>
+      <label class="cost-field">Typ nákladu<select id="cost-type-filter"><option value="all">Všechny typy</option></select></label>
+    </div>
+    <div id="cost-categories" class="cost-categories" aria-label="Součty podle typu"></div>
+    <p class="cost-fine">Filtry typu a plateb mění seznam níže. Souhrn a finanční dopad nahoře vždy zahrnují všechny typy ve vybraném období a rozsahu.</p>
+    <div class="cost-table-wrap" role="region" aria-label="Seznam nákladů" tabindex="0">
+      <table class="cost-table"><caption class="cost-sr-only">Náklady vybraného období a e-shopu</caption><thead><tr><th scope="col">Náklad / typ</th><th scope="col">Částka v rozsahu</th><th scope="col">Přiřazení</th><th scope="col">Platba</th><th scope="col">Opakování</th><th scope="col">Akce</th></tr></thead><tbody id="cost-rows"></tbody></table>
+    </div>
+    <p id="cost-empty" class="cost-empty" hidden>Žádné náklady pro tento výběr. Změňte filtr nebo přidejte první náklad.</p>
+    <p id="cost-feedback" role="status" class="cost-fine"></p>
+  </section>
+  <details class="cost-card cost-rules"><summary>Jak se náklady propisují do financí?</summary>
+    <div class="cost-rule-grid">
+      <article><span class="cost-badge">01 · Přímý náklad</span><h3>Jeden e-shop</h3><p>Mzda, externista nebo sklad jen pro jeden e-shop. Celá částka sníží pouze jeho výsledek.</p></article>
+      <article><span class="cost-badge">02 · Sdílený náklad</span><h3>Rozdělení v procentech</h3><p>Například software 50 / 50 nebo zaměstnanec podle odpracovaného času 30 / 70. Součet podílů je vždy 100 %.</p></article>
+      <article><span class="cost-badge">03 · Firemní režie</span><h3>Zůstává na firmě</h3><p>Nerozdělený nájem nebo vedení sníží výsledek celé firmy. Výsledek jednotlivých e-shopů jej neobsahuje.</p></article>
+    </div>
+    <p>Období říká, ke kterému měsíci náklad patří. Splatnost říká, kdy má být uhrazen; datum platby, kdy byl skutečně zaplacen. Nezaplacený náklad se proto také promítá do výsledku.</p>
+    <p><a href="docs/naklady-spolecnosti.md" download>Stáhnout návrh pravidel a datového modelu ↓</a></p>
+  </details>
+</section></main>
+<dialog id="cost-dialog" aria-labelledby="cost-dialog-title">
+  <form id="cost-form">
+    <div class="cost-section-heading"><div><p class="eyebrow-line">Firma Alfa · Nový náklad</p><h2 id="cost-dialog-title">Co přidáme do nákladů?</h2></div><button class="cost-secondary" id="close-cost" type="button" aria-label="Zavřít formulář">✕</button></div>
+    <div class="cost-form-grid">
+      <label class="cost-field cost-wide">Název nákladu<input name="title" required maxlength="90" placeholder="Např. Zaměstnanec X – provoz e-shopu" /></label>
+      <label class="cost-field">Částka v Kč<input name="amount" type="number" required min="0.01" max="100000000" step="0.01" placeholder="48 000" /></label>
+      <label class="cost-field">Typ nákladu<select name="category" id="cost-category"></select></label>
+      <label class="cost-field">Období nákladu<input name="period" type="month" required min="2020-01" max="2100-12" value="2026-09" /></label>
+      <label class="cost-field">Opakování<select name="repeat"><option value="none">Jednorázově</option><option value="monthly">Měsíčně</option><option value="yearly">Ročně</option></select></label>
+      <label class="cost-field cost-wide">Kam náklad patří?<select name="allocation" id="cost-allocation"><option value="company">Firma Alfa · Nerozdělená režie</option><option value="store">Firma Alfa → E-shop 1 · 100 %</option><option value="outlet">Firma Alfa → E-shop 2 · 100 %</option><option value="split">Rozdělit mezi e-shopy firmy Alfa</option></select></label>
+      <div id="cost-split-fields" class="cost-wide cost-split" hidden><label class="cost-field">Podíl E-shopu 1 (%)<input name="share" type="number" min="1" max="99" step="1" value="50" /></label><p>E-shop 2: <strong id="cost-share-rest">50 %</strong><br />Rozdělujeme celou částku.</p></div>
+      <label class="cost-field">Stav platby<select name="status" id="cost-status"><option value="pending">Čeká na platbu</option><option value="paid">Zaplaceno</option></select></label>
+      <label class="cost-field">Datum splatnosti<input name="due" type="date" required /></label>
+      <label class="cost-field cost-wide" id="cost-paid-field" hidden>Datum skutečné platby<input name="paidOn" type="date" /></label>
+      <label class="cost-field cost-wide">Poznámka / způsob rozdělení (volitelné)<textarea name="note" rows="2" maxlength="240" placeholder="Např. rozděleno podle odpracovaných hodin"></textarea></label>
+    </div>
+    <p class="cost-fine">Částka pro manažerské vyhodnocení v CZK; ukázka nerozlišuje DPH. U zaměstnance evidujte celkový náklad firmy, ne pouze čistou mzdu. Opakování je zatím jen označení, další položky nevznikají automaticky.</p>
+    <p id="cost-form-error" role="alert"></p>
+    <div class="cost-form-actions"><button class="cost-secondary" type="button" id="cancel-cost">Zrušit</button><button class="cost-primary" type="submit">Přidat do ukázky</button></div>
+  </form>
+</dialog>
+<script src="/app.js?v=20260605-xml6" defer></script>
+<script type="module" src="/company-costs.js?v=2"></script>
+  <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
+  </body></html>

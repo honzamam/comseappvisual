@@ -1,0 +1,41 @@
+#bulk-rules-modal .honza-bulk-dialog { max-width: 980px; }
+.honza-bulk-header, .honza-bulk-review-header, .honza-bulk-footer {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.honza-bulk-dialog h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 800; line-height: 1.2; color: var(--cv-ink); }
+.honza-bulk-dialog h3 { font-size: 20px; font-weight: 750; color: var(--cv-ink); }
+.honza-bulk-lead { margin: 12px 0 24px; color: var(--cv-copy); line-height: 1.6; }
+.honza-bulk-composer { padding: 22px; background: var(--cv-purple-mist); border: 1px solid var(--cv-line); border-radius: 22px; }
+.honza-bulk-composer label { display: block; color: var(--cv-ink); font-size: 14px; font-weight: 700; }
+.honza-bulk-dialog textarea, .honza-bulk-dialog select {
+  display: block; width: 100%; margin-top: 9px; padding: 13px; border: 1px solid var(--cv-line-strong);
+  background: white; border-radius: 14px; color: var(--cv-ink); font-size: 15px; line-height: 1.6;
+}
+.honza-bulk-dialog textarea { resize: vertical; }
+.honza-bulk-examples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.honza-bulk-examples button { padding: 8px 12px; border-radius: 999px; border: 1px solid var(--cv-line-strong); background: white; color: var(--cv-purple-dark); font-size: 12px; font-weight: 650; }
+.honza-bulk-examples button:hover { background: var(--cv-purple-soft); }
+.honza-bulk-scope { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; margin-top: 24px; }
+.honza-bulk-dialog .honza-bulk-primary, .honza-bulk-dialog .honza-bulk-secondary {
+  border-radius: 14px; padding: 12px 17px; font-size: 14px; font-weight: 750; cursor: pointer;
+}
+.honza-bulk-dialog .honza-bulk-primary { background: var(--cv-purple); color: white; }
+.honza-bulk-dialog .honza-bulk-secondary { background: white; border: 1px solid var(--cv-line-strong); color: var(--cv-purple-dark); }
+.honza-bulk-dialog button:disabled { opacity: .45; cursor: not-allowed; }
+.honza-bulk-dialog :is(button, textarea, select, input):focus-visible { outline: 3px solid var(--cv-purple); outline-offset: 3px; }
+.honza-bulk-hint, .honza-bulk-status, #honza-bulk-summary { color: var(--cv-muted); font-size: 13px; line-height: 1.6; margin-top: 12px; }
+.honza-bulk-status { min-height: 24px; margin: 18px 0; color: var(--cv-purple-dark); }
+.honza-bulk-card { margin-top: 16px; padding: 20px; border: 1px solid var(--cv-line); border-radius: 18px; background: white; }
+.honza-bulk-card:has(input:checked) { border-color: var(--cv-green); }
+.honza-bulk-card h4 { font-weight: 750; color: var(--cv-ink); }
+.honza-bulk-diff { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 14px 0; }
+.honza-bulk-diff label, .honza-bulk-diff span { font-size: 12px; font-weight: 700; color: var(--cv-muted); }
+.honza-bulk-diff p { margin-top: 9px; padding: 13px; background: var(--cv-purple-mist); border-radius: 14px; font-size: 14px; line-height: 1.7; }
+.honza-bulk-approve { display: flex; gap: 9px; align-items: center; color: var(--cv-green); font-size: 14px; font-weight: 700; }
+.honza-bulk-approve input { width: 18px; height: 18px; accent-color: var(--cv-green); }
+.honza-bulk-footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--cv-line); font-size: 13px; color: var(--cv-copy); }
+@media (max-width: 640px) {
+  .honza-bulk-scope, .honza-bulk-diff { grid-template-columns: 1fr; }
+  .honza-bulk-review-header, .honza-bulk-footer { align-items: stretch; flex-direction: column; }
+  .honza-bulk-composer, .honza-bulk-card { padding: 15px; }
+}

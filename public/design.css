@@ -1,0 +1,286 @@
+/* Shared visual theme for the static COMSE APP VIZUAL prototype. */
+@font-face {
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('./fonts/figtree-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('./fonts/figtree-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --cv-purple: #5b4bc8;
+  --cv-purple-dark: #4839a8;
+  --cv-purple-soft: #eae8f6;
+  --cv-purple-mist: #f5f4fb;
+  --cv-orange: #f26522;
+  --cv-orange-ink: #b7470e;
+  --cv-orange-soft: #fff1e7;
+  --cv-green: #128051;
+  --cv-green-soft: #e9f9f1;
+  --cv-ink: #27223f;
+  --cv-copy: #514b67;
+  --cv-muted: #716980;
+  --cv-line: #e5e0ee;
+  --cv-line-strong: #cfc7e0;
+  --cv-paper: #fff;
+  --cv-shadow: 0 5px 24px rgb(64 44 120 / 5%);
+  --cv-shadow-raised: 0 14px 38px rgb(64 44 120 / 10%);
+  /* The login uses these existing variables. */
+  --bg: #f8f7fc;
+  --panel: var(--cv-paper);
+  --ink: var(--cv-ink);
+  --muted: var(--cv-muted);
+  --soft: var(--cv-muted);
+  --line: var(--cv-line);
+  --accent: var(--cv-purple);
+  --accent-soft: var(--cv-purple-soft);
+  --success: var(--cv-green);
+  --warning: var(--cv-orange-ink);
+}
+
+/* The repeated scope intentionally outranks old page-specific !important themes. */
+body.comse-visual.comse-visual {
+  background: radial-gradient(ellipse at 95% 0%, #fff0e4 0, transparent 34rem),
+    radial-gradient(ellipse at 18% 0%, #eeebfb 0, transparent 42rem), #f8f7fc !important;
+  color: var(--cv-ink);
+  font-family: Figtree, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.comse-visual ::selection { background: #ded8fa; color: #352780; }
+.comse-visual :where(button, input, select, textarea) { font-family: inherit; }
+.comse-visual :where(h1, h2, h3) { text-wrap: pretty; }
+body.comse-visual.comse-visual :is(h1, h2, h3) { color: var(--cv-ink) !important; letter-spacing: -.025em !important; }
+body.comse-visual.comse-visual h1 { font-size: clamp(30px, 3.2vw, 44px) !important; font-weight: 800 !important; line-height: 1.12 !important; }
+body.comse-visual.comse-visual h2 { line-height: 1.25; }
+body.comse-visual.comse-visual > main > section:not(.left):not(.right) { background: transparent !important; }
+body.comse-visual.comse-visual :is(.text-slate-950, .text-slate-900, .text-slate-800) { color: var(--cv-ink); }
+body.comse-visual.comse-visual :is(.text-slate-700, .text-slate-600) { color: var(--cv-copy); }
+body.comse-visual.comse-visual :is(.text-slate-500, .text-slate-400) { color: var(--cv-muted); }
+body.comse-visual.comse-visual :is(.text-indigo-700, .text-violet-700, .text-indigo-800, .text-violet-800) { color: var(--cv-purple-dark) !important; }
+body.comse-visual.comse-visual :is(.text-emerald-700, .text-green-700) { color: var(--cv-green); }
+body.comse-visual.comse-visual :is(.text-orange-700, .text-amber-700) { color: var(--cv-orange-ink); }
+body.comse-visual.comse-visual :is(.text-xs, [class~="text-[11px]"], [class~="text-[10px]"]) { font-size: .8125rem; }
+body.comse-visual.comse-visual :is(button, a, label).text-xs { font-size: .875rem; }
+
+/* Navigation: same links and placement, clearer active item and lighter chrome. */
+body.comse-visual.comse-visual .visual-sidebar {
+  border-color: var(--cv-line) !important;
+  background: rgb(255 255 255 / 92%) !important;
+  box-shadow: 4px 0 28px rgb(64 44 120 / 2%) !important;
+}
+body.comse-visual.comse-visual .analytics-logo { color: var(--cv-ink); font-size: 30px; font-weight: 850; letter-spacing: -.045em; }
+body.comse-visual.comse-visual .visual-sidebar .analytics-logo span {
+  background: transparent !important; color: var(--cv-orange) !important; box-shadow: none !important;
+}
+body.comse-visual.comse-visual .visual-sidebar nav a {
+  display: flex; align-items: center; justify-content: flex-start; gap: 11px;
+  min-height: 46px; border-radius: 14px !important;
+  color: var(--cv-copy) !important; font-size: 14px; font-weight: 650 !important;
+  text-decoration: none; transform: none;
+}
+body.comse-visual.comse-visual .visual-sidebar nav a:hover {
+  background: var(--cv-purple-mist) !important; color: var(--cv-purple-dark) !important; transform: none;
+}
+body.comse-visual.comse-visual .visual-sidebar nav a:is(.is-active, .bg-indigo-50, [aria-current="page"]) {
+  background: var(--cv-purple) !important; color: #fff !important; box-shadow: 0 5px 14px rgb(91 75 200 / 18%);
+}
+.visual-nav-icon { width: 19px; height: 19px; flex: 0 0 auto; opacity: .9; }
+body.comse-visual.comse-visual .shop-select-card {
+  border-color: var(--cv-line); border-radius: 20px; background: var(--cv-purple-mist); box-shadow: none;
+}
+body.comse-visual.comse-visual .active-shop {
+  border-color: #f3dbc9; border-radius: 20px; background: linear-gradient(120deg, #fff8f2, #fff0e4); box-shadow: none;
+}
+body.comse-visual.comse-visual :is(.active-shop span, .shop-select-card label) { color: var(--cv-muted); font-size: 13px; }
+body.comse-visual.comse-visual .active-shop strong { color: var(--cv-ink); }
+
+/* Shared surfaces, without changing any page grids or column ordering. */
+body.comse-visual.comse-visual :is(.top-dashboard-card, .product-overview-hero, .xml-page-hero, .xml-editor-hero),
+body.comse-visual.comse-visual > main > section > header {
+  border-color: var(--cv-line) !important;
+  background: linear-gradient(112deg, #fff 36%, #f2effd 78%, #fff1e6) !important;
+  box-shadow: var(--cv-shadow) !important;
+}
+body.comse-visual.comse-visual :is(.top-dashboard-card, .product-overview-hero, .xml-page-hero, .xml-editor-hero) { border-radius: 28px !important; }
+body.comse-visual.comse-visual :is(.hero-panel, .profit-panel, .activity-panel, .channel-section, .sales-panel, .shops-section,
+  .settings-card, .billing-card, .order-status-card, .discount-card, .api-card, .product-section, .product-detail, .stat-card) {
+  border: 1px solid var(--cv-line); border-radius: 26px; background: var(--cv-paper); box-shadow: var(--cv-shadow);
+}
+body.comse-visual.comse-visual :is(section, article, div).bg-white:is(.rounded-lg, .rounded-xl) {
+  border-color: var(--cv-line) !important; border-radius: 22px !important;
+  background: var(--cv-paper) !important; box-shadow: var(--cv-shadow) !important;
+}
+body.comse-visual.comse-visual :is(.dashboard-control-block, .discount-period-filter > div, .discount-period-filter label,
+  .billing-metric, .detail-meta > div, .detail-metrics > div, .xml-period-filter) {
+  border-color: var(--cv-line); background: #f8f7fc; border-radius: 18px;
+}
+body.comse-visual.comse-visual :is(.eyebrow-line, .section-heading > div > span, .panel-heading > div > span,
+  .dashboard-control-block > span, .profit-panel > span, .activity-panel > span) {
+  color: var(--cv-purple); font-size: 13px; font-weight: 750;
+}
+body.comse-visual.comse-visual :is(.top-dashboard-card p, .analytics-header p, .settings-card-header p,
+  .billing-plan p, .billing-metric p, .api-card-header p, .order-status-card-header p) { color: var(--cv-muted); }
+.comse-visual :is(.user-menu summary, .user-menu > div) { border-color: var(--cv-line); box-shadow: var(--cv-shadow); }
+.comse-visual .user-menu summary > span { background: var(--cv-purple-soft); color: var(--cv-purple-dark); border-radius: 13px; }
+.comse-visual .user-menu summary small { color: var(--cv-muted); font-size: 12px; }
+.comse-visual .user-menu > div a:hover { background: var(--cv-purple-mist); color: var(--cv-purple-dark); }
+
+/* Dashboard numbers and charts: purple focus, warm accents, green success. */
+.comse-visual .revenue-block strong { color: var(--cv-purple-dark); letter-spacing: -.045em; }
+.comse-visual :is(.revenue-block p, .trend-topline strong) { color: var(--cv-green); }
+.comse-visual .revenue-trend { background: #f8f6ff; border-color: var(--cv-line); border-radius: 22px; }
+.comse-visual .trend-line { stroke: var(--cv-purple); stroke-width: 3; }
+.comse-visual .trend-fill { fill: rgb(91 75 200 / 9%); }
+.comse-visual .trend-points circle { stroke: var(--cv-purple); }
+.comse-visual .trend-grid { stroke: #e7e2f1; }
+.comse-visual :is(.trend-labels, .trend-topline span, .revenue-block > span) { color: var(--cv-muted); }
+.comse-visual .mini-kpis > div { background: var(--cv-purple-mist); border: 1px solid #e9e3f5; border-radius: 20px; }
+.comse-visual .mini-kpis > div:nth-child(2) { background: var(--cv-orange-soft); border-color: #f6dfce; }
+.comse-visual .mini-kpis > div:nth-child(3) { background: var(--cv-green-soft); border-color: #ceeada; }
+.comse-visual .mini-kpis strong { color: var(--cv-ink); letter-spacing: -.035em; }
+.comse-visual :is(.mini-kpis span, .mini-kpis p, .profit-panel dt, .channel-card span, .channel-card dt, .activity-list p) { color: var(--cv-muted); font-size: 14px; }
+.comse-visual .profit-panel dl > div { background: #f8f7fc; border-radius: 20px; }
+body.comse-visual.comse-visual .profit-panel .is-highlighted {
+  background: var(--cv-purple); color: #fff; border-radius: 20px; box-shadow: 0 10px 22px rgb(91 75 200 / 16%);
+}
+body.comse-visual.comse-visual .profit-panel .is-highlighted :is(dt, dd, p) { color: #fff; }
+.comse-visual :is(.channel-card, .shop-card) { border: 1px solid var(--cv-line); background: #fcfbff; border-radius: 22px; }
+.comse-visual .channel-card:nth-child(2) { background: #fff7f0; border-color: #f4dfce; }
+.comse-visual :is(.channel-card h3, .shop-card h3) { font-weight: 750; }
+.comse-visual .activity-list > div { border-color: var(--cv-orange); background: var(--cv-orange-soft); }
+.comse-visual :is(.panel-heading em, .shop-card > span, .stat-card em, .status-badge.hero) { background: var(--cv-purple-soft); color: var(--cv-purple-dark); }
+.comse-visual .status-badge.potential { background: var(--cv-green-soft); color: var(--cv-green); }
+.comse-visual .status-badge.waste { background: var(--cv-orange-soft); color: var(--cv-orange-ink); }
+.comse-visual .status-badge { font-size: 12px; letter-spacing: .02em; }
+.comse-visual .trend-chart .chart-grid { stroke: var(--cv-line); }
+.comse-visual .trend-chart .chart-line-violet { stroke: var(--cv-purple); }
+.comse-visual .trend-chart .chart-line-amber { stroke: var(--cv-orange); }
+.comse-visual .trend-chart .chart-value-tooltip { border-radius: 16px; border-color: var(--cv-line); box-shadow: var(--cv-shadow-raised); }
+
+/* Forms and actions. Existing handlers, disabled states and links are unchanged. */
+body.comse-visual.comse-visual :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]) {
+  border-color: var(--cv-line-strong) !important; border-radius: 14px !important;
+  background-color: #fff !important; color: var(--cv-ink); font-family: inherit;
+}
+body.comse-visual.comse-visual :is(input, textarea)::placeholder { color: var(--cv-muted); opacity: 1; }
+body.comse-visual.comse-visual :is(input, select, textarea):focus {
+  border-color: var(--cv-purple) !important; box-shadow: 0 0 0 4px rgb(91 75 200 / 12%) !important;
+}
+body.comse-visual.comse-visual :is(input[type="checkbox"], input[type="radio"]) { accent-color: var(--cv-purple); }
+.comse-visual :is(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--cv-purple); outline-offset: 3px;
+}
+.comse-visual :is(a, button, summary) { -webkit-tap-highlight-color: transparent; }
+.comse-visual :is(button, a, summary, input, select, textarea) {
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+.comse-visual :is(button:disabled, [aria-disabled="true"]) { opacity: .5; cursor: not-allowed; }
+body.comse-visual.comse-visual :is(button, a):is(.bg-indigo-600, .bg-violet-600, .bg-slate-900, .primary-action, .button) {
+  border: 1px solid transparent !important; border-radius: 14px !important;
+  background: var(--cv-purple) !important; color: #fff !important;
+  font-weight: 750; box-shadow: 0 5px 14px rgb(91 75 200 / 19%) !important;
+}
+body.comse-visual.comse-visual :is(button, a):is(.bg-indigo-600, .bg-violet-600, .bg-slate-900, .primary-action, .button):hover:not(:disabled) {
+  background: var(--cv-purple-dark) !important; box-shadow: 0 8px 20px rgb(91 75 200 / 22%) !important; transform: translateY(-1px);
+}
+body.comse-visual.comse-visual :is(.segmented-control, .filter-pills) button.is-active {
+  background: var(--cv-purple) !important; color: #fff !important; border-color: transparent;
+}
+.comse-visual .segmented-control { border-color: var(--cv-line); background: var(--cv-paper); border-radius: 13px; }
+.comse-visual .segmented-control button { border-radius: 10px; }
+body.comse-visual.comse-visual :is(.quick-links a, .order-status-context a, .secondary-action) {
+  border-color: #d9d1ee; background: var(--cv-purple-soft); color: var(--cv-purple-dark); box-shadow: none;
+}
+.comse-visual .quick-links a:hover { background: #e0d9f5; }
+.comse-visual .chart-toggle { border-color: var(--cv-line); border-radius: 12px; background: #faf9fd; }
+.comse-visual .filter-pills button { font-size: 14px; }
+.comse-visual :is(.segmented-control button, .date-range input, .section-heading a, .shop-card a) { font-size: 14px; }
+.comse-visual .date-range label span { font-size: 12px; color: var(--cv-muted); }
+.comse-visual :is(.stat-card > span, .billing-metric > span, .api-connector-card p, .product-copy p) { color: var(--cv-muted); }
+.comse-visual .ghost-action { border-color: var(--cv-line-strong); color: var(--cv-purple-dark); box-shadow: none; }
+.comse-visual .ghost-action:hover { border-color: var(--cv-purple); background: var(--cv-purple-mist); box-shadow: var(--cv-shadow); }
+body.comse-visual.comse-visual .xml-page-hero button { background: var(--cv-purple) !important; color: #fff !important; }
+
+/* Tables, product cards and XML tools. Preserve their existing scroll behavior. */
+body.comse-visual.comse-visual :is(.product-row, .settings-link-card, .api-connector-card) {
+  border-color: var(--cv-line); border-radius: 22px; background: #fcfbff; box-shadow: none;
+}
+body.comse-visual.comse-visual :is(.product-row, .settings-link-card, .api-connector-card):hover {
+  border-color: #bfb1e6; background: var(--cv-purple-mist); box-shadow: var(--cv-shadow); transform: translateY(-2px);
+}
+.comse-visual .settings-link-card:nth-child(2) { background: var(--cv-orange-soft); border-color: #f4ddcc; }
+.comse-visual .settings-link-card:nth-child(3) { background: var(--cv-green-soft); border-color: #ceeada; }
+.comse-visual .settings-link-card span { color: var(--cv-purple-dark); font-size: 13px; }
+.comse-visual .settings-link-card:nth-child(2) span { color: var(--cv-orange-ink); }
+.comse-visual .settings-link-card:nth-child(3) span { color: var(--cv-green); }
+.comse-visual .settings-link-card p { color: var(--cv-copy); font-size: 14px; }
+.comse-visual .billing-metric strong { color: var(--cv-purple-dark); }
+.comse-visual .discount-summary-grid article { border-color: var(--cv-line); background: #fff; border-radius: 22px; box-shadow: var(--cv-shadow); }
+.comse-visual .discount-summary-grid article:nth-child(2) { background: var(--cv-orange-soft); }
+.comse-visual .discount-summary-grid article:nth-child(3) { background: var(--cv-purple-soft); }
+.comse-visual .discount-summary-grid span { color: var(--cv-copy); font-size: 14px; }
+.comse-visual .discount-summary-grid p { color: var(--cv-muted); }
+.comse-visual :is(.order-status-head, .product-metrics-table > .grid, .xml-products-table > .grid:first-child) {
+  background: var(--cv-purple-mist) !important; color: var(--cv-copy);
+}
+.comse-visual :is(.order-status-head, .order-status-name) { font-size: 14px; }
+.comse-visual .order-status-table-wrap { border-color: var(--cv-line); border-radius: 20px; }
+.comse-visual .order-status-table-body .order-status-row { border-color: var(--cv-line); }
+.comse-visual :is(.product-metrics-table, .xml-products-table, table) { font-variant-numeric: tabular-nums; }
+body.comse-visual.comse-visual :is(.bg-indigo-50, .bg-violet-50):not(a):not(button) { background-color: var(--cv-purple-mist); }
+.comse-visual :is(.xml-products-table, .product-metrics-table) > details:hover { background-color: #f8f6fd; }
+body.comse-visual.comse-visual :is(.xml-editor-hero, .xml-page-hero) p:last-child {
+  background: var(--cv-purple-mist); border-color: #ddd5f1; color: var(--cv-copy) !important;
+}
+body.comse-visual.comse-visual #feeds > article { background: #fcfbff !important; border-color: var(--cv-line) !important; }
+body.comse-visual.comse-visual #feeds > article:first-child { background: linear-gradient(125deg, #f4f0ff, #fff8f2) !important; }
+body.comse-visual.comse-visual :is(.ai-card) { background: var(--cv-purple); border-radius: 24px; box-shadow: var(--cv-shadow-raised); }
+body.comse-visual.comse-visual .ai-card :is(h3, p, span) { color: #fff !important; }
+.comse-visual :is([role="dialog"], [id$="modal"]) > div { border-radius: 26px !important; }
+
+/* The sign-in screen carries the same palette without moving its two blocks. */
+body.comse-visual.visual-login .page { border-color: var(--cv-line); border-radius: 36px; box-shadow: 0 24px 80px rgb(64 44 120 / 10%); }
+body.comse-visual.visual-login .left { background: linear-gradient(145deg, #f2edff, #fbf8ff 58%, #fff0e1); }
+body.comse-visual.visual-login .right { border-color: var(--cv-line); background: #fff; }
+body.comse-visual.visual-login .brand-dot { background: var(--cv-orange); width: 7px; height: 7px; }
+body.comse-visual.visual-login .headline h1 { font-size: clamp(38px, 4.3vw, 58px) !important; line-height: 1.06 !important; letter-spacing: -.045em !important; }
+body.comse-visual.visual-login .eyebrow { display: inline-flex; border: 1px solid #d9d0f2; border-radius: 999px; background: rgb(255 255 255 / 70%); padding: 6px 12px; color: var(--cv-purple-dark); }
+.visual-login :is(.snapshot, .alert-card, .login-card) { border-color: var(--cv-line); border-radius: 24px; box-shadow: var(--cv-shadow); }
+.visual-login .login-card h2 { font-size: 32px; font-weight: 800; }
+.visual-login .metric { background: var(--cv-purple-mist); }
+.visual-login .metric.warning { background: var(--cv-orange-soft); }
+.visual-login .metric.warning :is(strong, small) { color: var(--cv-orange-ink); }
+.visual-login .metric small { color: var(--cv-green); }
+.visual-login .chart { background: var(--cv-purple-mist); }
+.visual-login .chart-line path { stroke: var(--cv-purple); }
+.visual-login .alert-card:first-child { border-color: #f2d8c5; background: #fff8f2; }
+.visual-login .alert-card:first-child .tag { background: #ffe5d1; color: var(--cv-orange-ink); }
+.visual-login .tag.good { color: var(--cv-green); background: var(--cv-green-soft); }
+.visual-login .login-message { color: var(--cv-purple-dark); }
+.visual-login .mini-footer { color: var(--cv-muted); }
+
+@media (max-width: 960px) {
+  body.comse-visual.comse-visual .visual-sidebar nav a { flex: 0 0 auto; }
+  .comse-visual .visual-nav-icon { width: 17px; height: 17px; }
+}
+@media (max-width: 640px) {
+  body.comse-visual.comse-visual h1 { font-size: 30px !important; }
+  body.comse-visual.comse-visual :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]) { font-size: 16px; }
+  body.comse-visual.comse-visual :is(.top-dashboard-card, .hero-panel, .profit-panel, .settings-card, .billing-card, .discount-card) { border-radius: 22px; }
+  body.comse-visual.visual-login .page { border-radius: 26px; }
+  body.comse-visual.visual-login .headline h1 { font-size: 38px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .comse-visual *, .comse-visual *::before, .comse-visual *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

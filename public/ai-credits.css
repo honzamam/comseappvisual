@@ -1,0 +1,58 @@
+/* AI credit account controls, scoped to the local COMSE prototype. */
+body.comse-visual.comse-visual .ai-credit-badge { display: grid; gap: 7px; padding: 15px 17px; margin: 18px 0; border: 1px solid #ddd5f3; border-radius: 18px; background: linear-gradient(120deg, #f4f0ff, #fff6ee); color: var(--cv-purple-dark); text-decoration: none; }
+.ai-credit-badge-top { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; }
+.ai-credit-badge > strong { font-size: 26px; letter-spacing: -.035em; line-height: 1.2; }
+.ai-credit-badge strong small { font-size: 13px; font-weight: 550; letter-spacing: 0; }
+.ai-credit-badge-note { font-size: 11px; color: var(--cv-muted); }
+.ai-wallet { scroll-margin-top: 24px; }
+.ai-wallet-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.ai-wallet-heading h2 { font-size: 25px; font-weight: 800; margin: 6px 0 9px; }
+.ai-wallet :is(h3) { font-size: 18px; font-weight: 750; }
+.ai-wallet-heading p:not(.eyebrow-line), .ai-wallet-info > p { color: var(--cv-copy); font-size: 14px; line-height: 1.65; }
+.ai-demo-label { border-radius: 20px; padding: 6px 12px; background: var(--cv-orange-soft); color: var(--cv-orange-ink); white-space: nowrap; font-size: 12px; font-weight: 650; }
+.ai-wallet-grid { display: grid; grid-template-columns: minmax(240px, .9fr) minmax(0, 1.4fr); gap: 24px; margin: 24px 0; }
+.ai-wallet-balance { display: flex; flex-direction: column; align-items: flex-start; padding: 26px; border: 1px solid #dcd3f3; border-radius: 22px; background: linear-gradient(135deg, #f0eaff, #faf8ff); }
+.ai-wallet-balance > span { color: var(--cv-purple-dark); font-weight: 650; font-size: 14px; }
+.ai-wallet-balance > strong { font-size: clamp(34px, 4vw, 48px); font-weight: 800; letter-spacing: -.045em; line-height: 1.25; margin: 12px 0 4px; }
+.ai-wallet-balance strong small { font-size: 15px; font-weight: 550; letter-spacing: 0; }
+.ai-wallet-balance p { font-size: 13px; color: var(--cv-purple-dark); margin-bottom: 22px; }
+.ai-wallet-info { align-self: center; }
+.ai-wallet-info > p { margin-top: 10px; }
+.ai-wallet-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 24px; }
+.ai-wallet-metrics div { display: grid; gap: 5px; border-left: 3px solid var(--cv-line); padding-left: 14px; }
+.ai-wallet-metrics span { font-size: 13px; color: var(--cv-muted); }
+.ai-wallet-metrics strong, .ai-wallet-metrics strong span { font-size: 21px; color: var(--cv-ink); }
+body.comse-visual.comse-visual :is(.ai-credit-primary, .ai-credit-secondary) { display: inline-flex; justify-content: center; align-items: center; min-height: 44px; padding: 11px 16px; border-radius: 13px; font-size: 14px; font-weight: 700; cursor: pointer; border: 1px solid transparent; }
+body.comse-visual.comse-visual .ai-credit-primary { background: var(--cv-purple); color: white; }
+body.comse-visual.comse-visual .ai-credit-primary:hover { background: var(--cv-purple-dark); }
+body.comse-visual.comse-visual .ai-credit-secondary { background: white; border-color: var(--cv-line-strong); color: var(--cv-purple-dark); }
+body.comse-visual.comse-visual .ai-credit-secondary:disabled { opacity: .5; cursor: not-allowed; }
+.ai-credit-example { display: flex; align-items: center; gap: 16px; padding: 18px; background: #f8f7fc; border: 1px solid var(--cv-line); border-radius: 18px; }
+.ai-credit-example img { width: 48px; height: 48px; object-fit: cover; border-radius: 50%; flex-shrink: 0; }
+.ai-credit-example p { font-size: 13px; margin-top: 4px; color: var(--cv-copy); }
+.ai-credit-example button { margin-left: auto; flex-shrink: 0; }
+.ai-credit-feedback { margin-top: 12px; color: var(--cv-purple-dark); font-size: 14px; }
+.ai-history-heading { margin-top: 28px; align-items: center; }
+.ai-credit-text { color: var(--cv-purple); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; min-height: 44px; font-size: 13px; }
+.ai-credit-table-wrap { overflow-x: auto; margin-top: 14px; }
+.ai-credit-table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 13px; text-align: left; }
+.ai-credit-table caption { text-align: left; font-size: 12px; color: var(--cv-muted); padding-bottom: 10px; }
+.ai-credit-table th { padding: 12px; background: var(--cv-purple-mist); color: var(--cv-copy); font-weight: 650; }
+.ai-credit-table td { border-bottom: 1px solid var(--cv-line); padding: 14px 12px; }
+.ai-credit-table small { display: block; color: var(--cv-muted); font-size: 12px; margin-top: 3px; }
+.ai-credit-table td:last-child { text-align: right; white-space: nowrap; font-weight: 750; color: var(--cv-purple-dark); }
+.ai-credit-table .ai-credit-positive { color: var(--cv-green) !important; }
+.ai-credit-rules { border: 1px solid var(--cv-line); border-radius: 16px; padding: 16px; margin-top: 22px; }
+.ai-credit-rules summary { font-weight: 700; cursor: pointer; }
+.ai-credit-rules p { font-size: 14px; color: var(--cv-copy); margin-top: 12px; }
+.ai-credit-rules a { display: inline-block; color: var(--cv-purple); font-size: 13px; margin-top: 12px; text-decoration: underline; }
+.ai-wallet .ai-credit-fine { font-size: 12px; line-height: 1.65; color: var(--cv-muted); margin-top: 14px; }
+body.comse-visual.comse-visual .ai-topup-dialog { margin: auto; width: min(510px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; border: 1px solid var(--cv-line); padding: 28px; border-radius: 24px; background: white; color: var(--cv-ink); box-shadow: var(--cv-shadow-raised); }
+.ai-topup-dialog::backdrop { background: rgb(30 22 60 / 45%); backdrop-filter: blur(4px); }
+.ai-topup-dialog h2 { font-size: 25px; font-weight: 800; margin: 8px 0 16px; }
+.ai-topup-dialog p { color: var(--cv-copy); font-size: 14px; }
+.ai-topup-amount { background: var(--cv-purple-mist); color: var(--cv-purple-dark); font-size: 40px; font-weight: 800; padding: 20px; margin: 20px 0; text-align: center; border-radius: 16px; }
+.ai-topup-amount small { font-size: 16px; font-weight: 600; }
+.ai-topup-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+@media (max-width: 1100px) { .ai-credit-example { flex-wrap: wrap; } .ai-credit-example button { margin-left: 64px; } }
+@media (max-width: 700px) { .ai-wallet-grid { grid-template-columns: 1fr; } .ai-wallet-heading { flex-wrap: wrap; gap: 12px; } .ai-credit-example button { margin-left: 0; width: 100%; } .ai-credit-badge { max-width: 350px; } }

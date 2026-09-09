@@ -1,0 +1,38 @@
+.monthly-card { padding: clamp(20px, 3vw, 30px); border: 1px solid var(--cv-line); border-radius: 24px; background: white; box-shadow: var(--cv-shadow); }
+.monthly-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
+.monthly-heading h2 { font-size: 26px; font-weight: 800; margin: 6px 0 8px; }
+.monthly-heading p:not(.eyebrow-line) { font-size: 13px; color: var(--cv-muted); }
+.monthly-heading label { display: grid; gap: 7px; font-size: 12px; color: var(--cv-copy); flex-shrink: 0; }
+.monthly-heading input { border: 1px solid var(--cv-line-strong); border-radius: 12px; padding: 10px 12px; font: inherit; min-height: 44px; background: white; color: var(--cv-ink); }
+.monthly-result { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 30px; padding: 28px; margin: 22px 0; border-radius: 22px; background: linear-gradient(120deg, #eaf8ef, #f4faf6); border: 1px solid #cce9d7; }
+.monthly-result-main > span { display: block; color: #267345; font-size: 14px; font-weight: 700; }
+.monthly-result-main > strong { display: block; font-size: clamp(30px, 3.7vw, 48px); font-weight: 800; letter-spacing: -.04em; color: #14713d; line-height: 1.2; margin: 10px 0; overflow-wrap: anywhere; }
+.monthly-result-main p { font-size: 12px; color: var(--cv-copy); }
+.monthly-equation { margin: 0; display: grid; gap: 12px; }
+.monthly-equation div { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; font-size: 13px; }
+.monthly-equation dt { color: var(--cv-copy); }
+.monthly-equation dd { font-weight: 700; margin: 0; text-align: right; }
+.monthly-equation div:last-child { padding-top: 12px; border-top: 1px solid #cce9d7; font-weight: 750; }
+.monthly-result.is-loss { background: #fff3ef; border-color: #efd4cc; }
+.monthly-result.is-loss .monthly-result-main > :is(span, strong) { color: #a53929; }
+.monthly-payment-heading { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; margin: 22px 0 14px; flex-wrap: wrap; }
+.monthly-payment-heading h3, .monthly-shop-heading { font-size: 17px; font-weight: 750; }
+.monthly-payment-heading > span { color: var(--cv-copy); font-size: 12px; }
+.monthly-payments { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.monthly-payments article { border: 1px solid var(--cv-line); border-radius: 17px; padding: 17px; background: #faf9fc; }
+.monthly-payments span { display: block; min-height: 40px; font-size: 12px; font-weight: 650; color: var(--cv-copy); }
+.monthly-payments strong { display: block; font-size: clamp(20px, 2vw, 27px); font-weight: 800; margin: 5px 0; letter-spacing: -.025em; }
+.monthly-payments small { font-size: 11px; color: var(--cv-muted); }
+.monthly-payments .monthly-paid { background: #f1faf4; }
+.monthly-paid strong { color: #14713d; }
+.monthly-payments .monthly-current { background: var(--cv-orange-soft); }
+.monthly-current strong { color: var(--cv-orange-ink); }
+.monthly-payments .monthly-later { background: var(--cv-purple-mist); }
+.monthly-later strong { color: var(--cv-purple); }
+.monthly-note, .monthly-footer p { margin-top: 14px; font-size: 12px; color: var(--cv-muted); line-height: 1.7; }
+.monthly-footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 10px; }
+.monthly-footer p { max-width: 700px; }
+.monthly-footer a { flex-shrink: 0; font-size: 13px; font-weight: 700; color: var(--cv-purple); text-decoration: underline; text-underline-offset: 4px; }
+.monthly-shop-heading { margin: 22px 0 12px; }
+@media (max-width: 1100px) { .monthly-payments { grid-template-columns: repeat(2, minmax(0, 1fr)); } .monthly-result { gap: 20px; padding: 22px; } .monthly-footer { flex-wrap: wrap; } }
+@media (max-width: 650px) { .monthly-heading { flex-direction: column; gap: 15px; } .monthly-result { grid-template-columns: 1fr; } .monthly-payments { grid-template-columns: 1fr; } .monthly-payments span { min-height: 0; } }

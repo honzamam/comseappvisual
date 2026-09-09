@@ -6,11 +6,22 @@
     <title>Produkty XML feedu | COMSE Administrace</title>
     <link rel="stylesheet" href="/styles.css?v=20260606-xml-products7" />
     <link rel="stylesheet" href="/xml-feed-products.css?v=20260606-auto-rules-column1" />
+    <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
+    <link rel="stylesheet" href="/feed-honza.css?v=2" />
+    <link rel="stylesheet" href="/feed-bulk-honza.css?v=1" />
   </head>
-  <body class="xml-feed-products-page min-h-screen bg-slate-50 text-slate-950 antialiased">
+  <body class="comse-visual xml-feed-products-page min-h-screen bg-slate-50 text-slate-950 antialiased">
     <main class="grid min-h-screen lg:grid-cols-[280px_1fr]">
-      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
         <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
 
         <div class="shop-select-card">
           <label for="eshop-select">Vybraný e-shop</label>
@@ -22,14 +33,14 @@
         </div>
 
         <nav class="analytics-nav">
-          <a href="dashboard.html">Přehled</a>
-          <a href="ad-accounts.html">Výkon reklamních účtů</a>
-          <a href="product-overview.html">Produkty</a>
-          <a href="discounts.html">Slevy</a>
-          <a href="#">Doporučení</a>
-          <a href="performance-xml.html" class="is-active">Feed</a>
-          <a href="#">Reporty</a>
-          <a href="settings.html">Nastavení</a>
+          <a href="dashboard.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html" class="is-active" aria-current="page"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
         </nav>
 
         <div class="active-shop">
@@ -61,13 +72,13 @@
                 </p>
                 <div class="mt-4 flex flex-wrap gap-2">
 	                  <button type="button" data-feed-ai-analysis-open class="rounded-lg border border-violet-100 bg-white px-4 py-2.5 text-sm font-semibold text-violet-700 shadow-sm transition hover:bg-violet-50">
-	                    Analyza feedu COMSE AI
+	                    Honza zkontroluje feed
 	                  </button>
 	                  <button type="button" data-bulk-rules-open class="rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50">
-	                    Hromadna pravidla
+	                    Hromadné úpravy s Honzou
 	                  </button>
 	                  <button type="button" data-custom-label-rules-open data-custom-label-open-action="rules" class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">
-	                    Automaticka pravidla labelu
+	                    Pravidla labelů
 	                  </button>
 	                  <button type="button" data-custom-label-rules-open data-custom-label-open-action="create" class="rounded-lg border border-indigo-100 bg-white px-4 py-2.5 text-sm font-semibold text-indigo-700 shadow-sm transition hover:bg-indigo-50">
 	                    Vytvorit custom label
@@ -78,7 +89,7 @@
 	                <div class="rounded-lg bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-normal text-slate-500">Produkty</p><p class="mt-1 text-lg font-semibold text-slate-950">1 248</p></div>
 	                <div class="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3">
 	                  <div class="flex items-center justify-between gap-3">
-	                    <p class="text-xs font-semibold uppercase tracking-normal text-emerald-700">Automaticka pravidla labelu</p>
+	                    <p class="text-xs font-semibold uppercase tracking-normal text-emerald-700">Pravidla labelů</p>
 	                    <span class="rounded-full bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white">Zapnuto</span>
 	                  </div>
 	                  <p class="mt-2 text-sm font-semibold text-slate-950">custom_label_0 = top_vykon</p>
@@ -822,19 +833,19 @@
 	          </section>
 
 	          <section class="rounded-lg border border-violet-200 bg-violet-50 p-4">
-	            <p class="text-sm font-semibold text-slate-950">Vygenerovat COMSE AI</p>
+	            <p class="text-sm font-semibold text-slate-950">Nechat Honzu připravit návrh</p>
 	            <label class="mt-4 block">
-	              <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Zadani pro AI</span>
-	              <textarea rows="4" placeholder="Produktova fotka na bilem pozadi..." class="mt-1 w-full rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100"></textarea>
+	              <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Zadání pro Honzu</span>
+	              <textarea rows="4" placeholder="Honzo, připrav produktovou fotku na bílém pozadí…" class="mt-1 w-full rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:ring-4 focus:ring-violet-100"></textarea>
 	            </label>
-	            <button type="button" data-comse-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat</button>
+	            <button type="button" data-comse-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Honzo, připrav obrázek</button>
 	            <div data-comse-ai-result class="mt-4 hidden rounded-lg border border-violet-200 bg-white p-3">
 	              <div class="overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
-	                <img data-comse-ai-image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=520&h=360&q=80" alt="Obrazek vygenerovany COMSE AI" class="aspect-[4/3] w-full object-cover" />
+	                <img data-comse-ai-image src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=520&h=360&q=80" alt="Ukázkový návrh obrázku od Honzy" class="aspect-[4/3] w-full object-cover" />
 	              </div>
-	              <p class="mt-3 text-xs font-semibold uppercase tracking-normal text-violet-700">Vygenerovano COMSE AI</p>
+	              <p class="mt-3 text-xs font-semibold uppercase tracking-normal text-violet-700">Honza navrhuje · ukázka</p>
 	              <div class="mt-3 grid gap-2 sm:grid-cols-2">
-	                <button type="button" data-comse-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Vygenerovat znovu</button>
+	                <button type="button" data-comse-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Honzo, zkus to jinak</button>
 	                <button type="button" data-image-edit-close class="rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Potvrdit</button>
 	              </div>
 	            </div>
@@ -859,7 +870,7 @@
 	        </div>
 	        <div class="mt-5 grid gap-2 rounded-lg bg-slate-100 p-1 sm:grid-cols-2">
 	          <button type="button" data-xml-field-mode="manual" class="rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-700 shadow-sm">Rucne</button>
-	          <button type="button" data-xml-field-mode="ai" class="rounded-md px-3 py-2 text-sm font-semibold text-slate-500">COMSE AI</button>
+	          <button type="button" data-xml-field-mode="ai" class="rounded-md px-3 py-2 text-sm font-semibold text-slate-500">Honza AI</button>
 	        </div>
 	        <div data-xml-field-panel="manual" class="mt-5">
 	          <label class="block">
@@ -869,15 +880,15 @@
 	        </div>
 	        <div data-xml-field-panel="ai" class="mt-5 hidden">
 	          <label class="block">
-	            <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Zadani pro COMSE AI</span>
-	            <textarea rows="4" data-xml-field-ai-prompt placeholder="Zkrat text, vylepsi nazev, dopln lepsi custom label..." class="mt-1 w-full rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100"></textarea>
+	            <span class="block text-xs font-semibold uppercase tracking-normal text-violet-700">Co má Honza upravit?</span>
+	            <textarea rows="4" data-xml-field-ai-prompt placeholder="Honzo, zkrať popis, vylepši název nebo navrhni vhodný štítek…" class="mt-1 w-full rounded-lg border border-violet-200 bg-violet-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100"></textarea>
 	          </label>
-	          <button type="button" data-xml-field-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat COMSE AI</button>
+	          <button type="button" data-xml-field-ai-generate class="mt-4 w-full rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Nechat Honzu připravit návrh</button>
 	          <div data-xml-field-ai-result class="mt-4 hidden rounded-lg border border-violet-200 bg-white p-3">
-	            <p class="text-xs font-semibold uppercase tracking-normal text-violet-700">Navrh COMSE AI</p>
+	            <p class="text-xs font-semibold uppercase tracking-normal text-violet-700">Honza navrhuje</p>
 	            <textarea rows="4" data-xml-field-ai-value class="mt-2 w-full rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-800 outline-none transition focus:border-violet-500 focus:bg-white focus:ring-4 focus:ring-violet-100"></textarea>
 	            <div class="mt-3 grid gap-2 sm:grid-cols-2">
-	              <button type="button" data-xml-field-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Vygenerovat znovu</button>
+	              <button type="button" data-xml-field-ai-regenerate class="rounded-lg border border-violet-200 bg-white px-3 py-2 text-sm font-semibold text-violet-700 transition hover:bg-violet-50">Honzo, zkus to jinak</button>
 	              <button type="button" data-xml-field-ai-use class="rounded-lg bg-violet-600 px-3 py-2 text-sm font-semibold text-white transition hover:bg-violet-700">Pouzit hodnotu</button>
 	            </div>
 	          </div>
@@ -897,9 +908,9 @@
 	      <section class="w-full max-w-3xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="feed-ai-analysis-title">
 	        <div class="flex items-start justify-between gap-4">
 	          <div>
-	            <p class="text-sm font-medium text-violet-700">COMSE AI</p>
-	            <h2 id="feed-ai-analysis-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Analyza feedu COMSE AI</h2>
-	            <p class="mt-2 text-sm leading-6 text-slate-500">Rychly audit kvality XML feedu, vykonu produktu a doporucenych uprav.</p>
+	            <div class="feed-honza-intro"><img src="/images/honza-ai.webp" width="44" height="44" alt="" /><span><strong>Honza AI</strong><small>Tvůj parťák pro lepší feed</small></span></div>
+	            <h2 id="feed-ai-analysis-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Honza radí, co ve feedu vylepšit</h2>
+	            <p class="mt-2 text-sm leading-6 text-slate-500">Ahoj, jsem Honza. Pomůžu ti najít, co ve feedu vylepšit. Tady je ukázka mého rozboru a doporučení.</p>
 	          </div>
 	          <button type="button" data-feed-ai-analysis-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
 	        </div>
@@ -941,152 +952,59 @@
 	        </div>
 
 	        <div class="mt-5 rounded-lg border border-violet-100 bg-violet-50 p-4">
-	          <p class="text-sm font-semibold text-slate-950">Doporuceny dalsi krok</p>
-	          <p class="mt-2 text-sm leading-6 text-slate-600">Spustit hromadne pravidlo pro atribut <strong>description</strong> u kategorie Bezecke boty a nechat COMSE AI pripravit navrhy textu pro manualni schvaleni.</p>
+	          <p class="text-sm font-semibold text-slate-950">Co doporučuje Honza</p>
+	          <p class="mt-2 text-sm leading-6 text-slate-600">Doporučuji začít popisy v kategorii Běžecké boty. Připravím ti návrhy pro atribut <strong>description</strong> a ty rozhodneš, které schválíš nebo upravíš.</p>
 	        </div>
 
 	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
 	          <button type="button" data-feed-ai-analysis-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
-	          <button type="button" data-feed-ai-analysis-close data-bulk-rules-open class="rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Vytvorit hromadne pravidlo</button>
+	          <button type="button" data-feed-ai-analysis-close data-bulk-rules-open class="rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-violet-700">Připravit úpravy s Honzou</button>
 	        </div>
 	      </section>
 	    </div>
 
-	    <div
-	      id="bulk-rules-modal"
-	      class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4"
-	      aria-hidden="true"
-	    >
-	      <section class="w-full max-w-5xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="bulk-rules-title">
-	        <div class="flex items-start justify-between gap-4">
-	          <div>
-	            <p class="text-sm font-medium text-violet-700">Hromadne upravy XML feedu</p>
-	            <h2 id="bulk-rules-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950">Hromadna pravidla</h2>
-	            <p class="mt-2 text-sm leading-6 text-slate-500">Nejdriv vyberte segment produktu, potom atribut a prompt. COMSE AI pripravi navrhy, ktere muzete schvalit nebo rucne upravit.</p>
-	          </div>
-	          <button type="button" data-bulk-rules-close class="rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zavrit</button>
-	        </div>
-
-	        <div class="bulk-rules-grid mt-5">
-	          <section class="bulk-rules-panel">
-	            <p class="bulk-rules-step">1. Vyber produktu</p>
-	            <div class="grid gap-3 md:grid-cols-2">
-	              <label>
-	                <span>Kategorie</span>
-	                <select>
-	                  <option>Bezecke boty</option>
-	                  <option>Batohy</option>
-	                  <option>Lahve</option>
-	                  <option>Outdoor bundy</option>
-	                  <option>Vsechny kategorie</option>
-	                </select>
-	              </label>
-	              <label>
-	                <span>Custom label</span>
-	                <select>
-	                  <option>custom_label_1: high_roas</option>
-	                  <option>custom_label_0: sport</option>
-	                  <option>custom_label_2: summer</option>
-	                  <option>custom_label_4: omezit_bid</option>
-	                  <option>Bez omezeni</option>
-	                </select>
-	              </label>
-	              <label>
-	                <span>Vykonovy segment</span>
-	                <select>
-	                  <option>Hero / potential produkty</option>
-	                  <option>Waste produkty</option>
-	                  <option>Produkty bez description</option>
-	                  <option>Produkty skladem</option>
-	                </select>
-	              </label>
-	              <label>
-	                <span>Dalsi filtr</span>
-	                <select>
-	                  <option>Sklad je vetsi nez 10 ks</option>
-	                  <option>Marze % je vetsi nez 35 %</option>
-	                  <option>Eshop zisk je vetsi nez 5 000 Kc</option>
-	                  <option>Google Ads PNO neni vyssi nez 18 %</option>
-	                </select>
-	              </label>
-	            </div>
-	          </section>
-
-	          <section class="bulk-rules-panel">
-	            <p class="bulk-rules-step">2. Pravidlo upravy</p>
-	            <div class="grid gap-3 md:grid-cols-[220px_1fr]">
-	              <label>
-	                <span>Atribut produktu</span>
-	                <select>
-	                  <option>description</option>
-	                  <option>title</option>
-	                  <option>product_type</option>
-	                  <option>custom_label_0</option>
-	                  <option>custom_label_1</option>
-	                  <option>availability</option>
-	                </select>
-	              </label>
-	              <label>
-	                <span>Prompt pro COMSE AI</span>
-	                <textarea rows="4">Vylepsi description pro Google Shopping. Zachovej fakta o produktu, dopln hlavni benefity, material, pouziti a udrz text do 280 znaku.</textarea>
-	              </label>
-	            </div>
-	            <button type="button" data-bulk-rules-generate class="mt-4 rounded-lg bg-violet-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700">Vygenerovat navrhy uprav</button>
-	          </section>
-	        </div>
-
-	        <section class="bulk-rules-results mt-5" data-bulk-rules-results>
-	          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-	            <div>
-	              <p class="bulk-rules-step">3. Navrhy ke schvaleni</p>
-	              <h3>3 produkty pripraveny k uprave atributu description</h3>
-	            </div>
-	            <span data-bulk-rules-approved-count>0 / 3 schvaleno</span>
-	          </div>
-
-	          <div class="mt-4 grid gap-3">
-	            <article class="bulk-suggestion-card" data-bulk-suggestion>
-	              <div>
-	                <strong>Trail Runner Pro</strong>
-	                <span>TRP-042 - Bezecke boty - custom_label_1: high_roas</span>
-	              </div>
-	              <textarea rows="3">Lehke bezecke boty Trail Runner Pro pro rychly trenink i delsi behy. Prodysny svršek, stabilni podrazka a pohodlne tlumeni pomahaji drzet tempo na silnici i zpevnenych cestach.</textarea>
-	              <div class="bulk-suggestion-actions">
-	                <button type="button" data-bulk-approve>Schvalit</button>
-	                <button type="button" data-bulk-edit>Upravit manualne</button>
-	              </div>
-	            </article>
-	            <article class="bulk-suggestion-card" data-bulk-suggestion>
-	              <div>
-	                <strong>City Backpack 24L</strong>
-	                <span>CBP-118 - Batohy - custom_label_0: accessories</span>
-	              </div>
-	              <textarea rows="3">Mestsky batoh City Backpack 24L s prehlednym vnitrnim prostorem, kapsou na notebook a odolnym materialem. Vhodny pro praci, skolu i kazdodenni cestovani.</textarea>
-	              <div class="bulk-suggestion-actions">
-	                <button type="button" data-bulk-approve>Schvalit</button>
-	                <button type="button" data-bulk-edit>Upravit manualne</button>
-	              </div>
-	            </article>
-	            <article class="bulk-suggestion-card" data-bulk-suggestion>
-	              <div>
-	                <strong>Hydro Bottle Steel</strong>
-	                <span>HBS-640 - Lahve - custom_label_2: summer</span>
-	              </div>
-	              <textarea rows="3">Nerezova lahev Hydro Bottle Steel pro sport i bezny den. Udrzi napoj dele chladny, tesni pri prenaseni a diky odolnemu telu se hodi do batohu i auta.</textarea>
-	              <div class="bulk-suggestion-actions">
-	                <button type="button" data-bulk-approve>Schvalit</button>
-	                <button type="button" data-bulk-edit>Upravit manualne</button>
-	              </div>
-	            </article>
-	          </div>
-	        </section>
-
-	        <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-	          <button type="button" data-bulk-rules-close class="rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-600 transition hover:bg-slate-50">Zrusit</button>
-	          <button type="button" data-bulk-rules-close class="rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-indigo-200 transition hover:bg-indigo-700">Pouzit schvalene upravy</button>
-	        </div>
-	      </section>
-	    </div>
+    <div id="bulk-rules-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/50 p-4" aria-hidden="true">
+      <section class="honza-bulk-dialog w-full max-w-5xl rounded-xl bg-white p-5 shadow-2xl sm:p-6" role="dialog" aria-modal="true" aria-labelledby="bulk-rules-title">
+        <header class="honza-bulk-header">
+          <div class="feed-honza-intro"><img src="/images/honza-ai.webp" width="44" height="44" alt="" /><span><strong>Honza AI</strong><small>Řekni mi, co ve feedu vylepšíme</small></span></div>
+          <button type="button" data-bulk-rules-close class="honza-bulk-secondary">Zavřít</button>
+        </header>
+        <h2 id="bulk-rules-title">Hromadné úpravy feedu s Honzou</h2>
+        <p class="honza-bulk-lead">Napiš mi zadání vlastními slovy. Připravím návrhy a ty rozhodneš, které použiješ.</p>
+        <div class="honza-bulk-composer">
+          <label for="honza-bulk-prompt">Co mám upravit?</label>
+          <textarea id="honza-bulk-prompt" rows="3" maxlength="1500" placeholder="Honzo, prosím zkrať popisky u všech produktů…">Honzo, prosím zkrať popisky u všech produktů.</textarea>
+          <div class="honza-bulk-examples" aria-label="Příklady zadání">
+            <button type="button" data-honza-example="shorten">Zkrať popisky</button>
+            <button type="button" data-honza-example="titles">Zkrať názvy produktů</button>
+            <button type="button" data-honza-example="expand">Doplň použití produktu</button>
+          </div>
+          <div class="honza-bulk-scope">
+            <label for="honza-bulk-scope">Kterých produktů se úprava týká?
+              <select id="honza-bulk-scope">
+                <option value="all">Všechny produkty tohoto feedu · 3 v ukázce</option>
+                <option value="shoes">Kategorie Běžecké boty · 1 v ukázce</option>
+                <option value="bags">Kategorie Batohy · 1 v ukázce</option>
+              </select>
+            </label>
+            <button type="button" id="honza-bulk-generate" class="honza-bulk-primary">Honzo, připrav návrhy</button>
+          </div>
+          <p class="honza-bulk-hint">Klikací ukázka na 3 produktech. Vyzkoušej zkrácení popisků, názvů nebo doplnění použití ze známých údajů.</p>
+        </div>
+        <p id="honza-bulk-status" class="honza-bulk-status" role="status" aria-live="polite"></p>
+        <section id="honza-bulk-results" hidden aria-labelledby="honza-bulk-results-title">
+          <div class="honza-bulk-review-header">
+            <div><h3 id="honza-bulk-results-title">Moje návrhy pro tebe</h3><p id="honza-bulk-summary"></p></div>
+            <button type="button" id="honza-bulk-approve-all" class="honza-bulk-secondary">Schválit všechny návrhy</button>
+          </div>
+          <div id="honza-bulk-cards"></div>
+        </section>
+        <footer class="honza-bulk-footer">
+          <span id="honza-bulk-count">Zatím žádné návrhy ke schválení</span>
+          <button type="button" id="honza-bulk-apply" class="honza-bulk-primary" disabled>Potvrdit schválené úpravy</button>
+        </footer>
+      </section>
+    </div>
 
 	    <div
 	      id="custom-label-rules-modal"
@@ -1096,7 +1014,7 @@
 	      <section class="w-full max-w-3xl rounded-xl bg-white p-5 shadow-2xl shadow-slate-900/20 sm:p-6" role="dialog" aria-labelledby="custom-label-rules-title">
 	        <div class="flex items-start justify-between gap-4">
 	          <div>
-	            <p class="text-sm font-medium text-violet-700">Automaticka pravidla labelu</p>
+	            <p class="text-sm font-medium text-violet-700">Pravidla labelů</p>
 	            <h2 id="custom-label-rules-title" class="mt-1 text-xl font-semibold tracking-normal text-slate-950" data-custom-label-modal-title>Custom labely</h2>
 	            <p class="mt-2 text-sm leading-6 text-slate-500" data-custom-label-modal-description>
 	              Pripravte pravidlo, ktere bude doplnovat hodnotu do vybraneho custom labelu u produktu ve feedu.
@@ -1146,6 +1064,14 @@
 	        </div>
 
 	        <div data-custom-label-rules-flow class="auto-label-rules-panel mt-5 hidden">
+              <label class="label-performance-update">
+                <input type="checkbox" id="label-performance-update" checked aria-describedby="label-performance-update-help" />
+                <span>
+                  <strong>Automaticky aktualizovat na základě výkonu</strong>
+                  <small id="label-performance-update-help">Při zapnutí se přiřazení labelu průběžně přehodnocuje podle aktuálního výkonu a nastavených filtrů. Při vypnutí se pravidlo použije jen při ručním spuštění.</small>
+                </span>
+              </label>
+
 	          <div class="grid gap-4 lg:grid-cols-[1fr_1fr_1.2fr]">
 	            <label class="block">
 	              <span class="block text-xs font-semibold uppercase tracking-normal text-slate-500">Vybrat label</span>
@@ -1317,6 +1243,9 @@
 	      </section>
 	    </div>
 	
-	    <script src="/app.js?v=20260606-xml-products7" defer></script>
-	  </body>
+	    <script src="/app.js?v=20260909-label-rules" defer></script>
+	    <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
+    <script type="module" src="/feed-bulk-honza.js?v=1"></script>
+  </body>
 	</html>

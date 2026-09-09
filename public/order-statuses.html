@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stavy objednávek | comse.</title>
     <link rel="stylesheet" href="/styles.css?v=20260610-order-statuses-base" />
+    <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
   </head>
-  <body class="commerce-app order-statuses-page">
+  <body class="comse-visual commerce-app order-statuses-page">
     <main class="analytics-shell">
-      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
         <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
 
         <div class="shop-select-card">
           <label for="eshop-select">Vybraný e-shop</label>
@@ -21,14 +30,14 @@
         </div>
 
         <nav class="analytics-nav">
-          <a href="dashboard.html">Přehled</a>
-          <a href="ad-accounts.html">Výkon reklamních účtů</a>
-          <a href="product-overview.html">Produkty</a>
-          <a href="discounts.html">Slevy</a>
-          <a href="#">Doporučení</a>
-          <a href="performance-xml.html">Feed</a>
-          <a href="#">Reporty</a>
-          <a href="settings.html" class="is-active">Nastavení</a>
+          <a href="dashboard.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html" class="is-active" aria-current="page"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
         </nav>
 
         <div class="active-shop">
@@ -43,7 +52,7 @@
             <div>
               <p class="eyebrow-line">Nastavení přehledu</p>
               <h1>Stavy objednávek</h1>
-              <p>Nastavte, které stavy se započítávají do marketingového a finančního přehledu.</p>
+              <p>Sami určujete, které stavy objednávek svého e-shopu zahrnete do marketingového a které do finančního přehledu.</p>
             </div>
             <details class="user-menu">
               <summary>
@@ -74,7 +83,7 @@
               <p class="eyebrow-line">Base</p>
               <h2>Výběr stavů pro výpočty</h2>
               <p>
-                Přepínače určují, jestli se daný stav objednávky počítá do marketingového nebo finančního pohledu.
+                Každý pohled má vlastní výběr stavů. Například nové objednávky můžete zahrnout do marketingu, zatímco do financí pouze zaplacené. Konečný výběr je na vás.
               </p>
             </div>
             <span>7 stavů</span>
@@ -178,5 +187,7 @@
     </main>
 
     <script src="/app.js?v=20260605-xml6" defer></script>
+    <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
   </body>
 </html>

@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nastavení | comse.</title>
     <link rel="stylesheet" href="/styles.css?v=20260610-settings-base" />
+    <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="/account-model.css?v=20260909-accounts1" />
+    <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
   </head>
-  <body class="commerce-app settings-page">
+  <body class="comse-visual commerce-app settings-page">
     <main class="analytics-shell">
-      <aside class="analytics-sidebar" aria-label="Hlavní navigace">
+      <aside class="visual-sidebar analytics-sidebar" aria-label="Hlavní navigace">
         <a href="dashboard.html" class="analytics-logo" aria-label="comse.">comse<span>.</span></a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
 
         <div class="shop-select-card">
           <label for="eshop-select">Vybraný e-shop</label>
@@ -21,14 +31,14 @@
         </div>
 
         <nav class="analytics-nav">
-          <a href="dashboard.html">Přehled</a>
-          <a href="ad-accounts.html">Výkon reklamních účtů</a>
-          <a href="product-overview.html">Produkty</a>
-          <a href="discounts.html">Slevy</a>
-          <a href="#">Doporučení</a>
-          <a href="performance-xml.html">Feed</a>
-          <a href="#">Reporty</a>
-          <a href="settings.html" class="is-active">Nastavení</a>
+          <a href="dashboard.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Přehled</a>
+          <a href="ad-accounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Výkon reklamních účtů</a>
+          <a href="product-overview.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>Produkty</a>
+          <a href="discounts.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 13 13 20 3 10V3h7Z M7 7h.01" /></svg>Slevy</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.2l5.9-.9Z" /></svg>Doporučení</a>
+          <a href="performance-xml.html"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Feed</a>
+          <a href="#"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12h8 M8 16h6" /></svg>Reporty</a>
+          <a href="settings.html" class="is-active" aria-current="page"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastavení</a>
         </nav>
 
         <div class="active-shop">
@@ -41,9 +51,9 @@
         <header class="dashboard-header top-dashboard-card">
           <div class="dashboard-title-row">
             <div>
-              <p class="eyebrow-line">Base</p>
+              <p class="eyebrow-line">Firma, tým a aplikace</p>
               <h1>Nastavení</h1>
-              <p>Správa přehledu, marží, stavů objednávek, napojení, předplatného a fakturace.</p>
+              <p>Firmy, e-shopy, zaměstnanci a jejich přístupy. Nastavení přehledu, napojení a fakturace na jednom místě.</p>
             </div>
             <details class="user-menu">
               <summary>
@@ -68,16 +78,110 @@
           </div>
         </header>
 
+
+        <section class="settings-card ai-wallet" id="ai-kredity" aria-labelledby="ai-wallet-title">
+          <div class="ai-wallet-heading"><div><p class="eyebrow-line">Účet firmy Alfa · Honza AI</p><h2 id="ai-wallet-title">Kredity pro vaše AI nápady</h2><p>Jeden společný zůstatek pro firmu. Přehled o každém použití napříč týmem a e-shopy.</p></div><span class="ai-demo-label">Klikací ukázka</span></div>
+          <div class="ai-wallet-grid">
+            <div class="ai-wallet-balance"><span>K dispozici</span><strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong><p id="ai-credit-status" role="status">Připraveno pro další nápad.</p><button class="ai-credit-primary" id="ai-topup-open" type="button">＋ Dobít kredity</button></div>
+            <div class="ai-wallet-info"><h3>Vy víte, kolik. Honza ví, jak.</h3><p>Před spuštěním AI uvidíte spotřebu kreditů i účet, ze kterého se odečtou. Bez dostatečného zůstatku se akce nespustí.</p><div class="ai-wallet-metrics"><div><span>Celkem připsáno</span><strong><span id="ai-credit-added">1 500</span> kr.</strong></div><div><span>Celkem využito</span><strong><span id="ai-credit-used">260</span> kr.</strong></div></div><p class="ai-credit-fine">Souhrn ukázkové historie. Výběr e-shopu nemění společný zůstatek firmy.</p></div>
+          </div>
+          <div class="ai-credit-example"><img src="images/honza-ai.webp" width="48" height="48" alt="" /><div><strong>Ukázka: AI doporučení pro E-shop 2</strong><p>Účet firmy Alfa · Zaměstnanec X · <b>20 kreditů</b></p></div><button class="ai-credit-secondary" id="ai-demo-use" type="button">Vyzkoušet odečet 20 kreditů</button></div>
+          <p id="ai-credit-feedback" class="ai-credit-feedback" role="status"></p>
+          <div class="ai-wallet-heading ai-history-heading"><div><h3>Historie kreditů</h3><p>Kdo je použil, pro který e-shop a na co.</p></div><button class="ai-credit-text" id="ai-credit-reset" type="button">Obnovit ukázku</button></div>
+          <div class="ai-credit-table-wrap" role="region" aria-label="Historie AI kreditů" tabindex="0"><table class="ai-credit-table"><caption>Ukázkové pohyby na účtu firmy Alfa</caption><thead><tr><th scope="col">Datum</th><th scope="col">Akce</th><th scope="col">Uživatel / e-shop</th><th scope="col">Kredity</th></tr></thead><tbody id="ai-credit-history"></tbody></table></div>
+          <details class="ai-credit-rules"><summary>Kdo kredity spravuje?</summary><p>Návrh: majitel firmy spravuje dobití a přiděluje oprávnění k používání AI. Zaměstnanci čerpají ze společného účtu firmy. Agentura čerpá kredity klientské firmy pouze s jejím pověřením; zůstatky různých firem se neslučují.</p><p>AI kredity jsou jednotky použití, nikoli koruny. Ceník, expirace a kredity zahrnuté v tarifu zatím nejsou stanovené.</p><a href="docs/ai-kredity.md" download>Stáhnout návrh AI kreditů ↓</a></details>
+          <p class="ai-credit-fine">Dobití i odečet jsou pouze simulace bez platby a bez volání AI. Ukázka se drží v této kartě prohlížeče při přecházení mezi stránkami.</p>
+        </section>
+
+        <section class="settings-card account-model" id="typy-uctu" aria-labelledby="account-model-title">
+          <div class="account-model-heading">
+            <div>
+              <p class="eyebrow-line">Typy účtů a přístupy</p>
+              <h2 id="account-model-title">Firmy, e-shopy a tým</h2>
+              <p>Spravujete vlastní e-shopy, nebo klienty agentury? Oba typy účtů mají vlastní tým a možnost určit, co jednotliví zaměstnanci uvidí a co mohou měnit.</p>
+            </div>
+            <a class="account-model-download" href="docs/typy-uctu-a-opravneni.md" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5 M4 16v5h16v-5" /></svg>
+              Stáhnout dokumentaci
+            </a>
+          </div>
+
+          <div class="account-type-grid">
+            <article class="account-type-card">
+              <div class="account-type-top">
+                <div class="account-type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10h16v11H4Z M3 10l2-7h14l2 7 M9 21v-7h6v7 M3 10c0 3 4 3 4 0 0 3 5 3 5 0 0 3 5 3 5 0 0 3 4 3 4 0" /></svg></div>
+                <span>Vlastní firma</span>
+              </div>
+              <h3>Majitel e-shopu / firmy</h3>
+              <p>Nejvyšší oprávnění má majitel firmy. Pod jednou firmou může spravovat více e-shopů.</p>
+              <ul>
+                <li>Spravuje zaměstnance vlastní firmy.</li>
+                <li>Určuje přístup ke konkrétním e-shopům a částem aplikace.</li>
+                <li>Povoluje a odebírá přístup marketingové agentuře.</li>
+              </ul>
+            </article>
+            <article class="account-type-card agency">
+              <div class="account-type-top">
+                <div class="account-type-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 7h18v14H3Z M8 7V3h8v4 M3 12c6 4 12 4 18 0 M10 12h4v4h-4Z" /></svg></div>
+                <span>Více klientských firem</span>
+              </div>
+              <h3>Marketingová agentura</h3>
+              <p>Spravuje více klientských firem. Každá firma může mít více e-shopů a zachovává si svého majitele.</p>
+              <ul>
+                <li>Spravuje vlastní agenturní zaměstnance.</li>
+                <li>Přiděluje jim klienty, e-shopy a konkrétní oprávnění.</li>
+                <li>Pracuje pouze v rozsahu pověření od klienta.</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="account-owner-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9S4 17 4 12V6l8-3Z m-4 9 3 3 5-6" /></svg>
+            <div><strong>Majitel firmy má vždy poslední slovo.</strong><p>Agentura firmu spravuje na základě pověření. Její majitel řídí vlastní tým, ale není nadřazený majiteli klientské firmy.</p></div>
+          </div>
+
+          <details class="account-model-details" open>
+            <summary>Jak spolu souvisejí agentura, firmy a e-shopy</summary>
+            <div class="account-model-detail-body">
+              <p><strong>Ukázková agentura</strong> má pověřenou správu dvou firem. Každá má svého majitele a vlastní e-shopy.</p>
+              <div class="account-company-grid">
+                <div class="account-company"><strong>Firma Alfa</strong><span>Vlastní majitel a zaměstnanci</span><ul><li>E-shop Alfa CZ</li><li>E-shop Alfa SK</li></ul></div>
+                <div class="account-company"><strong>Firma Beta</strong><span>Vlastní majitel a zaměstnanci</span><ul><li>E-shop Beta CZ</li></ul></div>
+              </div>
+            </div>
+          </details>
+          <details class="account-model-details">
+            <summary>Jak se zaměstnancům přidělují oprávnění</summary>
+            <div class="account-model-detail-body">
+              <p>Majitel firmy i vedení agentury určují přístupy vlastnímu týmu. Nikdo nemůže předat širší oprávnění, než sám smí spravovat.</p>
+              <ol class="account-permission-steps">
+                <li><span>1</span><strong>Komu</strong><p>Konkrétnímu zaměstnanci firmy nebo agentury.</p></li>
+                <li><span>2</span><strong>Ke kterým datům</strong><p>Vyberou se firmy, e-shopy a části aplikace, například Produkty nebo Reklamní účty.</p></li>
+                <li><span>3</span><strong>Co může dělat</strong><p>Zobrazit, upravovat, schvalovat či spouštět povolené akce. Správa přístupů je samostatné oprávnění.</p></li>
+              </ol>
+              <div class="account-access-example"><strong>Příklad:</strong> Zaměstnanec agentury vidí Metu a Google pro e-shop Alfa CZ. Nemá přístup k Alfa SK, Firmě Beta ani k maržím a fakturaci klienta.</div>
+            </div>
+          </details>
+          <p class="account-model-footnote">Návrh budoucích účtů a oprávnění. V tomto klikacím vizuálu se zatím nevytvářejí skutečné účty ani nemění přístupy.</p>
+        </section>
+
         <section class="settings-card">
           <div class="settings-card-header">
             <div>
               <p class="eyebrow-line">Nastavení aplikace</p>
               <h2>Konfigurace přehledu</h2>
               <p>Rychlé vstupy do základních částí, které ovlivňují výpočty a napojení v dashboardu.</p>
+              <a class="account-model-download" href="docs/prehled-a-nastaveni.md" download>Jak funguje Přehled · dokumentace ↓</a>
             </div>
           </div>
 
           <div class="settings-link-grid">
+            <a href="company-costs.html" class="settings-link-card">
+              <span>Base · Finance</span>
+              <strong>Náklady společnosti</strong>
+              <p>Lidé, software i provoz. Přiřazení firmě nebo e-shopu a rozdělení společných nákladů.</p>
+            </a>
+
             <a href="order-statuses.html" class="settings-link-card">
               <span>Nastavení přehledu</span>
               <strong>Stavy objednávek</strong>
@@ -87,7 +191,7 @@
             <a href="margin-settings.html" class="settings-link-card">
               <span>Finance</span>
               <strong>Nastavení marží</strong>
-              <p>Správa marží pro přesnější zisk, PNO a výkon produktů.</p>
+              <p>Marže podle kategorií i produktů. Hromadné nastavení s návrhem Honzy AI.</p>
             </a>
 
             <a href="api-integrations.html" class="settings-link-card">
@@ -137,6 +241,13 @@
       </section>
     </main>
 
+
+    <dialog id="ai-topup-dialog" class="ai-topup-dialog" aria-labelledby="ai-topup-title">
+      <form id="ai-topup-form"><p class="eyebrow-line">AI kredity · Firma Alfa</p><h2 id="ai-topup-title">Doplňte energii pro Honzu</h2><p>Vyzkoušejte připsání <strong>500 ukázkových kreditů</strong> na společný účet firmy.</p><div class="ai-topup-amount">＋ 500 <small>kreditů</small></div><p>Bez platby. Cena skutečného dobití bude doplněna až po stanovení ceníku.</p><div class="ai-topup-actions"><button class="ai-credit-secondary" id="ai-topup-cancel" type="button">Zrušit</button><button class="ai-credit-primary" type="submit">Připsat ukázkové kredity</button></div></form>
+    </dialog>
+
     <script src="/app.js?v=20260605-xml6" defer></script>
+    <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
   </body>
 </html>

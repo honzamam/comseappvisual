@@ -847,7 +847,7 @@ const initXmlFieldEditing = () => {
     } else if (activeFieldName === "title") {
       aiValue.value = `${activeOriginalValue} - ${suffix}`;
     } else if (activeFieldName === "description") {
-      aiValue.value = `${activeOriginalValue} Navrh COMSE AI zkracuje text pro lepsi citelnost ve feedu.`;
+      aiValue.value = `${activeOriginalValue} Honzův ukázkový návrh pro lepší čitelnost ve feedu.`;
     } else {
       aiValue.value = `${activeOriginalValue} ${suffix}`.trim();
     }
@@ -876,7 +876,7 @@ const initXmlFieldEditing = () => {
       return;
     }
 
-    if (fieldName === "URL obrazku" || fieldName === "Zadani pro AI") {
+    if (fieldName === "URL obrazku" || fieldName === "Zadani pro AI" || fieldName === "Zadání pro Honzu") {
       return;
     }
 
@@ -1091,13 +1091,13 @@ const initCustomLabelRulesModal = () => {
     }
 
     if (modalTitle) {
-      modalTitle.textContent = mode === "rules" ? "Automaticka pravidla labelu" : "Custom labely";
+      modalTitle.textContent = mode === "rules" ? "Pravidla labelů" : "Custom labely";
     }
 
     if (modalDescription) {
       modalDescription.textContent =
         mode === "rules"
-          ? "Vyberte label, hodnotu a filtry produktu, podle kterych se hodnota automaticky propise do feedu."
+          ? "Vyber label, hodnotu a filtry produktů. Zvol, zda se má pravidlo aktualizovat automaticky podle výkonu."
           : "Vytvorte hodnotu pod vybranym custom labelem a spravujte hotove hodnoty.";
     }
 
@@ -1306,50 +1306,55 @@ const initProductChartCursor = () => {
     {
       percent: 6,
       date: "1. 5.",
-      values: ["Google CTR: 3,4 %", "Google CPC: 4,62 Kc", "Meta utrata: 620 Kc", "Celkove nakupy: 9 ks"],
+      values: ["Google CTR: 3,4 %", "Google CPC: 4,62 Kc", "Meta utrata: 620 Kc", "Celkove nakupy: 9 ks", "Skladové zásoby: 72 ks"],
     },
     {
       percent: 18,
       date: "6. 5.",
-      values: ["Google CTR: 3,8 %", "Google CPC: 4,55 Kc", "Meta utrata: 760 Kc", "Celkove nakupy: 12 ks"],
+      values: ["Google CTR: 3,8 %", "Google CPC: 4,55 Kc", "Meta utrata: 760 Kc", "Celkove nakupy: 12 ks", "Skladové zásoby: 64 ks"],
     },
     {
       percent: 30,
       date: "10. 5.",
-      values: ["Google CTR: 3,7 %", "Google CPC: 4,48 Kc", "Meta utrata: 890 Kc", "Celkove nakupy: 15 ks"],
+      values: ["Google CTR: 3,7 %", "Google CPC: 4,48 Kc", "Meta utrata: 890 Kc", "Celkove nakupy: 15 ks", "Skladové zásoby: 55 ks"],
     },
     {
       percent: 43,
       date: "15. 5.",
-      values: ["Google CTR: 4,1 %", "Google CPC: 4,38 Kc", "Meta utrata: 1 050 Kc", "Celkove nakupy: 18 ks"],
+      values: ["Google CTR: 4,1 %", "Google CPC: 4,38 Kc", "Meta utrata: 1 050 Kc", "Celkove nakupy: 18 ks", "Skladové zásoby: 43 ks"],
     },
     {
       percent: 55,
       date: "18. 5.",
-      values: ["Google CTR: 4,4 %", "Google CPC: 4,20 Kc", "Meta utrata: 1 180 Kc", "Celkove nakupy: 22 ks"],
+      values: ["Google CTR: 4,4 %", "Google CPC: 4,20 Kc", "Meta utrata: 1 180 Kc", "Celkove nakupy: 22 ks", "Skladové zásoby: 32 ks"],
     },
     {
       percent: 67,
       date: "22. 5.",
-      values: ["Google CTR: 4,9 %", "Google CPC: 4,08 Kc", "Meta utrata: 1 420 Kc", "Celkove nakupy: 26 ks"],
+      values: ["Google CTR: 4,9 %", "Google CPC: 4,08 Kc", "Meta utrata: 1 420 Kc", "Celkove nakupy: 26 ks", "Skladové zásoby: 20 ks"],
     },
     {
       percent: 79,
       date: "26. 5.",
-      values: ["Google CTR: 4,7 %", "Google CPC: 4,12 Kc", "Meta utrata: 1 560 Kc", "Celkove nakupy: 28 ks"],
+      values: ["Google CTR: 4,7 %", "Google CPC: 4,12 Kc", "Meta utrata: 1 560 Kc", "Celkove nakupy: 28 ks", "Skladové zásoby: 60 ks"],
     },
     {
       percent: 94,
       date: "31. 5.",
-      values: ["Google CTR: 5,3 %", "Google CPC: 4,02 Kc", "Meta utrata: 1 720 Kc", "Celkove nakupy: 31 ks"],
+      values: ["Google CTR: 5,3 %", "Google CPC: 4,02 Kc", "Meta utrata: 1 720 Kc", "Celkove nakupy: 31 ks", "Skladové zásoby: 48 ks"],
     },
   ];
 
+  let selectedPoint = points[3];
+  const stockToggle = document.querySelector('[data-chart-toggle="stock"]');
+
   const renderPoint = (point) => {
+    selectedPoint = point;
     cursor.style.left = `${point.percent}%`;
     tooltip.style.left = `${Math.min(point.percent + 2, 82)}%`;
     tooltipDate.textContent = point.date;
     tooltipValues.innerHTML = point.values
+      .filter((value) => !value.startsWith("Skladové zásoby:") || stockToggle?.checked)
       .map((value) => {
         const [label, metric] = value.split(": ");
         return `<span>${label} <strong>${metric}</strong></span>`;
@@ -1367,7 +1372,8 @@ const initProductChartCursor = () => {
     renderPoint(point);
   };
 
-  renderPoint(points[3]);
+  renderPoint(selectedPoint);
+  stockToggle?.addEventListener("change", () => renderPoint(selectedPoint));
   chart.addEventListener("mousemove", (event) => updateFromClientX(event.clientX));
   chart.addEventListener("touchmove", (event) => updateFromClientX(event.touches[0].clientX), { passive: true });
 };

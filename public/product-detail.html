@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail produktu | COMSE Administrace</title>
     <link rel="stylesheet" href="/styles.css?v=20260605-xml6" />
+    <link rel="stylesheet" href="/design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="/ai-credits.css?v=1" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
+    <link rel="stylesheet" href="/product-stock-chart.css?v=1" />
   </head>
-  <body class="min-h-screen bg-slate-50 text-slate-950 antialiased">
+  <body class="comse-visual min-h-screen bg-slate-50 text-slate-950 antialiased">
     <main class="grid min-h-screen lg:grid-cols-[280px_1fr]">
-      <aside class="border-b border-indigo-100 bg-white px-5 py-5 shadow-sm lg:border-b-0 lg:border-r">
+      <aside class="visual-sidebar border-b border-indigo-100 bg-white px-5 py-5 shadow-sm lg:border-b-0 lg:border-r">
         <a href="dashboard.html" class="flex items-center gap-3" aria-label="COMSE Administrace">
           <span class="flex size-10 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white shadow-sm shadow-indigo-200">
             C
           </span>
           <span class="text-base font-semibold tracking-normal text-slate-900">COMSE Admin</span>
         </a>
+        <a class="ai-credit-badge" href="settings.html#ai-kredity" aria-label="AI kredity firmy Alfa — přehled a dobití">
+          <span class="ai-credit-badge-top"><span>✦ AI kredity</span><span aria-hidden="true">↗</span></span>
+          <strong><span data-ai-balance>1 240</span> <small>kreditů</small></strong>
+          <span class="ai-credit-badge-note">Účet firmy Alfa · ukázka</span>
+        </a>
+
 
         <div class="mt-6">
           <label for="eshop-select" class="block text-xs font-semibold uppercase tracking-normal text-slate-500">
@@ -31,19 +41,19 @@
         </div>
 
         <nav class="mt-8 space-y-1" aria-label="Hlavni navigace">
-          <a href="dashboard.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Dashboard</a>
-          <a href="ad-accounts.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Vykon reklamnich uctu</a>
-          <a href="product-overview.html" class="flex items-center justify-between rounded-lg bg-indigo-50 px-3 py-2.5 text-sm font-semibold text-indigo-700">
+          <a href="dashboard.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3h7v7H3z M14 3h7v7h-7z M3 14h7v7H3z M14 14h7v7h-7z" /></svg>Dashboard</a>
+          <a href="ad-accounts.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M12 20V4 M20 20v-7" /></svg>Vykon reklamnich uctu</a>
+          <a href="product-overview.html" class="flex items-center justify-between rounded-lg bg-indigo-50 px-3 py-2.5 text-sm font-semibold text-indigo-700" aria-current="page"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 9 5-9 5-9-5Z M3 8v9l9 5 9-5V8 M12 13v9" /></svg>
             Produktovy prehled
             <span class="size-2 rounded-full bg-indigo-500"></span>
           </a>
-          <a href="performance-xml.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Výkonnostní XML</a>
-          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">E-shopy</a>
-          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Objednavky</a>
-          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Zakaznici</a>
-          <a href="order-statuses.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Stavy objednavek</a>
-          <a href="settings.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700">Nastaveni</a>
-          <a href="margin-settings.html" class="block rounded-lg px-6 py-2 text-sm font-medium text-slate-500 transition hover:bg-slate-50 hover:text-indigo-700">Nastaveni marzi</a>
+          <a href="performance-xml.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h10l4 4v14H5Z M14 3v5h5 M8 12l-2 2 2 2 M16 12l2 2-2 2 M13 11l-2 6" /></svg>Výkonnostní XML</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4Z M8 9h8 M8 13h5" /></svg>E-shopy</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4Z M8 9h8 M8 13h5" /></svg>Objednavky</a>
+          <a href="#" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4Z M8 9h8 M8 13h5" /></svg>Zakaznici</a>
+          <a href="order-statuses.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 5h11 M9 12h11 M9 19h11 M3 5h.01 M3 12h.01 M3 19h.01" /></svg>Stavy objednavek</a>
+          <a href="settings.html" class="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-600 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16 M4 17h16 M8 4v6 M16 14v6" /></svg>Nastaveni</a>
+          <a href="margin-settings.html" class="block rounded-lg px-6 py-2 text-sm font-medium text-slate-500 transition hover:bg-slate-50 hover:text-indigo-700"><svg class="visual-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20V10 M10 20V4 M16 20v-7 M3 20h18" /></svg>Nastaveni marzi</a>
         </nav>
 
         <div class="mt-8 rounded-lg border border-violet-100 bg-violet-50 p-4">
@@ -191,6 +201,10 @@
                     <input type="checkbox" data-chart-toggle="storno" />
                     <span>Storno %</span>
                   </label>
+                  <label class="chart-toggle product-stock-toggle">
+                    <input type="checkbox" checked data-chart-toggle="stock" />
+                    <span>Skladové zásoby · ks</span>
+                  </label>
                 </div>
               </div>
 
@@ -231,8 +245,9 @@
                 </div>
               </div>
 
+              <p class="product-stock-note">Skladové zásoby ukazuje přerušovaná tyrkysová čára podle pravé osy v kusech. Ukázka: 1.–31. 5. · poslední stav 48 ks. Ostatní křivky mají vlastní měřítka.</p>
               <div class="trend-chart trend-chart-large mt-5" data-product-chart>
-                <svg viewBox="0 0 980 340" role="img" aria-label="Spolecny graf metrik produktu">
+                <svg viewBox="0 0 980 340" role="img" aria-label="Vývoj metrik produktu a skladových zásob v kusech">
                   <path class="chart-grid" d="M55 45H940M55 110H940M55 175H940M55 240H940M55 305H940" />
                   <path class="chart-axis-label" d="M55 305H940" />
                   <g class="chart-events" aria-label="Udalosti v case">
@@ -251,6 +266,14 @@
                   <polyline data-chart-series="googleSpend" class="chart-line chart-line-amber" points="60,270 180,258 300,232 420,214 540,186 660,156 780,138 930,112" />
                   <polyline data-chart-series="conversions" class="chart-line chart-line-cyan" points="60,280 180,266 300,248 420,214 540,196 660,158 780,146 930,128" />
                   <polyline data-chart-series="storno" class="chart-line chart-line-rose" points="60,156 180,164 300,170 420,150 540,142 660,132 780,138 930,126" />
+                  <g data-chart-series="stock" class="product-stock-axis" aria-label="Pravá osa: skladové zásoby v kusech">
+                    <text x="946" y="49">80 ks</text>
+                    <text x="946" y="114">60 ks</text>
+                    <text x="946" y="179">40 ks</text>
+                    <text x="946" y="244">20 ks</text>
+                    <text x="946" y="309">0 ks</text>
+                  </g>
+                  <polyline data-chart-series="stock" class="chart-line product-stock-line" points="60,71 180,97 300,126.25 420,165.25 540,201 660,240 780,110 930,149" />
                 </svg>
                 <button class="chart-point bg-orange-500" style="left: 43%; top: 49%" aria-label="Zmena: obrazku">
                   <span>Zmena: obrazku</span>
@@ -286,6 +309,8 @@
       </section>
     </main>
 
-    <script src="/app.js?v=20260605-xml6"></script>
+    <script src="/app.js?v=20260909-product-stock"></script>
+    <script type="module" src="/ai-credits.js?v=1"></script>
+    <script src="/honza-chat.js?v=1" defer></script>
   </body>
 </html>

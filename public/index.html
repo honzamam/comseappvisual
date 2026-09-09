@@ -3,132 +3,112 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>comse. | Prihlaseni</title>
-    <link rel="stylesheet" href="styles.css?v=20260605-xml6" />
+    <title>Přihlášení | comse.</title>
+    <link rel="stylesheet" href="styles.css?v=20260909-login2" />
     <link rel="stylesheet" href="login.css?v=20260605d" />
+    <link rel="stylesheet" href="design.css?v=20260909-visual1" />
+    <link rel="stylesheet" href="login-preview.css?v=20260909-login2" />
+    <link rel="stylesheet" href="/honza-chat.css?v=1" />
   </head>
-
-  <body>
+  <body class="comse-visual visual-login">
     <main class="page">
-      <section class="left">
+      <section class="left" aria-label="Seznamte se s comse">
         <div class="topbar">
-          <a class="logo" href="/" aria-label="comse administrace">comse<span class="brand-dot"></span></a>
-          <a class="help" href="mailto:podpora@comse.cz">Potrebujes pomoc?</a>
+          <a class="logo" href="index.html" aria-label="comse">comse<span class="brand-dot"></span></a>
+          <a class="help" href="mailto:podpora@comse.cz">Potřebujete pomoc?</a>
         </div>
-
         <div class="headline">
-          <div class="eyebrow">Performance control room</div>
-          <h1>Mej vykon e-shopu pod kontrolou.</h1>
-          <p>
-            Prehled kampani, produktu, PNO a rustu na jednom miste.
-            Bez chaosu. Bez hadani. Bez zbytecnych tabulek.
-          </p>
+          <div class="eyebrow"><span class="intro-dot" aria-hidden="true"></span> Malý detail. Velký rozdíl ve výkonu.</div>
+          <h1>Vaše produkty.<br /><span>Jejich skutečný výkon.</span></h1>
+          <p>Meta, Google i celý e-shop. PNO, jasné štítky a Honza AI, který vám pomůže najít další krok.</p>
         </div>
-
-        <div class="dashboard">
-          <div class="snapshot" id="snapshot">
-            <div class="snapshot-head">
-              <div class="snapshot-title">
-                <span class="live-dot"></span>
-                Profit Snapshot
-              </div>
-              <div class="status-pill" id="status-text">zivy nahled</div>
+        <article class="product-preview" aria-labelledby="preview-product-name">
+          <div class="product-preview-top">
+            <span class="product-preview-caption">Produkt pod lupou</span>
+            <span class="demo-label">Ukázková data · 7 dní</span>
+          </div>
+          <div class="preview-product-identity">
+            <div class="preview-product-photo"><img src="images/demo-sneaker.jpg" alt="Bílá teniska Urban" width="84" height="84" /></div>
+            <div class="preview-product-copy">
+              <h2 id="preview-product-name">Tenisky Urban</h2>
+              <p>Bílá · velikost 42 <span aria-hidden="true">/</span> SKU URB-042</p>
             </div>
-
-            <div class="metrics">
-              <div class="metric">
-                <span>Dnesni trzby</span>
-                <strong data-count="128450" data-format="money">0 Kc</strong>
-                <small>+18,4 %</small>
-              </div>
-
-              <div class="metric">
-                <span>PNO</span>
-                <strong data-count="14.8" data-format="percent">0 %</strong>
-                <small>v cili</small>
-              </div>
-
-              <div class="metric">
-                <span>ROAS</span>
-                <strong data-count="6.7" data-format="roas">0x</strong>
-                <small>stabilni</small>
-              </div>
-
-              <div class="metric warning">
-                <span>Waste produkty</span>
-                <strong data-count="17" data-format="number">0</strong>
-                <small>zkontrolovat</small>
-              </div>
+            <span class="product-hero-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 3 2.8 5.6 6.2.9-4.5 4.4 1.1 6.1-5.6-2.9-5.6 2.9 1.1-6.1L3 9.5l6.2-.9Z" /></svg> HERO</span>
+          </div>
+          <dl class="preview-pno-grid">
+            <div class="pno-meta">
+              <dt><span class="channel-symbol" aria-hidden="true">∞</span> PNO Meta</dt>
+              <dd>12,4<span> %</span><small>Produkt na Metě</small></dd>
             </div>
-
-            <div class="chart">
-              <div class="scan"></div>
-              <div class="chart-line">
-                <svg viewBox="0 0 560 80" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M0,58 C60,40 92,66 142,42 C190,19 230,52 276,34 C340,7 380,44 430,24 C482,2 520,18 560,10" />
-                </svg>
-              </div>
+            <div class="pno-google">
+              <dt><span class="channel-symbol channel-symbol-google" aria-hidden="true">G</span> PNO Google</dt>
+              <dd>18,6<span> %</span><small>Produkt na Googlu</small></dd>
+            </div>
+            <div class="pno-shop">
+              <dt><svg class="channel-symbol" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z M8 9V6a4 4 0 0 1 8 0v3" /></svg> PNO e-shopu</dt>
+              <dd>14,8<span> %</span><small>Celý e-shop pro srovnání</small></dd>
+            </div>
+          </dl>
+          <div class="product-preview-bottom">
+            <span><i aria-hidden="true"></i> HERO = produkt pod cílovým PNO</span>
+            <a href="product-overview.html">Prohlédnout produkty <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <section class="honza-companion" aria-labelledby="honza-title" data-honza-demo>
+          <div class="honza-intro">
+            <div class="honza-portrait">
+              <img src="images/honza-ai.webp" alt="Honza AI, váš marketingový parťák" width="104" height="104" />
+              <span class="honza-online" aria-label="Vždy po ruce"></span>
+            </div>
+            <div class="honza-intro-copy">
+              <div class="honza-name">Honza <span>AI</span><span class="honza-availability">24/7</span></div>
+              <h2 id="honza-title">Vždy po ruce.<br /><span>Nikdy nespí.</span></h2>
+              <p>Vy znáte svůj e-shop. Honza hlídá souvislosti.</p>
             </div>
           </div>
-
-          <div class="alerts">
-            <div class="alert-card">
-              <strong>Produkt pali rozpocet</strong>
-              <p>Sedacka NIVA ma vysokou utratu bez odpovidajici hodnoty konverzi.</p>
-              <span class="tag">WASTE</span>
+          <div class="honza-message" aria-live="polite" aria-atomic="true">
+            <div class="honza-typing" data-honza-typing hidden>
+              <img src="images/honza-ai.webp" alt="" width="30" height="30" />
+              <span>Honza píše…</span>
+              <span class="typing-dots" aria-hidden="true"><i></i><i></i><i></i></span>
             </div>
-
-            <div class="alert-card">
-              <strong>Produkt stoji za posileni</strong>
-              <p>Postel Evropa prodava stabilne a Google ji porad netlaci dost.</p>
-              <span class="tag good">HERO_UNDERPUSHED</span>
-            </div>
+            <p data-honza-answer>Tenisky Urban mají na Metě PNO 12,4 %, pod ukázkovým cílem 20 %. Proto štítek HERO. Na Googlu je PNO vyšší — podíval bych se na kampaně tohoto produktu.</p>
           </div>
-        </div>
+          <div class="honza-footer">
+            <span>Ukázka doporučení od Honzy</span>
+            <button type="button" class="honza-replay" data-honza-replay><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8 M3 4v6h6" /></svg> Přehrát ukázku</button>
+          </div>
+        </section>
       </section>
-
-      <section class="right">
+      <section class="right" aria-labelledby="login-title">
         <div class="login-card">
-          <h2>Vitej zpet.</h2>
-          <p>Prihlas se do sveho performance dashboardu.</p>
-
+          <div class="login-welcome-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v4 M12 17v4 M3 12h4 M17 12h4 M5.6 5.6l2.8 2.8 M15.6 15.6l2.8 2.8 M5.6 18.4l2.8-2.8 M15.6 8.4l2.8-2.8" /></svg></div>
+          <span class="login-eyebrow">Váš e-shop. Váš přehled.</span>
+          <h2 id="login-title">Vítejte zpátky.</h2>
+          <p>Všechna důležitá čísla už na vás čekají.</p>
           <form id="login-form" action="dashboard.html" method="get">
             <div class="field">
               <label for="email">E-mail</label>
               <input id="email" name="email" type="email" placeholder="jan@firma.cz" autocomplete="email" />
             </div>
-
             <div class="field">
               <label for="password">Heslo</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="••••••••"
-                autocomplete="current-password"
-              />
+              <input id="password" name="password" type="password" placeholder="Vaše heslo" autocomplete="current-password" />
             </div>
-
             <div class="row">
-              <label class="remember">
-                <input type="checkbox" />
-                Pamatovat si me
-              </label>
-
-              <a class="forgot" href="#">Zapomenute heslo</a>
+              <label class="remember"><input type="checkbox" /> Zůstat přihlášený</label>
+              <a class="forgot" href="#">Zapomenuté heslo</a>
             </div>
-
-            <button class="button" type="submit">Prihlasit do dashboardu</button>
-            <div class="login-message" id="login-message"></div>
+            <button class="button" type="submit">Přejít do přehledu <span aria-hidden="true">→</span></button>
+            <div class="login-message" id="login-message" role="status"></div>
           </form>
-
-          <div class="mini-footer">
-            comse. © 2026 - performance bez omacky
-          </div>
+          <div class="login-demo-note"><span aria-hidden="true">↗</span> Jen se rozhlížíte? <a href="dashboard.html">Prohlédnout ukázku</a></div>
+          <div class="mini-footer">comse. © 2026 <span aria-hidden="true">·</span> Méně dohadů. Více přehledu.</div>
         </div>
       </section>
     </main>
-
     <script src="app.js?v=20260605-xml6" defer></script>
+    <script src="login-preview.js?v=20260909-login2" defer></script>
+    <script src="/honza-chat.js?v=1" defer></script>
   </body>
 </html>
